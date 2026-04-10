@@ -1,166 +1,236 @@
+# ─────────────────────────────────────────────
+#  pages/interface.py — interface gráfica Tkinter
+#  Visual inspirado no sistema SGEP (tema claro)
+#  Execute: python main.py
+# ─────────────────────────────────────────────
+
 import tkinter as tk
 from tkinter import ttk, messagebox
 import threading
 from datetime import date
+import os
+import json
 
-# ─────────────────────────────────────────────
-#  PALETA & FONTES
-# ─────────────────────────────────────────────
+from config import TODOS_CLIENTES, PAGAMENTOS, ESPECIES
+
+# ── Caminhos de dados ─────────────────────────
+_BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LOG_PATH = os.path.join(_BASE, "data", "log.txt")
+os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
+
+# ── Paleta SGEP (tema claro) ──────────────────
 COR = {
-    "fundo":        "#0f1923",   # azul-noite profundo
-    "painel":       "#162332",   # card levemente mais claro
-    "borda":        "#1e3448",   # borda sutil
-    "acento":       "#00b4d8",   # azul-água (cor principal de destaque)
-    "acento2":      "#0077a8",   # azul mais escuro para hover/pressed
-    "texto":        "#e8f4f8",   # quase branco com tom frio
-    "texto_fraco":  "#6b8fa3",   # cinza-azulado para labels
-    "verde":        "#22c55e",
-    "vermelho":     "#ef4444",
-    "amarelo":      "#f59e0b",
-    "linha":        "#1e3448",
+    "janela":      "#f0f2f5",   # fundo geral acinzentado
+    "fundo":       "#ffffff",   # fundo dos cards/painéis
+    "borda":       "#d0d7de",   # borda sutil
+    "borda_focus": "#2c7be5",   # azul SGEP no foco
+    "acento":      "#2c5f8a",   # azul escuro cabeçalho/abas
+    "acento_btn":  "#3a7abf",   # azul botão primário
+    "acento_hov":  "#2c6aa0",   # hover do botão
+    "texto":       "#1a2535",   # quase preto
+    "texto_fraco": "#6b7a8d",   # cinza para labels/hints
+    "texto_branco":"#ffffff",
+    "verde":       "#1a7f4e",
+    "verde_bg":    "#d4edda",
+    "vermelho":    "#b02020",
+    "vermelho_bg": "#f8d7da",
+    "amarelo":     "#856404",
+    "amarelo_bg":  "#fff3cd",
+    "linha_tab":   "#e3e8ef",   # separador de linhas na tabela
+    "aba_inativa": "#dce3ec",
+    "aba_ativa":   "#ffffff",
+    "cabecalho":   "#1e3a5f",   # azul escuro do topo
+    "rodape":      "#e8ecf0",
 }
 
-FONTE_TITULO  = ("Consolas", 13, "bold")
-FONTE_LABEL   = ("Consolas", 9)
-FONTE_INPUT   = ("Consolas", 10)
-FONTE_BTN     = ("Consolas", 10, "bold")
-FONTE_LOG     = ("Consolas", 8)
-FONTE_CABEC   = ("Consolas", 16, "bold")
+FONTE_LABEL  = ("Segoe UI", 9)
+FONTE_INPUT  = ("Segoe UI", 10)
+FONTE_BTN    = ("Segoe UI", 9, "bold")
+FONTE_LOG    = ("Consolas", 8)
+FONTE_CABEC  = ("Segoe UI", 13, "bold")
+FONTE_TITULO = ("Segoe UI", 10, "bold")
 
-# ─────────────────────────────────────────────
-#  DADOS FIXOS
-# ─────────────────────────────────────────────
-CLIENTES_ESPECIAIS = {
-    "formosa_d":    {"busca": "formosa",       "value": "328"},
-    "formosa_cn":   {"busca": "formosa",       "value": "327"},
-    "formosa_agm":  {"busca": "formosa",       "value": "332"},
-    "formosa_cu":   {"busca": "formosa",       "value": "329"},
-    "formosa_g":    {"busca": "formosa",       "value": "9180"},
-    "rest_cortizu": {"busca": "cortizu",       "value": "5860"},
-    "mc_solano":    {"busca": "mc solano",     "value": "9411"},
-    "trs":          {"busca": "trs de souza",  "value": "9410"},
-    "s_alb":        {"busca": "s albuquerque", "value": "409"},
-    "fas":          {"busca": "fas queiroz",   "value": "595"},
-    "ds":           {"busca": "ds muller",     "value": "330"},
-}
-CLIENTES_NORMAIS = sorted([
-    "compespa", "assembleia", "jo", "lucelia", "lider",
-    "cambuci", "r3x", "shopping", "kenko", "amazonia", "dumar"
-])
-TODOS_CLIENTES = sorted(list(CLIENTES_ESPECIAIS.keys()) + CLIENTES_NORMAIS)
+# ── Widgets estilo SGEP ───────────────────────
 
-PAGAMENTOS = [
-    "a vista", "contrato", "7 dias", "14 dias", "21 dias", "28 dias",
-    "28/42", "30 dias", "30/60", "30/60/90", "45 dias", "60 dias",
-]
+def _aplicar_estilos():
+    s = ttk.Style()
+    s.theme_use("clam")
 
-ESPECIES = ["camarao", "dourada", "filhote", "jaraqui", "pirarucu",
-            "pescada", "surubim", "tambaqui", "tucunare", "outros"]
+    # Notebook / abas
+    s.configure("SGEP.TNotebook",
+        background=COR["janela"], borderwidth=0, tabmargins=[0, 0, 0, 0])
+    s.configure("SGEP.TNotebook.Tab",
+        background=COR["aba_inativa"], foreground=COR["texto_fraco"],
+        font=("Segoe UI", 9, "bold"), padding=[16, 6], borderwidth=1,
+        relief="flat")
+    s.map("SGEP.TNotebook.Tab",
+        background=[("selected", COR["aba_ativa"])],
+        foreground=[("selected", COR["acento"])],
+        expand=[("selected", [1, 1, 1, 0])])
 
-# ─────────────────────────────────────────────
-#  WIDGETS CUSTOMIZADOS
-# ─────────────────────────────────────────────
-
-def estilo_entry(parent, textvariable=None, width=28, **kw):
-    e = tk.Entry(
-        parent,
-        textvariable=textvariable,
-        font=FONTE_INPUT,
-        bg=COR["fundo"],
-        fg=COR["texto"],
-        insertbackground=COR["acento"],
-        relief="flat",
-        highlightthickness=1,
-        highlightbackground=COR["borda"],
-        highlightcolor=COR["acento"],
-        width=width,
-        **kw
-    )
-    return e
-
-def estilo_combo(parent, values, textvariable=None, width=26, **kw):
-    style = ttk.Style()
-    style.theme_use("clam")
-    style.configure("Dark.TCombobox",
-        fieldbackground=COR["fundo"],
-        background=COR["borda"],
-        foreground=COR["texto"],
-        selectbackground=COR["acento2"],
-        selectforeground=COR["texto"],
-        arrowcolor=COR["acento"],
-        bordercolor=COR["borda"],
-        lightcolor=COR["borda"],
-        darkcolor=COR["borda"],
-    )
-    style.map("Dark.TCombobox",
+    # Combobox
+    s.configure("SGEP.TCombobox",
+        fieldbackground=COR["fundo"], background=COR["fundo"],
+        foreground=COR["texto"], selectbackground=COR["acento_btn"],
+        selectforeground=COR["texto_branco"], arrowcolor=COR["acento_btn"],
+        bordercolor=COR["borda"], lightcolor=COR["borda"],
+        darkcolor=COR["borda"], relief="solid")
+    s.map("SGEP.TCombobox",
         fieldbackground=[("readonly", COR["fundo"])],
         foreground=[("readonly", COR["texto"])],
-    )
-    c = ttk.Combobox(
-        parent,
-        values=values,
-        textvariable=textvariable,
-        font=FONTE_INPUT,
-        style="Dark.TCombobox",
-        width=width,
-        state="normal",
-        **kw
-    )
+        bordercolor=[("focus", COR["borda_focus"])])
+
+    # Treeview
+    s.configure("SGEP.Treeview",
+        background=COR["fundo"], foreground=COR["texto"],
+        fieldbackground=COR["fundo"], borderwidth=1,
+        font=FONTE_INPUT, rowheight=28, relief="solid")
+    s.configure("SGEP.Treeview.Heading",
+        background=COR["acento"], foreground=COR["texto_branco"],
+        font=("Segoe UI", 9, "bold"), borderwidth=0, relief="flat", padding=6)
+    s.map("SGEP.Treeview",
+        background=[("selected", COR["acento_btn"])],
+        foreground=[("selected", COR["texto_branco"])])
+
+    # Scrollbar
+    s.configure("SGEP.Vertical.TScrollbar",
+        background=COR["borda"], troughcolor=COR["janela"],
+        arrowcolor=COR["texto_fraco"], borderwidth=0, relief="flat")
+
+
+def _entry(parent, var=None, width=24, readonly=False, **kw):
+    state = "readonly" if readonly else "normal"
+    e = tk.Entry(parent, textvariable=var, font=FONTE_INPUT,
+                 bg=COR["fundo"] if not readonly else COR["janela"],
+                 fg=COR["texto"] if not readonly else COR["texto_fraco"],
+                 disabledforeground=COR["texto_fraco"],
+                 disabledbackground=COR["janela"],
+                 insertbackground=COR["acento_btn"],
+                 relief="solid", bd=1,
+                 highlightthickness=1,
+                 highlightbackground=COR["borda"],
+                 highlightcolor=COR["borda_focus"],
+                 width=width, **kw)
+    if readonly:
+        e.configure(state="disabled")
+    return e
+
+
+def _combo(parent, values, var=None, width=22):
+    c = ttk.Combobox(parent, values=values, textvariable=var,
+                     font=FONTE_INPUT, style="SGEP.TCombobox",
+                     width=width, state="normal")
     return c
 
-def estilo_label(parent, texto, fraco=False, **kw):
-    return tk.Label(
-        parent,
-        text=texto,
-        font=FONTE_LABEL,
-        bg=COR["painel"],
-        fg=COR["texto_fraco"] if fraco else COR["texto"],
-        **kw
-    )
 
-def estilo_btn(parent, texto, comando, cor=None, **kw):
-    cor_bg = cor or COR["acento"]
-    b = tk.Button(
-        parent,
-        text=texto,
-        command=comando,
-        font=FONTE_BTN,
-        bg=cor_bg,
-        fg=COR["fundo"],
-        activebackground=COR["acento2"],
-        activeforeground=COR["texto"],
-        relief="flat",
-        cursor="hand2",
-        padx=16,
-        pady=6,
-        **kw
-    )
-    return b
+def _label(parent, texto, fraco=False, bold=False, bg=None, **kw):
+    fonte = ("Segoe UI", 9, "bold") if bold else FONTE_LABEL
+    return tk.Label(parent, text=texto, font=fonte,
+                    bg=bg or COR["fundo"],
+                    fg=COR["texto_fraco"] if fraco else COR["texto"], **kw)
 
-def card(parent, **kw):
-    return tk.Frame(parent, bg=COR["painel"],
-                    highlightthickness=1,
-                    highlightbackground=COR["borda"], **kw)
 
-def linha_form(parent, label, widget, row):
-    estilo_label(parent, label, fraco=True).grid(
-        row=row, column=0, sticky="w", padx=(16, 8), pady=(8, 2))
-    widget.grid(row=row, column=1, sticky="ew", padx=(0, 16), pady=(8, 2))
+def _btn_primario(parent, texto, cmd, **kw):
+    """Botão azul principal (estilo Gravar do SGEP)."""
+    return tk.Button(parent, text=texto, command=cmd,
+                     font=FONTE_BTN,
+                     bg=COR["acento_btn"], fg=COR["texto_branco"],
+                     activebackground=COR["acento_hov"],
+                     activeforeground=COR["texto_branco"],
+                     relief="flat", cursor="hand2",
+                     padx=14, pady=5, **kw)
 
-# ─────────────────────────────────────────────
-#  JANELA PRINCIPAL
-# ─────────────────────────────────────────────
+
+def _btn_secundario(parent, texto, cmd, **kw):
+    """Botão cinza secundário (estilo Limpar do SGEP)."""
+    return tk.Button(parent, text=texto, command=cmd,
+                     font=FONTE_BTN,
+                     bg=COR["borda"], fg=COR["texto"],
+                     activebackground="#bec8d4",
+                     activeforeground=COR["texto"],
+                     relief="flat", cursor="hand2",
+                     padx=14, pady=5, **kw)
+
+
+def _separador(parent, vertical=False):
+    orient = "vertical" if vertical else "horizontal"
+    return tk.Frame(parent,
+                    bg=COR["borda"],
+                    width=1 if vertical else 0,
+                    height=0 if vertical else 1)
+
+
+def _card(parent, titulo=None, **kw):
+    """Frame com borda e título opcional (como os painéis do SGEP)."""
+    outer = tk.Frame(parent, bg=COR["borda"], bd=0, **kw)
+    inner = tk.Frame(outer, bg=COR["fundo"], bd=0)
+    inner.pack(fill="both", expand=True, padx=1, pady=1)
+
+    if titulo:
+        tit = tk.Frame(inner, bg=COR["acento"], height=28)
+        tit.pack(fill="x")
+        tk.Label(tit, text=f"  {titulo}", font=("Segoe UI", 9, "bold"),
+                 bg=COR["acento"], fg=COR["texto_branco"]).pack(side="left", pady=4)
+        corpo = tk.Frame(inner, bg=COR["fundo"])
+        corpo.pack(fill="both", expand=True)
+        return outer, corpo
+    return outer, inner
+
+
+def _linha_form(parent, label, widget, row, col_start=0, hint=None):
+    """Label + widget numa grade de formulário."""
+    lbl = _label(parent, label, fraco=True)
+    lbl.grid(row=row, column=col_start, sticky="w",
+             padx=(12, 6), pady=(8, 1))
+    widget.grid(row=row, column=col_start + 1, sticky="ew",
+                padx=(0, 12), pady=(8, 1))
+    if hint:
+        _label(parent, hint, fraco=True).grid(
+            row=row + 1, column=col_start + 1, sticky="w",
+            padx=(0, 12), pady=(0, 2))
+
+
+def _filtrar(combo, lista, digitado):
+    f = [x for x in lista if digitado.lower() in x.lower()]
+    combo["values"] = f if f else lista
+
+
+# ── Persistência do log ───────────────────────
+
+def _salvar_log(texto):
+    try:
+        with open(LOG_PATH, "a", encoding="utf-8") as f:
+            f.write(texto + "\n")
+    except Exception:
+        pass
+
+
+def _carregar_log():
+    try:
+        with open(LOG_PATH, "r", encoding="utf-8") as f:
+            return f.read()
+    except FileNotFoundError:
+        return ""
+
+
+# ── App principal ─────────────────────────────
 
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("SGEP — Automação de Pedidos")
-        self.configure(bg=COR["fundo"])
-        self.resizable(False, False)
-        self.geometry("680x780")
+        self.configure(bg=COR["janela"])
+        self.resizable(True, True)
+        self.minsize(820, 680)
+        self.geometry("900x720")
 
-        self.itens = []          # lista de dicts {especie, pa, quantidade, valor}
-        self._build_ui()
+        # variável para guardar o código do pedido criado (para o PDF)
+        self._codigo_pedido = None
+        self.itens = []
+
+        _aplicar_estilos()
+        self._build()
+        self._carregar_log_salvo()
         self._centralizar()
 
     def _centralizar(self):
@@ -170,382 +240,441 @@ class App(tk.Tk):
         y = (self.winfo_screenheight() - h) // 2
         self.geometry(f"{w}x{h}+{x}+{y}")
 
-    # ── cabeçalho ──────────────────────────────
-    def _build_ui(self):
-        cab = tk.Frame(self, bg=COR["fundo"])
-        cab.pack(fill="x", padx=24, pady=(20, 4))
+    # ── Layout geral ─────────────────────────
 
-        tk.Label(cab, text="◈  SGEP PEDIDOS", font=FONTE_CABEC,
-                 bg=COR["fundo"], fg=COR["acento"]).pack(side="left")
-        tk.Label(cab, text="automação de pescados", font=FONTE_LABEL,
-                 bg=COR["fundo"], fg=COR["texto_fraco"]).pack(side="left", padx=(10, 0), pady=(6, 0))
+    def _build(self):
+        # ── Cabeçalho estilo SGEP ──
+        cab = tk.Frame(self, bg=COR["cabecalho"], height=48)
+        cab.pack(fill="x")
+        cab.pack_propagate(False)
 
-        sep = tk.Frame(self, bg=COR["borda"], height=1)
-        sep.pack(fill="x", padx=24, pady=(4, 12))
+        tk.Label(cab, text="🐟  SGEP — Automação de Pedidos",
+                 font=FONTE_CABEC, bg=COR["cabecalho"],
+                 fg=COR["texto_branco"]).pack(side="left", padx=16, pady=10)
 
-        # notebook
-        nb_style = ttk.Style()
-        nb_style.theme_use("clam")
-        nb_style.configure("Dark.TNotebook",
-            background=COR["fundo"], borderwidth=0, tabmargins=0)
-        nb_style.configure("Dark.TNotebook.Tab",
-            background=COR["borda"], foreground=COR["texto_fraco"],
-            font=FONTE_BTN, padding=(18, 8), borderwidth=0)
-        nb_style.map("Dark.TNotebook.Tab",
-            background=[("selected", COR["painel"])],
-            foreground=[("selected", COR["acento"])],
-        )
+        tk.Label(cab, text="Americo Lima  |  AMASA Belém",
+                 font=FONTE_LABEL, bg=COR["cabecalho"],
+                 fg="#8daac8").pack(side="right", padx=16)
 
-        self.nb = ttk.Notebook(self, style="Dark.TNotebook")
-        self.nb.pack(fill="both", expand=True, padx=24, pady=(0, 8))
+        # ── Abas ──
+        self.nb = ttk.Notebook(self, style="SGEP.TNotebook")
+        self.nb.pack(fill="both", expand=True, padx=0, pady=0)
 
         self._aba_pedido()
         self._aba_itens()
         self._aba_log()
 
-    # ── aba 1: pedido ──────────────────────────
+        # ── Rodapé ──
+        rod = tk.Frame(self, bg=COR["rodape"], height=28)
+        rod.pack(fill="x", side="bottom")
+        rod.pack_propagate(False)
+        self._status_var = tk.StringVar(value="Pronto.")
+        tk.Label(rod, textvariable=self._status_var,
+                 font=("Segoe UI", 8), bg=COR["rodape"],
+                 fg=COR["texto_fraco"]).pack(side="left", padx=10, pady=4)
+
+    def _status(self, msg):
+        self._status_var.set(msg)
+
+    # ── Aba 1 — Pedido ───────────────────────
+
     def _aba_pedido(self):
-        frame = tk.Frame(self.nb, bg=COR["fundo"])
-        self.nb.add(frame, text="  Pedido  ")
+        frame = tk.Frame(self.nb, bg=COR["janela"])
+        self.nb.add(frame, text="  Pedidos  ")
 
-        c = card(frame)
-        c.pack(fill="both", expand=True, padx=0, pady=8)
-        c.columnconfigure(1, weight=1)
+        frame.columnconfigure(0, weight=1)
+        frame.columnconfigure(1, weight=1)
+        frame.rowconfigure(1, weight=1)
 
-        # Ordem de Compra
+        # ── Bloco superior: campos principais ──
+        outer, corpo = _card(frame, titulo="Informações do Pedido")
+        outer.grid(row=0, column=0, columnspan=2,
+                   sticky="ew", padx=12, pady=(10, 6))
+        corpo.columnconfigure(1, weight=1)
+        corpo.columnconfigure(3, weight=1)
+
+        # Linha 0: Ordem Compra | Data
         self.v_ordem = tk.StringVar(value="0")
-        linha_form(c, "Ordem de Compra", estilo_entry(c, self.v_ordem), 0)
+        _label(corpo, "Ordem Compra", fraco=True).grid(
+            row=0, column=0, sticky="w", padx=(12, 6), pady=(10, 2))
+        _entry(corpo, self.v_ordem, width=14).grid(
+            row=0, column=1, sticky="w", padx=(0, 20), pady=(10, 2))
 
-        # Empresa (padrão fixo, editável se necessário)
-        self.v_empresa = tk.StringVar(value="AMASA — índice 1 (padrão)")
-        emp_entry = estilo_entry(c, self.v_empresa, state="disabled",
-                                  disabledforeground=COR["texto_fraco"],
-                                  disabledbackground=COR["fundo"])
-        linha_form(c, "Empresa", emp_entry, 1)
-        estilo_label(c, "Sempre a primeira opção (AMASA Belém)", fraco=True).grid(
-            row=2, column=1, sticky="w", padx=(0, 16))
+        self.v_data = tk.StringVar(value=date.today().strftime("%d/%m/%Y"))
+        _label(corpo, "Prev. Entrega", fraco=True).grid(
+            row=0, column=2, sticky="w", padx=(0, 6), pady=(10, 2))
+        _entry(corpo, self.v_data, width=14).grid(
+            row=0, column=3, sticky="w", padx=(0, 12), pady=(10, 2))
 
-        # Data de entrega
-        hoje = date.today().strftime("%d/%m/%Y")
-        self.v_data = tk.StringVar(value=hoje)
-        linha_form(c, "Data de Entrega", estilo_entry(c, self.v_data), 3)
-        estilo_label(c, "Formato  DD/MM/AAAA", fraco=True).grid(
-            row=4, column=1, sticky="w", padx=(0, 16))
+        # Linha 1: Empresa (fixo)
+        self.v_empresa = tk.StringVar(
+            value="AMAZONAS INDUSTRIAS ALIMENTICIAS S A AMASA — BELÉM")
+        _label(corpo, "Empresa", fraco=True).grid(
+            row=1, column=0, sticky="w", padx=(12, 6), pady=(6, 2))
+        _entry(corpo, self.v_empresa, width=52, readonly=True).grid(
+            row=1, column=1, columnspan=3, sticky="ew",
+            padx=(0, 12), pady=(6, 2))
 
-        # Cliente
+        # Linha 2: Cliente
         self.v_cliente = tk.StringVar()
-        combo_cli = estilo_combo(c, TODOS_CLIENTES, self.v_cliente)
-        combo_cli.bind("<KeyRelease>", lambda e: self._filtrar_combo(
-            combo_cli, TODOS_CLIENTES, self.v_cliente.get()))
-        linha_form(c, "Cliente", combo_cli, 5)
+        _label(corpo, "Cliente", fraco=True).grid(
+            row=2, column=0, sticky="w", padx=(12, 6), pady=(6, 2))
+        cb_cli = _combo(corpo, TODOS_CLIENTES, self.v_cliente, width=40)
+        cb_cli.bind("<KeyRelease>",
+                    lambda e: _filtrar(cb_cli, TODOS_CLIENTES, self.v_cliente.get()))
+        cb_cli.grid(row=2, column=1, columnspan=3, sticky="ew",
+                    padx=(0, 12), pady=(6, 2))
 
-        # Cond. Pagamento
+        # Linha 3: Vendedor (fixo) | Cond Pagamento
+        self.v_vendedor = tk.StringVar(value="Americo Lima  (único disponível)")
+        _label(corpo, "Vendedor", fraco=True).grid(
+            row=3, column=0, sticky="w", padx=(12, 6), pady=(6, 2))
+        _entry(corpo, self.v_vendedor, width=28, readonly=True).grid(
+            row=3, column=1, sticky="ew", padx=(0, 20), pady=(6, 2))
+
         self.v_pagto = tk.StringVar()
-        combo_pag = estilo_combo(c, PAGAMENTOS, self.v_pagto)
-        combo_pag.bind("<KeyRelease>", lambda e: self._filtrar_combo(
-            combo_pag, PAGAMENTOS, self.v_pagto.get()))
-        linha_form(c, "Cond. Pagamento", combo_pag, 6)
+        _label(corpo, "Cond. Pagto", fraco=True).grid(
+            row=3, column=2, sticky="w", padx=(0, 6), pady=(6, 2))
+        cb_pag = _combo(corpo, PAGAMENTOS, self.v_pagto, width=18)
+        cb_pag.bind("<KeyRelease>",
+                    lambda e: _filtrar(cb_pag, PAGAMENTOS, self.v_pagto.get()))
+        cb_pag.grid(row=3, column=3, sticky="ew", padx=(0, 12), pady=(6, 2))
 
-        # Observações
-        estilo_label(c, "Observações", fraco=True).grid(
-            row=7, column=0, sticky="nw", padx=(16, 8), pady=(12, 2))
+        # Linha 4: Observações
+        _label(corpo, "Observações", fraco=True).grid(
+            row=4, column=0, sticky="nw", padx=(12, 6), pady=(6, 2))
         self.txt_obs = tk.Text(
-            c, font=FONTE_INPUT, bg=COR["fundo"], fg=COR["texto"],
-            insertbackground=COR["acento"], relief="flat",
-            highlightthickness=1, highlightbackground=COR["borda"],
-            highlightcolor=COR["acento"],
-            width=30, height=4, wrap="word"
-        )
-        self.txt_obs.grid(row=7, column=1, sticky="ew",
-                          padx=(0, 16), pady=(12, 2))
-        estilo_label(c, "Opcional — VIA NAVIO, CONTRATO, etc.", fraco=True).grid(
-            row=8, column=1, sticky="w", padx=(0, 16))
+            corpo, font=FONTE_INPUT, bg=COR["fundo"], fg=COR["texto"],
+            insertbackground=COR["acento_btn"],
+            relief="solid", bd=1, width=52, height=3, wrap="word")
+        self.txt_obs.grid(row=4, column=1, columnspan=3, sticky="ew",
+                          padx=(0, 12), pady=(6, 8))
 
-        # Vendedor (padrão fixo)
-        estilo_label(c, "Vendedor", fraco=True).grid(
-            row=9, column=0, sticky="w", padx=(16, 8), pady=(12, 8))
-        estilo_label(c, "Sempre o único disponível (índice 1)", fraco=True).grid(
-            row=9, column=1, sticky="w", padx=(0, 16), pady=(12, 8))
+        # ── Opção de PDF ──
+        outer_pdf, corpo_pdf = _card(frame, titulo="Opções")
+        outer_pdf.grid(row=1, column=0, sticky="nsew", padx=(12, 6), pady=(0, 10))
+        corpo_pdf.columnconfigure(0, weight=1)
 
-        # Botão ir para itens
-        estilo_btn(c, "Ir para Itens  →", lambda: self.nb.select(1)).grid(
-            row=10, column=0, columnspan=2, pady=(8, 16))
+        self.v_baixar_pdf = tk.BooleanVar(value=False)
+        chk = tk.Checkbutton(
+            corpo_pdf,
+            text="Baixar PDF do pedido após criar",
+            variable=self.v_baixar_pdf,
+            font=FONTE_INPUT,
+            bg=COR["fundo"], fg=COR["texto"],
+            activebackground=COR["fundo"],
+            selectcolor=COR["fundo"],
+            cursor="hand2")
+        chk.pack(anchor="w", padx=12, pady=(10, 4))
 
-    # ── aba 2: itens ───────────────────────────
+        _label(corpo_pdf,
+               "O sistema buscará o pedido pelo código gerado\n"
+               "e salvará o PDF automaticamente na pasta data/pedidos/",
+               fraco=True).pack(anchor="w", padx=12, pady=(0, 10))
+
+        # ── Botões ──
+        outer_btn, corpo_btn = _card(frame, titulo="")
+        outer_btn.grid(row=1, column=1, sticky="nsew", padx=(6, 12), pady=(0, 10))
+
+        _btn_primario(corpo_btn, "  Ir para Itens  →",
+                      lambda: self.nb.select(1)).pack(
+            pady=(20, 8), padx=16, fill="x")
+        _btn_secundario(corpo_btn, "  Limpar Formulário",
+                        self._limpar_pedido).pack(
+            pady=(0, 8), padx=16, fill="x")
+
+    # ── Aba 2 — Itens Pedidos ────────────────
+
     def _aba_itens(self):
-        frame = tk.Frame(self.nb, bg=COR["fundo"])
-        self.nb.add(frame, text="  Itens  ")
+        frame = tk.Frame(self.nb, bg=COR["janela"])
+        self.nb.add(frame, text="  Itens Pedidos  ")
+        frame.columnconfigure(0, weight=1)
+        frame.rowconfigure(1, weight=1)
 
-        # formulário de novo item
-        form = card(frame)
-        form.pack(fill="x", padx=0, pady=(8, 4))
-        form.columnconfigure(1, weight=1)
+        # ── Formulário de item ──
+        outer, corpo = _card(frame, titulo="Novo Item")
+        outer.grid(row=0, column=0, sticky="ew", padx=12, pady=(10, 6))
+        corpo.columnconfigure(1, weight=1)
+        corpo.columnconfigure(3, weight=1)
+        corpo.columnconfigure(5, weight=1)
 
-        # Espécie
+        # Linha 0: Espécie | PA | Quantidade | Valor
         self.v_esp = tk.StringVar()
-        combo_esp = estilo_combo(form, ESPECIES, self.v_esp, width=20)
-        combo_esp.bind("<KeyRelease>", lambda e: self._filtrar_combo(
-            combo_esp, ESPECIES, self.v_esp.get()))
-        linha_form(form, "Espécie", combo_esp, 0)
+        _label(corpo, "Espécie", fraco=True).grid(
+            row=0, column=0, sticky="w", padx=(12, 6), pady=(10, 2))
+        cb_esp = _combo(corpo, ESPECIES, self.v_esp, width=14)
+        cb_esp.bind("<KeyRelease>",
+                    lambda e: _filtrar(cb_esp, ESPECIES, self.v_esp.get()))
+        cb_esp.grid(row=0, column=1, sticky="ew", padx=(0, 16), pady=(10, 2))
 
-        # PA
         self.v_pa = tk.StringVar()
-        linha_form(form, "PA do Produto", estilo_entry(form, self.v_pa, width=12), 1)
-        estilo_label(form, "Código numérico, ex: 0203", fraco=True).grid(
-            row=2, column=1, sticky="w", padx=(0, 16))
+        _label(corpo, "PA", fraco=True).grid(
+            row=0, column=2, sticky="w", padx=(0, 6), pady=(10, 2))
+        _entry(corpo, self.v_pa, width=8).grid(
+            row=0, column=3, sticky="w", padx=(0, 16), pady=(10, 2))
 
-        # Quantidade
         self.v_qtd = tk.StringVar()
-        linha_form(form, "Quantidade (kg)", estilo_entry(form, self.v_qtd, width=12), 3)
+        _label(corpo, "Qtd (kg)", fraco=True).grid(
+            row=0, column=4, sticky="w", padx=(0, 6), pady=(10, 2))
+        _entry(corpo, self.v_qtd, width=10).grid(
+            row=0, column=5, sticky="ew", padx=(0, 16), pady=(10, 2))
 
-        # Valor solicitado
         self.v_val = tk.StringVar()
-        linha_form(form, "Valor Solicitado", estilo_entry(form, self.v_val, width=12), 4)
-        estilo_label(form, "O sistema decide se anota na obs. ou altera", fraco=True).grid(
-            row=5, column=1, sticky="w", padx=(0, 16))
+        _label(corpo, "Valor Unit.", fraco=True).grid(
+            row=0, column=6, sticky="w", padx=(0, 6), pady=(10, 2))
+        _entry(corpo, self.v_val, width=10).grid(
+            row=0, column=7, sticky="ew", padx=(0, 12), pady=(10, 2))
 
-        estilo_btn(form, "+ Adicionar Item", self._adicionar_item_lista,
-                   cor=COR["verde"]).grid(row=6, column=0, columnspan=2, pady=(8, 12))
+        # Linha 1: hint + botão
+        _label(corpo, "Uni. Medida sempre KG — valor comparado com o sistema automaticamente",
+               fraco=True).grid(
+            row=1, column=0, columnspan=6, sticky="w", padx=(12, 0), pady=(0, 6))
 
-        # tabela de itens
-        tbl_frame = card(frame)
-        tbl_frame.pack(fill="both", expand=True, padx=0, pady=4)
+        _btn_primario(corpo, "+ Adicionar", self._add_item).grid(
+            row=1, column=6, columnspan=2, padx=(0, 12), pady=(0, 8), sticky="e")
 
-        cols = ("Espécie", "PA", "Qtd (kg)", "Valor")
-        style = ttk.Style()
-        style.configure("Dark.Treeview",
-            background=COR["fundo"], foreground=COR["texto"],
-            fieldbackground=COR["fundo"], borderwidth=0,
-            font=FONTE_INPUT, rowheight=26)
-        style.configure("Dark.Treeview.Heading",
-            background=COR["borda"], foreground=COR["acento"],
-            font=FONTE_LABEL, borderwidth=0, relief="flat")
-        style.map("Dark.Treeview",
-            background=[("selected", COR["acento2"])],
-            foreground=[("selected", COR["texto"])],
-        )
+        # ── Tabela de itens ──
+        outer_t, corpo_t = _card(frame, titulo="Itens do Pedido")
+        outer_t.grid(row=1, column=0, sticky="nsew", padx=12, pady=(0, 6))
+        corpo_t.columnconfigure(0, weight=1)
+        corpo_t.rowconfigure(0, weight=1)
 
-        self.tree = ttk.Treeview(tbl_frame, columns=cols, show="headings",
-                                  style="Dark.Treeview", height=7)
-        for col, w in zip(cols, (140, 70, 90, 90)):
+        cols = ("Espécie", "PA", "Qtd (kg)", "Valor Solicitado")
+        self.tree = ttk.Treeview(corpo_t, columns=cols, show="headings",
+                                  style="SGEP.Treeview", height=8)
+        for col, w in zip(cols, (180, 80, 100, 120)):
             self.tree.heading(col, text=col)
             self.tree.column(col, width=w, anchor="center")
 
-        sb = ttk.Scrollbar(tbl_frame, orient="vertical", command=self.tree.yview)
+        sb = ttk.Scrollbar(corpo_t, orient="vertical",
+                           command=self.tree.yview,
+                           style="SGEP.Vertical.TScrollbar")
         self.tree.configure(yscrollcommand=sb.set)
-        self.tree.pack(side="left", fill="both", expand=True, padx=(8, 0), pady=8)
-        sb.pack(side="right", fill="y", pady=8, padx=(0, 4))
+        self.tree.grid(row=0, column=0, sticky="nsew", padx=(6, 0), pady=6)
+        sb.grid(row=0, column=1, sticky="ns", pady=6, padx=(0, 4))
 
-        # botões da tabela
-        btn_row = tk.Frame(frame, bg=COR["fundo"])
-        btn_row.pack(fill="x", pady=(4, 8))
-        estilo_btn(btn_row, "✕  Remover Selecionado",
-                   self._remover_item, cor="#374151").pack(side="left", padx=4)
-        estilo_btn(btn_row, "▶  Executar Pedido",
-                   self._executar, cor=COR["acento"]).pack(side="right", padx=4)
+        # ── Botões finais ──
+        btn_row = tk.Frame(frame, bg=COR["janela"])
+        btn_row.grid(row=2, column=0, sticky="ew", padx=12, pady=(0, 10))
 
-    # ── aba 3: log ─────────────────────────────
+        _btn_secundario(btn_row, "✕  Remover Item", self._remover).pack(
+            side="left", padx=(0, 8))
+        _btn_primario(btn_row, "▶  Gravar e Executar Pedido",
+                      self._executar).pack(side="right")
+        _btn_secundario(btn_row, "← Voltar ao Pedido",
+                        lambda: self.nb.select(0)).pack(side="right", padx=(0, 8))
+
+    # ── Aba 3 — Log ──────────────────────────
+
     def _aba_log(self):
-        frame = tk.Frame(self.nb, bg=COR["fundo"])
+        frame = tk.Frame(self.nb, bg=COR["janela"])
         self.nb.add(frame, text="  Log  ")
+        frame.columnconfigure(0, weight=1)
+        frame.rowconfigure(0, weight=1)
 
-        self.log_text = tk.Text(
-            frame, font=FONTE_LOG,
-            bg=COR["fundo"], fg=COR["texto"],
-            insertbackground=COR["acento"],
-            relief="flat", state="disabled",
-            wrap="word"
-        )
-        sb = ttk.Scrollbar(frame, orient="vertical", command=self.log_text.yview)
-        self.log_text.configure(yscrollcommand=sb.set)
-        self.log_text.pack(side="left", fill="both", expand=True, padx=(8, 0), pady=8)
-        sb.pack(side="right", fill="y", pady=8, padx=(0, 4))
+        outer, corpo = _card(frame, titulo="Histórico de Execuções")
+        outer.grid(row=0, column=0, sticky="nsew", padx=12, pady=(10, 6))
+        corpo.columnconfigure(0, weight=1)
+        corpo.rowconfigure(0, weight=1)
 
-        # tags de cor no log
-        self.log_text.tag_config("ok",      foreground=COR["verde"])
-        self.log_text.tag_config("erro",    foreground=COR["vermelho"])
-        self.log_text.tag_config("aviso",   foreground=COR["amarelo"])
-        self.log_text.tag_config("info",    foreground=COR["acento"])
-        self.log_text.tag_config("normal",  foreground=COR["texto"])
+        self.log_txt = tk.Text(
+            corpo, font=FONTE_LOG,
+            bg="#1a1e2e", fg="#c8d3e0",
+            insertbackground=COR["acento_btn"],
+            relief="flat", state="disabled", wrap="word")
+        sb = ttk.Scrollbar(corpo, orient="vertical",
+                           command=self.log_txt.yview,
+                           style="SGEP.Vertical.TScrollbar")
+        self.log_txt.configure(yscrollcommand=sb.set)
+        self.log_txt.grid(row=0, column=0, sticky="nsew", padx=(6, 0), pady=6)
+        sb.grid(row=0, column=1, sticky="ns", pady=6, padx=(0, 4))
 
-    # ── helpers ────────────────────────────────
+        self.log_txt.tag_config("ok",     foreground="#4ade80")
+        self.log_txt.tag_config("erro",   foreground="#f87171")
+        self.log_txt.tag_config("aviso",  foreground="#fbbf24")
+        self.log_txt.tag_config("info",   foreground="#60a5fa")
+        self.log_txt.tag_config("normal", foreground="#c8d3e0")
+
+        # botão limpar log
+        btn_row = tk.Frame(frame, bg=COR["janela"])
+        btn_row.grid(row=1, column=0, sticky="e", padx=12, pady=(0, 10))
+        _btn_secundario(btn_row, "Limpar Log", self._limpar_log).pack(side="right")
+
+    # ── Helpers ──────────────────────────────
 
     def log(self, msg, tipo="normal"):
-        self.log_text.configure(state="normal")
-        self.log_text.insert("end", msg + "\n", tipo)
-        self.log_text.see("end")
-        self.log_text.configure(state="disabled")
+        self.log_txt.configure(state="normal")
+        self.log_txt.insert("end", msg + "\n", tipo)
+        self.log_txt.see("end")
+        self.log_txt.configure(state="disabled")
+        _salvar_log(msg)
 
-    def _filtrar_combo(self, combo, lista, digitado):
-        filtrado = [x for x in lista if digitado.lower() in x.lower()]
-        combo["values"] = filtrado if filtrado else lista
+    def _carregar_log_salvo(self):
+        conteudo = _carregar_log()
+        if conteudo:
+            self.log_txt.configure(state="normal")
+            self.log_txt.insert("1.0", conteudo)
+            self.log_txt.see("end")
+            self.log_txt.configure(state="disabled")
 
-    def _adicionar_item_lista(self):
+    def _limpar_log(self):
+        if messagebox.askyesno("Limpar Log", "Apagar todo o histórico de log?"):
+            self.log_txt.configure(state="normal")
+            self.log_txt.delete("1.0", "end")
+            self.log_txt.configure(state="disabled")
+            try:
+                open(LOG_PATH, "w").close()
+            except Exception:
+                pass
+
+    def _limpar_pedido(self):
+        self.v_ordem.set("0")
+        self.v_data.set(date.today().strftime("%d/%m/%Y"))
+        self.v_cliente.set("")
+        self.v_pagto.set("")
+        self.txt_obs.delete("1.0", "end")
+
+    def _add_item(self):
         esp = self.v_esp.get().strip().lower()
         pa  = self.v_pa.get().strip().zfill(4)
         qtd = self.v_qtd.get().strip().replace(",", ".")
         val = self.v_val.get().strip().replace(",", ".")
 
         if not esp:
-            messagebox.showwarning("Campo vazio", "Preencha a Espécie.")
-            return
-        if not pa or pa == "0000":
-            messagebox.showwarning("Campo vazio", "Preencha o PA do produto.")
-            return
+            messagebox.showwarning("Campo vazio", "Preencha a Espécie."); return
+        if pa == "0000":
+            messagebox.showwarning("Campo vazio", "Preencha o PA do produto."); return
         try:
             qtd_f = float(qtd)
         except ValueError:
-            messagebox.showerror("Valor inválido", "Quantidade deve ser um número.")
-            return
+            messagebox.showerror("Inválido", "Quantidade deve ser um número."); return
         try:
             val_f = float(val)
         except ValueError:
-            messagebox.showerror("Valor inválido", "Valor deve ser um número.")
-            return
+            messagebox.showerror("Inválido", "Valor deve ser um número."); return
 
-        item = {"especie": esp, "pa": pa, "quantidade": qtd_f, "valor": val_f}
-        self.itens.append(item)
+        self.itens.append({"especie": esp, "pa": pa, "quantidade": qtd_f, "valor": val_f})
         self.tree.insert("", "end", values=(
             esp.capitalize(), pa,
             f"{qtd_f:.3f}".rstrip("0").rstrip("."),
             f"R$ {val_f:.2f}"
         ))
+        self.v_esp.set(""); self.v_pa.set("")
+        self.v_qtd.set(""); self.v_val.set("")
 
-        # limpa campos para próximo item
-        self.v_esp.set("")
-        self.v_pa.set("")
-        self.v_qtd.set("")
-        self.v_val.set("")
-
-    def _remover_item(self):
+    def _remover(self):
         sel = self.tree.selection()
-        if not sel:
-            return
+        if not sel: return
         idx = self.tree.index(sel[0])
         self.tree.delete(sel[0])
         self.itens.pop(idx)
 
-    def _validar_pedido(self):
+    def _validar(self):
         erros = []
-        if not self.v_ordem.get().strip():
-            erros.append("Ordem de Compra")
-        if not self.v_data.get().strip():
-            erros.append("Data de Entrega")
-        if not self.v_cliente.get().strip():
-            erros.append("Cliente")
-        if not self.v_pagto.get().strip():
-            erros.append("Cond. Pagamento")
-        if not self.itens:
-            erros.append("Nenhum item adicionado")
+        if not self.v_ordem.get().strip(): erros.append("Ordem de Compra")
+        if not self.v_data.get().strip():  erros.append("Data de Entrega")
+        if not self.v_cliente.get().strip(): erros.append("Cliente")
+        if not self.v_pagto.get().strip():   erros.append("Cond. Pagamento")
+        if not self.itens: erros.append("Nenhum item adicionado")
         return erros
 
-    def _montar_pedido(self):
-        return {
-            "ordem":          self.v_ordem.get().strip(),
-            "data":           self.v_data.get().strip(),
-            "cliente":        self.v_cliente.get().strip().lower(),
-            "pagamento":      self.v_pagto.get().strip().lower(),
-            "observacao":     self.txt_obs.get("1.0", "end").strip(),
-            "empresa_index":  1,
-            "vendedor_index": 1,
-        }
-
     def _executar(self):
-        erros = self._validar_pedido()
+        erros = self._validar()
         if erros:
             messagebox.showerror("Campos obrigatórios",
-                "Preencha os seguintes campos antes de continuar:\n\n• " +
-                "\n• ".join(erros))
+                "Preencha antes de continuar:\n\n• " + "\n• ".join(erros))
             return
 
-        confirma = messagebox.askyesno(
-            "Confirmar execução",
-            f"Pedido para:  {self.v_cliente.get()}\n"
-            f"Data:         {self.v_data.get()}\n"
-            f"Itens:        {len(self.itens)}\n\n"
-            "Iniciar automação?"
-        )
-        if not confirma:
+        baixar = self.v_baixar_pdf.get()
+        msg = (f"Cliente:  {self.v_cliente.get()}\n"
+               f"Data:     {self.v_data.get()}\n"
+               f"Itens:    {len(self.itens)}\n"
+               f"PDF:      {'Sim' if baixar else 'Não'}\n\n"
+               "Iniciar automação?")
+        if not messagebox.askyesno("Confirmar", msg):
             return
 
-        self.nb.select(2)   # vai para aba Log
-        self.log("═" * 50, "info")
-        self.log("  INICIANDO AUTOMAÇÃO", "info")
-        self.log("═" * 50, "info")
+        self.nb.select(2)
+        self.log("═" * 55, "info")
+        self.log(f"  NOVO PEDIDO — {date.today().strftime('%d/%m/%Y %H:%M')}", "info")
+        self.log("═" * 55, "info")
+        self._status("Automação em andamento...")
 
-        # roda em thread para não travar a janela
-        t = threading.Thread(target=self._rodar_automacao, daemon=True)
-        t.start()
+        threading.Thread(target=self._rodar, daemon=True).start()
 
-    def _rodar_automacao(self):
-        import importlib, sys, os
-
-        # importa o módulo de automação do mesmo diretório
-        pasta = os.path.dirname(os.path.abspath(__file__))
-        if pasta not in sys.path:
-            sys.path.insert(0, pasta)
-
-        try:
-            import main as bot
-        except Exception as ex:
-            self.log(f"[ERRO] Não foi possível importar main.py: {ex}", "erro")
-            return
-
-        dados = self._montar_pedido()
-
-        # injeta os dados no módulo
-        bot.pedido.update(dados)
-
-        # redireciona print para o log da interface
+    def _rodar(self):
         import builtins
-        _print_orig = builtins.print
-        def _print_gui(*args, **kw):
+        _orig = builtins.print
+
+        def _gui_print(*args, **kw):
             msg = " ".join(str(a) for a in args)
-            if "[OK]" in msg:
-                tag = "ok"
-            elif "[ERRO]" in msg or "[PULADO]" in msg:
-                tag = "erro"
-            elif "[AVISO]" in msg or "INFERIOR" in msg:
-                tag = "aviso"
-            else:
-                tag = "normal"
-            self.after(0, lambda m=msg, t=tag: self.log(m, t))
-            _print_orig(*args, **kw)
-        builtins.print = _print_gui
+            tipo = ("ok"    if "[OK]"     in msg else
+                    "erro"  if "[ERRO]"   in msg or "[PULADO]" in msg else
+                    "aviso" if "[AVISO]"  in msg or "INFERIOR" in msg else
+                    "normal")
+            self.after(0, lambda m=msg, t=tipo: self.log(m, t))
+            _orig(*args, **kw)
+
+        builtins.print = _gui_print
 
         try:
-            bot.driver.get("http://45.228.140.38:8082/WebSGEP/")
-            bot.fazer_login()
-            bot.abrir_novo_pedido()
-            bot.selecionar_empresa()
-            bot.preencher_data()
-            bot.preencher_ordem()
-            bot.selecionar_cliente()
-            bot.selecionar_vendedor()
-            bot.selecionar_pagamento()
-            bot.preencher_observacao_inicial()
-            bot.gravar_pedido()
-            bot.abrir_aba_itens()
+            from pages.pedidos import executar_pedido
 
-            for item in self.itens:
-                bot.adicionar_item(
-                    item["especie"], item["pa"],
-                    item["quantidade"], item["valor"]
-                )
+            dados = {
+                "ordem":          self.v_ordem.get().strip(),
+                "data":           self.v_data.get().strip(),
+                "cliente":        self.v_cliente.get().strip().lower(),
+                "pagamento":      self.v_pagto.get().strip().lower(),
+                "observacao":     self.txt_obs.get("1.0", "end").strip(),
+                "empresa_index":  1,
+                "vendedor_index": 1,
+            }
 
-            self.after(0, lambda: self.log("\n✔  PEDIDO CONCLUÍDO COM SUCESSO!", "ok"))
+            codigo = executar_pedido(dados, self.itens)
+            self._codigo_pedido = codigo
+
+            self.after(0, lambda: self.log("\n✔  PEDIDO CONCLUÍDO!", "ok"))
+            self.after(0, lambda: self._status("Pedido concluído."))
+
+            # ── PDF (opcional) ──────────────────
+            if self.v_baixar_pdf.get():
+                if codigo:
+                    self.after(0, lambda: self.log(
+                        f"\n[PDF] Buscando pedido #{codigo}...", "info"))
+                    self._baixar_pdf(codigo, dados["cliente"], dados["data"])
+                else:
+                    self.after(0, lambda: self.log(
+                        "[PDF] Código do pedido não capturado — baixe manualmente.", "aviso"))
+
             self.after(0, lambda: messagebox.showinfo(
                 "Concluído", "Pedido enviado com sucesso!\nVerifique o sistema."))
 
         except Exception as ex:
             self.after(0, lambda e=str(ex): self.log(f"[ERRO FATAL] {e}", "erro"))
-            self.after(0, lambda: messagebox.showerror(
-                "Erro na automação", str(ex)))
+            self.after(0, lambda: self._status("Erro na automação."))
+            self.after(0, lambda: messagebox.showerror("Erro na automação", str(ex)))
         finally:
-            builtins.print = _print_orig
+            builtins.print = _orig
+
+    def _baixar_pdf(self, codigo, cliente, data):
+        """Chama pages/pdf.py para baixar o PDF com valor do pedido."""
+        try:
+            from pages.pdf import baixar_pdf
+            ok = baixar_pdf(codigo, cliente, data)
+            if ok:
+                self.after(0, lambda: self.log(
+                    f"[PDF] [OK] PDF do pedido #{codigo} salvo em data/pedidos/", "ok"))
+            else:
+                self.after(0, lambda: self.log(
+                    f"[PDF] [AVISO] Não foi possível salvar automaticamente. Veja o log acima.", "aviso"))
+        except ImportError:
+            self.after(0, lambda: self.log(
+                "[PDF] [AVISO] Instale as dependências: pip install pyautogui pyperclip keyboard", "aviso"))
+        except Exception as ex:
+            self.after(0, lambda e=str(ex): self.log(f"[PDF] [ERRO] {e}", "erro"))
 
 
-# ─────────────────────────────────────────────
+# ── Ponto de entrada ─────────────────────────
 if __name__ == "__main__":
     app = App()
     app.mainloop()

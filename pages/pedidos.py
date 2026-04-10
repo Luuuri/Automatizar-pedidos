@@ -1,151 +1,125 @@
-#############################
-# BIBLIOTECAS
-#############################
+# ─────────────────────────────────────────────
+#  pages/pedidos.py — automação do fluxo de pedidos
+# ─────────────────────────────────────────────
 
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait, Select
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import utils.driver as _drv
+from utils.waits import aguardar, esperar, limpar_e_digitar, clicar_js, fechar_popup_swal
+from config import SEL, LOGIN, CLIENTES_ESPECIAIS, CLIENTES_NORMAIS
 import time
 
-service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service)
-
-#############################
-# CONFIG — CLIENTES
-#############################
-
-# Clientes com múltiplos endereços ou nome diferente no sistema.
-# "value" é o valor do <option> no HTML — inspecione o <select> para descobrir.
-clientes_especiais = {
-    "formosa_d":    {"busca": "formosa", "value": "328"},
-    "formosa_cn":   {"busca": "formosa", "value": "327"},
-    "formosa_agm":  {"busca": "formosa", "value": "332"},
-    "formosa_cu":   {"busca": "formosa", "value": "329"},
-    "formosa_g":    {"busca": "formosa", "value": "9180"},
-    "rest_cortizu": {"busca": "cortizu", "value": "5860"},
-    "mc_solano":    {"busca": "mc solano","value": "9411"},
-    "trs":          {"busca": "trs de souza","value": "9410"},
-    "s_alb":        {"busca": "s albuquerque","value": "409"},
-    "fas":          {"busca": "fas queiroz","value": "595"},
-    "ds":           {"busca": "ds muller", "value": "330"},
-}
-
-# Clientes que o sistema reconhece só pelo nome digitado.
-clientes_normais = {
-    "compespa", "assembleia", "jo", "lucelia", "lider",
-    "cambuci", "r3x", "shopping", "kenko", "amazonia", "dumar"
-}
-
-#############################
-# SELETORES HTML
-#############################
-
-SEL = {
-    "usuario":       "#USUEMAIL",
-    "senha":         "#USUSENHA",
-    "btn_login":     ".sartec-btn-login",
-    "btn_pedidos":   "#atalhos",
-    "aba_pedidos":   "#pedido",
-    "aba_itens":     "#itensPedido",
-    "empresa":       "#EMPCODIGO",
-    "data_entrega":  "#PEDDTPREVENTREGA",
-    "ordem_compra":  "#PEDORDEMCOMPRA",
-    "cliente":       "#CLICODIGO",
-    "vendedor":      "#VENCODIGO",
-    "cond_pagto":    "#CPACODIGO",
-    "observacao":    "#PEDOBS",
-    "especie":       "#ESPCODIGO",
-    "produto":       "#PROCODIGO",
-    "und_medida":    "#IPEUNIMEDIDA",
-    "quantidade":    "#IPEQTDE",
-    "valor_unit":    "#IPEVLUNITARIO",
-    "salvar_pedido": "#btnGravarPedido",
-    "salvar_item":   "#btnGravar",
-    "erro_swal":     ".swal-text",
-    "btn_confirmar": ".swal-button--confirm",
-}
-
-#############################
-# DADOS DO PEDIDO
-# ← EDITE AQUI ANTES DE RODAR
-#############################
-
-LOGIN = {
-    "usuario": "Americo.Lima",
-    "senha":   "amlima1947",
-}
-
 pedido = {
-    "cliente":        "compespa",
-    "data":           "09/04/2026",
+    "cliente":        "",
+    "data":           "",
     "ordem":          "0",
-    "pagamento":      "30",
-    "observacao":     "",           # deixe "" se não tiver observação inicial
+    "pagamento":      "",
+    "observacao":     "",
     "empresa_index":  1,
     "vendedor_index": 1,
 }
 
-#############################
-# FUNÇÕES AUXILIARES
-#############################
+def _d():
+    return _drv.driver
 
-def esperar(segundos=10):
-    return WebDriverWait(driver, segundos)
+# ── Bootstrap Select ──────────────────────────
 
-def aguardar(seletor, segundos=10):
-    return WebDriverWait(driver, segundos).until(
-        EC.visibility_of_element_located((By.CSS_SELECTOR, seletor))
+def _bsselect_buscar_e_selecionar(data_id, texto_busca, texto_opcao=None):
+    """
+    Interage com dropdowns Bootstrap Select:
+    1. Clica no botão para abrir
+    2. Digita no campo de busca interno
+    3. Clica na opção desejada
+    """
+    d = _d()
+
+    # Abre o dropdown
+    btn = d.find_element(By.CSS_SELECTOR, f'button[data-id="{data_id}"]')
+    d.execute_script("arguments[0].click();", btn)
+    time.sleep(0.5)
+
+    # Campo de busca interno do bootstrap-select
+    try:
+        busca = WebDriverWait(d, 4).until(
+            EC.visibility_of_element_located((
+                By.CSS_SELECTOR, ".bootstrap-select.open .bs-searchbox input, "
+                                 ".bootstrap-select.show .bs-searchbox input"
+            ))
+        )
+        busca.send_keys(texto_busca)
+        time.sleep(0.6)
+    except Exception:
+        pass  # sem campo de busca — continua
+
+    # Clica na opção correta
+    alvo = texto_opcao.lower() if texto_opcao else None
+    opcoes = d.find_elements(
+        By.CSS_SELECTOR,
+        ".bootstrap-select.open ul.dropdown-menu.inner li:not(.disabled) a span.text, "
+        ".bootstrap-select.show ul.dropdown-menu.inner li:not(.disabled) a span.text"
     )
 
-def limpar_e_digitar(seletor, texto):
-    campo = aguardar(seletor)
-    campo.send_keys(Keys.CONTROL + "a")
-    campo.send_keys(Keys.DELETE)
-    campo.send_keys(str(texto))
-    return campo
+    for opcao in opcoes:
+        texto = opcao.text.strip()
+        if not texto:
+            continue
+        if alvo:
+            if alvo in texto.lower():
+                d.execute_script("arguments[0].click();", opcao)
+                time.sleep(0.3)
+                return texto
+        else:
+            d.execute_script("arguments[0].click();", opcao)
+            time.sleep(0.3)
+            return texto
 
-def escolher_cliente(nome):
-    if nome in clientes_especiais:
-        return clientes_especiais[nome]
-    elif nome in clientes_normais:
+    raise Exception(f"Opção '{texto_opcao or texto_busca}' não encontrada no bs-select [{data_id}]")
+
+# ── helpers internos ──────────────────────────
+
+def _escolher_cliente(nome):
+    if nome in CLIENTES_ESPECIAIS:
+        return CLIENTES_ESPECIAIS[nome]
+    elif nome in CLIENTES_NORMAIS:
         return {"busca": nome, "value": None}
     else:
-        raise ValueError(
-            f"\nCliente '{nome}' não cadastrado no código.\n"
-            "→ Adicione em 'clientes_especiais' (com value) ou 'clientes_normais'."
-        )
+        raise ValueError(f"Cliente '{nome}' não cadastrado no config.py.")
 
-def anotar_preco_observacao(pa, valor):
-    """
-    Vai para a aba Pedidos, anota 'PA XXXX V,VV' em Observações
-    (com uma linha de espaço antes se já tiver outro texto), e volta para Itens.
-    """
+def _anotar_preco_observacao(pa, valor):
     nota = f"PA {pa} {f'{valor:.2f}'.replace('.', ',')}"
 
-    aguardar(SEL["aba_pedidos"]).click()
-    time.sleep(0.5)
+    clicar_js(SEL["aba_pedidos"])
+    time.sleep(0.8)
 
     campo = aguardar(SEL["observacao"])
     atual = campo.get_attribute("value").strip()
-
     if atual:
-        # Já tem texto — vai ao final e abre uma linha antes de anotar
         campo.send_keys(Keys.END)
-        campo.send_keys(Keys.SHIFT + Keys.ENTER)
-
+        campo.send_keys(" / ")
     campo.send_keys(nota)
     print(f"         [OBS] Anotado: {nota}")
 
-    aguardar(SEL["aba_itens"]).click()
-    time.sleep(0.5)
+    # Grava o pedido novamente para persistir a observação no sistema
+    clicar_js(SEL["salvar_pedido"])
+    fechar_popup_swal(timeout=10)
+    print(f"         [OBS] Pedido regravado com observação.")
 
-#############################
-# ETAPAS DO PEDIDO
-#############################
+    clicar_js("#pedidoitem")
+    time.sleep(0.8)
+
+def _ler_codigo():
+    time.sleep(0.5)
+    try:
+        campo = _d().find_element(By.CSS_SELECTOR, "#PEDCODIGO")
+        valor = campo.get_attribute("value").strip()
+        return valor if valor and valor != "0" else None
+    except Exception:
+        return None
+
+# ── etapas do pedido ──────────────────────────
 
 def fazer_login():
     aguardar(SEL["usuario"]).send_keys(LOGIN["usuario"])
@@ -155,12 +129,14 @@ def fazer_login():
 
 def abrir_novo_pedido():
     aguardar(SEL["btn_pedidos"]).click()
+    time.sleep(0.5)
     aguardar(SEL["aba_pedidos"]).click()
+    time.sleep(0.5)
     print("[OK] Aba Pedidos aberta")
 
 def selecionar_empresa():
     esperar().until(
-        lambda d: len(Select(d.find_element(By.CSS_SELECTOR, SEL["empresa"])).options) > 1
+        lambda d: len(Select(d.find_element("css selector", SEL["empresa"])).options) > 1
     )
     Select(aguardar(SEL["empresa"])).select_by_index(pedido["empresa_index"])
     print("[OK] Empresa selecionada")
@@ -174,17 +150,16 @@ def preencher_ordem():
     print(f"[OK] Ordem de compra: {pedido['ordem']}")
 
 def selecionar_cliente():
-    dados = escolher_cliente(pedido["cliente"])
+    dados = _escolher_cliente(pedido["cliente"])
     campo = aguardar(SEL["cliente"])
-
     if dados["value"]:
         Select(campo).select_by_value(str(dados["value"]))
     else:
+        campo.click()
         campo.send_keys(Keys.CONTROL + "a", Keys.DELETE)
         campo.send_keys(dados["busca"])
         time.sleep(1.5)
         campo.send_keys(Keys.ENTER)
-
     print(f"[OK] Cliente: {pedido['cliente']}")
 
 def selecionar_vendedor():
@@ -194,7 +169,6 @@ def selecionar_vendedor():
 def selecionar_pagamento():
     select = Select(aguardar(SEL["cond_pagto"]))
     entrada = pedido["pagamento"].lower().strip()
-
     for modo in ("exato", "inicia", "contem"):
         for opcao in select.options:
             texto = opcao.text.lower().strip()
@@ -207,7 +181,6 @@ def selecionar_pagamento():
                 opcao.click()
                 print(f"[OK] Pagamento: {opcao.text.strip()}")
                 return
-
     raise Exception(f"Condição de pagamento '{pedido['pagamento']}' não encontrada.")
 
 def preencher_observacao_inicial():
@@ -215,44 +188,39 @@ def preencher_observacao_inicial():
     if not texto:
         return
     campo = aguardar(SEL["observacao"])
+    campo.click()
     campo.send_keys(texto)
     print(f"[OK] Observação: {texto}")
 
-def clicar_js(seletor):
-    """
-    Clica via JavaScript — resolve ElementClickInterceptedException
-    quando outro elemento (header fixo, banner) está sobreposto ao botão.
-    """
-    elemento = aguardar(seletor)
-    driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", elemento)
-    time.sleep(0.3)
-    driver.execute_script("arguments[0].click();", elemento)
-
 def gravar_pedido():
     clicar_js(SEL["salvar_pedido"])
-    time.sleep(2)
-    print("[OK] Pedido gravado — abrindo itens...")
+    texto = fechar_popup_swal(timeout=10)
+    if texto:
+        print(f"[OK] Pedido gravado — {texto}")
+    else:
+        print("[AVISO] Popup não apareceu — continuando mesmo assim")
+    # Após gravar o sistema fica na aba Pedidos com o código preenchido
+    codigo = _ler_codigo()
+    if codigo:
+        print(f"[OK] Código do pedido capturado: {codigo}")
+    else:
+        print("[AVISO] Código não capturado.")
+    return codigo
 
 def abrir_aba_itens():
-    clicar_js(SEL["aba_itens"])
+    # ID correto conforme HTML inspecionado: id="pedidoitem"
+    clicar_js("#pedidoitem")
     time.sleep(1)
     print("[OK] Aba Itens Pedidos aberta\n")
 
 def verificar_erro_produto():
-    try:
-        erro = WebDriverWait(driver, 2).until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, SEL["erro_swal"]))
-        )
-        if "não encontrado" in erro.text.lower():
-            print(f"[ERRO] {erro.text}")
-            driver.find_element(By.CSS_SELECTOR, SEL["btn_confirmar"]).click()
-            return True
-    except Exception:
-        pass
+    texto = fechar_popup_swal(timeout=2)
+    if texto and "não encontrado" in texto.lower():
+        print(f"[ERRO] {texto}")
+        return True
     return False
 
 def ler_valor_sistema():
-    """Lê o valor que o sistema preencheu automaticamente no campo Valor Unit."""
     campo = aguardar(SEL["valor_unit"])
     texto = campo.get_attribute("value").strip().replace(",", ".")
     try:
@@ -260,41 +228,53 @@ def ler_valor_sistema():
     except ValueError:
         return 0.0
 
+# ── adição de itens ───────────────────────────
+
+_ultima_especie        = None
+_und_medida_preenchida = False
+
 def adicionar_item(especie, pa, quantidade, valor_pedido):
-    """
-    Preenche e grava um item.
-      valor_pedido < valor_sistema  → anota nas Observações (não mexe no campo)
-      valor_pedido == valor_sistema → não mexe no campo (já está correto)
-      valor_pedido > valor_sistema  → digita o novo valor (sistema aceita)
-    """
+    global _ultima_especie, _und_medida_preenchida
 
-    # Espécie
-    limpar_e_digitar(SEL["especie"], especie)
-    time.sleep(1)
-    aguardar(SEL["especie"]).send_keys(Keys.ENTER)
+    print(f"\n[ITEM] {especie.upper()} | PA {pa} | {quantidade} kg | R$ {valor_pedido:.2f}")
 
-    # Produto (PA)
-    limpar_e_digitar(SEL["produto"], pa)
-    time.sleep(1)
-    aguardar(SEL["produto"]).send_keys(Keys.ENTER)
+    # 1. Espécie — só muda se diferente do item anterior
+    if especie.lower() != (_ultima_especie or "").lower():
+        texto_opcao = "rosa" if "camar" in especie.lower() else None
+        nome_sel = _bsselect_buscar_e_selecionar("ESPCODIGO", especie, texto_opcao)
+        print(f"         Espécie: {nome_sel}")
+        _ultima_especie = especie.lower()
+        time.sleep(0.3)
+    else:
+        print(f"         Espécie mantida: {especie}")
+
+    # 2. Produto (PA)
+    nome_prod = _bsselect_buscar_e_selecionar("PROCODIGO", pa)
+    print(f"         Produto: {nome_prod}")
+    time.sleep(0.8)
 
     if verificar_erro_produto():
         print(f"[PULADO] PA {pa} não encontrado.")
         return
 
-    # Unidade de medida
-    limpar_e_digitar(SEL["und_medida"], "KG")
+    # 3. Uni. Medida (uma vez por pedido)
+    if not _und_medida_preenchida:
+        limpar_e_digitar(SEL["und_medida"], "KG")
+        _und_medida_preenchida = True
+        print("         Uni. Medida: KG")
 
-    # Quantidade
+    # 4. Quantidade (sempre sobrescreve)
     limpar_e_digitar(SEL["quantidade"], str(quantidade).replace(".", ","))
 
-    # Valor — compara com o que o sistema colocou
+    # 5. Valor
     valor_sistema = ler_valor_sistema()
     print(f"         Sistema: R$ {valor_sistema:.2f} | Pedido: R$ {valor_pedido:.2f}", end=" → ")
 
     if valor_pedido < valor_sistema:
         print("INFERIOR — anotando em Observações")
-        anotar_preco_observacao(pa, valor_pedido)
+        _anotar_preco_observacao(pa, valor_pedido)
+        # Re-preenche quantidade após voltar para Itens
+        limpar_e_digitar(SEL["quantidade"], str(quantidade).replace(".", ","))
 
     elif valor_pedido > valor_sistema:
         print("SUPERIOR — alterando valor")
@@ -303,82 +283,49 @@ def adicionar_item(especie, pa, quantidade, valor_pedido):
     else:
         print("IGUAL — sem alteração")
 
-    # Grava o item
+    # 6. Gravar
     clicar_js(SEL["salvar_item"])
+    texto = fechar_popup_swal(timeout=10)
+    if texto and "sucesso" in texto.lower():
+        print(f"         [OK] PA {pa} gravado — {texto}")
+    elif texto:
+        print(f"         [AVISO] PA {pa} — resposta: {texto}")
+    else:
+        print(f"         [AVISO] PA {pa} — popup não apareceu.")
 
-    # Aguarda campo de produto limpar para confirmar que salvou
-    esperar().until(
-        lambda d: d.find_element(By.CSS_SELECTOR, SEL["produto"]).get_attribute("value") == ""
-    )
-    print(f"         [OK] PA {pa} gravado.")
+    time.sleep(0.5)
 
-#############################
-# LOOP DE ITENS NO TERMINAL
-#############################
+# ── execução completa ─────────────────────────
 
-def loop_itens():
-    """
-    Pergunta os dados de cada item no terminal.
-    Digite 'fim' no campo Espécie para encerrar.
-    """
-    print("=" * 45)
-    print("ADICIONANDO ITENS")
-    print("Digite 'fim' no campo Espécie para encerrar.")
-    print("=" * 45)
+def executar_pedido(dados_pedido, itens):
+    global _ultima_especie, _und_medida_preenchida
+    _ultima_especie        = None
+    _und_medida_preenchida = False
 
-    while True:
-        print()
-        especie = input("Espécie (ou 'fim'): ").strip().lower()
-        if especie == "fim":
-            break
+    pedido.update(dados_pedido)
 
-        pa = input("PA do produto:      ").strip().zfill(4)
+    # Cria o Chrome aqui, não na importação
+    _drv.iniciar()
 
-        qtd_raw = input("Quantidade (kg):    ").strip().replace(",", ".")
-        try:
-            quantidade = float(qtd_raw)
-        except ValueError:
-            print("[ERRO] Quantidade inválida — item pulado.")
-            continue
+    from config import URL_BASE
+    _d().get(URL_BASE)
 
-        val_raw = input("Valor unitário:     ").strip().replace(",", ".")
-        try:
-            valor = float(val_raw)
-        except ValueError:
-            print("[ERRO] Valor inválido — item pulado.")
-            continue
+    fazer_login()
+    abrir_novo_pedido()
+    selecionar_empresa()
+    preencher_data()
+    preencher_ordem()
+    selecionar_cliente()
+    selecionar_vendedor()
+    selecionar_pagamento()
+    preencher_observacao_inicial()
 
-        print(f"\n[→] Adicionando: {especie.upper()} | PA {pa} | {quantidade} kg | R$ {valor:.2f}")
-        adicionar_item(especie, pa, quantidade, valor)
+    codigo = gravar_pedido()
 
-    print("\n[OK] Todos os itens adicionados.")
+    abrir_aba_itens()
 
-#############################
-# EXECUÇÃO PRINCIPAL
-#############################
+    for item in itens:
+        adicionar_item(item["especie"], item["pa"], item["quantidade"], item["valor"])
 
-print("=" * 45)
-print("  AUTOMAÇÃO SGEP — PEDIDOS DE PESCADOS")
-print("=" * 45 + "\n")
-
-driver.get("http://45.228.140.38:8082/WebSGEP/")
-
-fazer_login()
-abrir_novo_pedido()
-
-selecionar_empresa()
-preencher_data()
-preencher_ordem()
-selecionar_cliente()
-selecionar_vendedor()
-selecionar_pagamento()
-preencher_observacao_inicial()
-
-gravar_pedido()
-abrir_aba_itens()
-
-loop_itens()
-
-print("\n=== PEDIDO CONCLUÍDO! ===")
-input("Pressione ENTER para fechar o navegador...")
-driver.quit()
+    print("\n=== PEDIDO CONCLUÍDO! ===")
+    return codigo

@@ -1,0 +1,377 @@
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 08/04/2026 00:00
+═══════════════════════════════════════════════════════
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 10/04/26
+[OK] Ordem de compra: 0
+[OK] Cliente: amazonia
+[OK] Vendedor selecionado
+[OK] Pagamento: 30 DIAS
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[ERRO FATAL] Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xb8c733+10b73]
+	chromedriver!GetHandleVerifier [0xb8c864+10ca4]
+	chromedriver!(No symbol) [0x962100]
+	chromedriver!(No symbol) [0x9aacba]
+	chromedriver!(No symbol) [0x9aaf5b]
+	chromedriver!(No symbol) [0x9ed9c2]
+	chromedriver!(No symbol) [0x9cdc64]
+	chromedriver!(No symbol) [0x9eb1f4]
+	chromedriver!(No symbol) [0x9cd9b6]
+	chromedriver!(No symbol) [0x9a0339]
+	chromedriver!(No symbol) [0x9a10f4]
+	chromedriver!GetHandleVerifier [0xdefe04+274244]
+	chromedriver!GetHandleVerifier [0xdeb459+26f899]
+	chromedriver!GetHandleVerifier [0xe09bd5+28e015]
+	chromedriver!GetHandleVerifier [0xba7188+2b5c8]
+	chromedriver!GetHandleVerifier [0xbaf23d+3367d]
+	chromedriver!GetHandleVerifier [0xb95138+19578]
+	chromedriver!GetHandleVerifier [0xb95302+19742]
+	chromedriver!GetHandleVerifier [0xb7e48f+28cf]
+	KERNEL32!BaseThreadInitThunk [0x75c65d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7734d81b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7734d7a1+231]
+
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 09/04/2026 00:00
+═══════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 09/04/2026 00:00
+═══════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 09/04/2026 00:00
+═══════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 09/04/2026 00:00
+═══════════════════════════════════════════════════════
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 10/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: s_alb
+[ERRO FATAL] Message: Could not locate element with index 1; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 10/04/2026 00:00
+═══════════════════════════════════════════════════════
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 10/04/2026
+[OK] Ordem de compra: 0
+[ERRO FATAL] Message: Cannot locate option with value: 328; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 10/04/2026 00:00
+═══════════════════════════════════════════════════════
+[ERRO FATAL] Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=147.0.7727.56); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xbfc733+10b73]
+	chromedriver!GetHandleVerifier [0xbfc864+10ca4]
+	chromedriver!(No symbol) [0x9d2100]
+	chromedriver!(No symbol) [0x9c109e]
+	chromedriver!(No symbol) [0x9dfbd9]
+	chromedriver!(No symbol) [0xa4464c]
+	chromedriver!(No symbol) [0xa5ac29]
+	chromedriver!(No symbol) [0xa3d9b6]
+	chromedriver!(No symbol) [0xa10339]
+	chromedriver!(No symbol) [0xa110f4]
+	chromedriver!GetHandleVerifier [0xe5fe04+274244]
+	chromedriver!GetHandleVerifier [0xe5b459+26f899]
+	chromedriver!GetHandleVerifier [0xe79bd5+28e015]
+	chromedriver!GetHandleVerifier [0xc17188+2b5c8]
+	chromedriver!GetHandleVerifier [0xc1f23d+3367d]
+	chromedriver!GetHandleVerifier [0xc05138+19578]
+	chromedriver!GetHandleVerifier [0xc05302+19742]
+	chromedriver!GetHandleVerifier [0xbee48f+28cf]
+	KERNEL32!BaseThreadInitThunk [0x76a85d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7745d81b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7745d7a1+231]
+
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 10/04/2026 00:00
+═══════════════════════════════════════════════════════
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 10/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: amazonia
+[OK] Vendedor selecionado
+[OK] Pagamento: 30 DIAS
+[OK] Observação: TESTE
+[OK] Pedido gravado — Pedido Incluido com Sucesso ! | Código: 90779
+[ERRO FATAL] Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xbfc733+10b73]
+	chromedriver!GetHandleVerifier [0xbfc864+10ca4]
+	chromedriver!(No symbol) [0x9d2100]
+	chromedriver!(No symbol) [0xa1acba]
+	chromedriver!(No symbol) [0xa1af5b]
+	chromedriver!(No symbol) [0xa5d9c2]
+	chromedriver!(No symbol) [0xa3dc64]
+	chromedriver!(No symbol) [0xa5b1f4]
+	chromedriver!(No symbol) [0xa3d9b6]
+	chromedriver!(No symbol) [0xa10339]
+	chromedriver!(No symbol) [0xa110f4]
+	chromedriver!GetHandleVerifier [0xe5fe04+274244]
+	chromedriver!GetHandleVerifier [0xe5b459+26f899]
+	chromedriver!GetHandleVerifier [0xe79bd5+28e015]
+	chromedriver!GetHandleVerifier [0xc17188+2b5c8]
+	chromedriver!GetHandleVerifier [0xc1f23d+3367d]
+	chromedriver!GetHandleVerifier [0xc05138+19578]
+	chromedriver!GetHandleVerifier [0xc05302+19742]
+	chromedriver!GetHandleVerifier [0xbee48f+28cf]
+	KERNEL32!BaseThreadInitThunk [0x76a85d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7745d81b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7745d7a1+231]
+
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 10/04/2026 00:00
+═══════════════════════════════════════════════════════
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 10/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: formosa_cn
+[OK] Vendedor selecionado
+[OK] Pagamento: 30 DIAS
+[OK] Observação: teste
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido: 90780
+[ERRO FATAL] Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xbfc733+10b73]
+	chromedriver!GetHandleVerifier [0xbfc864+10ca4]
+	chromedriver!(No symbol) [0x9d2100]
+	chromedriver!(No symbol) [0xa1acba]
+	chromedriver!(No symbol) [0xa1af5b]
+	chromedriver!(No symbol) [0xa5d9c2]
+	chromedriver!(No symbol) [0xa3dc64]
+	chromedriver!(No symbol) [0xa5b1f4]
+	chromedriver!(No symbol) [0xa3d9b6]
+	chromedriver!(No symbol) [0xa10339]
+	chromedriver!(No symbol) [0xa110f4]
+	chromedriver!GetHandleVerifier [0xe5fe04+274244]
+	chromedriver!GetHandleVerifier [0xe5b459+26f899]
+	chromedriver!GetHandleVerifier [0xe79bd5+28e015]
+	chromedriver!GetHandleVerifier [0xc17188+2b5c8]
+	chromedriver!GetHandleVerifier [0xc1f23d+3367d]
+	chromedriver!GetHandleVerifier [0xc05138+19578]
+	chromedriver!GetHandleVerifier [0xc05302+19742]
+	chromedriver!GetHandleVerifier [0xbee48f+28cf]
+	KERNEL32!BaseThreadInitThunk [0x76a85d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7745d81b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7745d7a1+231]
+
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 10/04/2026 00:00
+═══════════════════════════════════════════════════════
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 10/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: formosa_d
+[OK] Vendedor selecionado
+[OK] Pagamento: 30 DIAS
+[OK] Observação: teste
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90781
+[ERRO FATAL] Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xbfc733+10b73]
+	chromedriver!GetHandleVerifier [0xbfc864+10ca4]
+	chromedriver!(No symbol) [0x9d2100]
+	chromedriver!(No symbol) [0xa1acba]
+	chromedriver!(No symbol) [0xa1af5b]
+	chromedriver!(No symbol) [0xa5d9c2]
+	chromedriver!(No symbol) [0xa3dc64]
+	chromedriver!(No symbol) [0xa5b1f4]
+	chromedriver!(No symbol) [0xa3d9b6]
+	chromedriver!(No symbol) [0xa10339]
+	chromedriver!(No symbol) [0xa110f4]
+	chromedriver!GetHandleVerifier [0xe5fe04+274244]
+	chromedriver!GetHandleVerifier [0xe5b459+26f899]
+	chromedriver!GetHandleVerifier [0xe79bd5+28e015]
+	chromedriver!GetHandleVerifier [0xc17188+2b5c8]
+	chromedriver!GetHandleVerifier [0xc1f23d+3367d]
+	chromedriver!GetHandleVerifier [0xc05138+19578]
+	chromedriver!GetHandleVerifier [0xc05302+19742]
+	chromedriver!GetHandleVerifier [0xbee48f+28cf]
+	KERNEL32!BaseThreadInitThunk [0x76a85d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7745d81b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7745d7a1+231]
+
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 10/04/2026 00:00
+═══════════════════════════════════════════════════════
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 10/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: ds
+[OK] Vendedor selecionado
+[OK] Pagamento: 30 DIAS
+[OK] Observação: teste
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90782
+[ERRO] Não consegui abrir a aba de Itens. Abas encontradas na página:
+         (erro ao listar abas: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xbfc733+10b73]
+	chromedriver!GetHandleVerifier [0xbfc864+10ca4]
+	chromedriver!(No symbol) [0x9d1f3e]
+	chromedriver!(No symbol) [0xa0f5c5]
+	chromedriver!(No symbol) [0xa3dad6]
+	chromedriver!(No symbol) [0xa38f42]
+	chromedriver!(No symbol) [0xa38561]
+	chromedriver!(No symbol) [0x9a531e]
+	chromedriver!(No symbol) [0x9a58be]
+	chromedriver!(No symbol) [0x9a5d9d]
+	chromedriver!GetHandleVerifier [0xe5fe04+274244]
+	chromedriver!GetHandleVerifier [0xe5b459+26f899]
+	chromedriver!GetHandleVerifier [0xe79bd5+28e015]
+	chromedriver!GetHandleVerifier [0xc17188+2b5c8]
+	chromedriver!GetHandleVerifier [0xc1f23d+3367d]
+	chromedriver!(No symbol) [0x9a4e99]
+	chromedriver!(No symbol) [0x9a44e0]
+	chromedriver!GetHandleVerifier [0xfa2faf+3b73ef]
+	KERNEL32!BaseThreadInitThunk [0x76a85d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7745d81b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7745d7a1+231]
+)
+[ERRO FATAL] Aba de Itens Pedidos não encontrada — veja os IDs acima no log.
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 10/04/2026 00:00
+═══════════════════════════════════════════════════════
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 10/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: trs
+[OK] Vendedor selecionado
+[OK] Pagamento: 30 DIAS
+[OK] Observação: teste
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90783
+[OK] Aba Itens Pedidos aberta
+
+
+[ITEM] CAMARAO | PA 0108 | 20.0 kg | R$ 20.00
+         Espécie: CAMARAO ROSA
+         Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+         Uni. Medida: KG
+         Sistema: R$ 80.50 | Pedido: R$ 20.00
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0108 20,00
+         [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO ROSA | PA 0105 | 45.0 kg | R$ 102.00
+         Espécie: CAMARAO ROSA
+         Produto: PA0105 - 26/30 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+         Sistema: R$ 99.50 | Pedido: R$ 102.00
+SUPERIOR — alterando valor
+         [OK] PA 0105 gravado — Item do Pedido Incluido com sucesso !
+
+=== PEDIDO CONCLUÍDO! ===
+
+✔  PEDIDO CONCLUÍDO!
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 10/04/2026 00:00
+═══════════════════════════════════════════════════════
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 10/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: trs
+[OK] Vendedor selecionado
+[OK] Pagamento: 30 DIAS
+[OK] Observação: teste
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90784
+[OK] Aba Itens Pedidos aberta
+
+
+[ITEM] CAMARAO | PA 0108 | 20.0 kg | R$ 20.00
+         Espécie: CAMARAO ROSA
+         Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+         Uni. Medida: KG
+         Sistema: R$ 80.50 | Pedido: R$ 20.00
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0108 20,00
+         [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO ROSA | PA 0105 | 45.0 kg | R$ 102.00
+         Espécie: CAMARAO ROSA
+         Produto: PA0105 - 26/30 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+         Sistema: R$ 99.50 | Pedido: R$ 102.00
+SUPERIOR — alterando valor
+         [OK] PA 0105 gravado — Item do Pedido Incluido com sucesso !
+
+=== PEDIDO CONCLUÍDO! ===
+
+✔  PEDIDO CONCLUÍDO!
+
+[PDF] Buscando pedido #90784...
+
+[PDF] Iniciando download — Pedido #90784
+[PDF] [AVISO] Pedido #90784 não encontrado na lista do filtro.
+[PDF]         Tente baixar manualmente.
+[PDF] [AVISO] Não foi possível salvar automaticamente. Veja o log acima.
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 10/04/2026 00:00
+═══════════════════════════════════════════════════════
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 10/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: kenko
+[OK] Vendedor selecionado
+[OK] Pagamento: 21/28/35 DIAS
+[OK] Observação: teste
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90785
+[OK] Aba Itens Pedidos aberta
+
+
+[ITEM] CAMARAO | PA 0108 | 20.0 kg | R$ 120.00
+         Espécie: CAMARAO ROSA
+         Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+         Uni. Medida: KG
+         Sistema: R$ 80.50 | Pedido: R$ 120.00
+SUPERIOR — alterando valor
+         [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0202 | 390.0 kg | R$ 12.00
+         Espécie mantida: camarao
+         Produto: PA0202 - G31/50 CAMARAO ROSA DESC CONG SC400G CX10
+         Sistema: R$ 112.50 | Pedido: R$ 12.00
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0202 12,00
+         [OK] PA 0202 gravado — Item do Pedido Incluido com sucesso !
+
+=== PEDIDO CONCLUÍDO! ===
+
+✔  PEDIDO CONCLUÍDO!
+
+[PDF] Buscando pedido #90785...
+
+[PDF] Iniciando download — Pedido #90785
+[PDF] Pedido #90785 encontrado.
+[PDF] Chamando impressão com valor...
+[PDF] Aguardando diálogo de salvar...
+[PDF] [AVISO] Diálogo não apareceu. Salve manualmente em:
+[PDF]         D:\Documento\#Pedidos
+[PDF] [AVISO] Não foi possível salvar automaticamente. Veja o log acima.
