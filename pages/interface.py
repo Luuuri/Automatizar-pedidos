@@ -5,7 +5,7 @@
 # ─────────────────────────────────────────────
 
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk, messagebox, filedialog
 import threading
 from datetime import date
 import os
@@ -497,8 +497,18 @@ class App(tk.Tk):
 
         # botão limpar log
         btn_row = tk.Frame(frame, bg=COR["janela"])
-        btn_row.grid(row=1, column=0, sticky="e", padx=12, pady=(0, 10))
+        btn_row.grid(row=1, column=0, sticky="ew", padx=12, pady=(0, 10))
         _btn_secundario(btn_row, "Limpar Log", self._limpar_log).pack(side="right")
+        tk.Button(
+            btn_row, text="📎  Enviar PDF via WhatsApp",
+            command=self._enviar_whatsapp,
+            font=FONTE_BTN,
+            bg="#25D366", fg="white",
+            activebackground="#1ebe57",
+            activeforeground="white",
+            relief="flat", cursor="hand2",
+            padx=14, pady=5
+        ).pack(side="left")
 
     # ── Helpers ──────────────────────────────
 
@@ -672,6 +682,35 @@ class App(tk.Tk):
                 "[PDF] [AVISO] Instale as dependências: pip install pyautogui pyperclip keyboard", "aviso"))
         except Exception as ex:
             self.after(0, lambda e=str(ex): self.log(f"[PDF] [ERRO] {e}", "erro"))
+
+
+    def _enviar_whatsapp(self):
+        """Abre seletor de arquivo na pasta de pedidos e envia via WhatsApp Web."""
+        from pages.whatsapp import enviar_pdf, PASTA_PDF
+
+        # Abre o explorador de arquivos já na pasta certa, filtrando só PDFs
+        caminho = filedialog.askopenfilename(
+            title="Selecione o PDF para enviar",
+            initialdir=PASTA_PDF,
+            filetypes=[("PDF", "*.pdf"), ("Todos", "*.*")]
+        )
+        if not caminho:
+            return  # usuário cancelou
+
+        self.nb.select(2)  # vai para aba Log
+        self.log(f"[WA] Enviando: {os.path.basename(caminho)}", "info")
+
+        def _rodar_wa():
+            try:
+                enviar_pdf(caminho)
+                self.after(0, lambda: self.log("[WA] [OK] PDF enviado com sucesso!", "ok"))
+                self.after(0, lambda: messagebox.showinfo(
+                    "WhatsApp", "PDF enviado para Pai Américo!"))
+            except Exception as ex:
+                self.after(0, lambda e=str(ex): self.log(f"[WA] [ERRO] {e}", "erro"))
+                self.after(0, lambda: messagebox.showerror("Erro WhatsApp", str(ex)))
+
+        threading.Thread(target=_rodar_wa, daemon=True).start()
 
 
 # ── Ponto de entrada ─────────────────────────

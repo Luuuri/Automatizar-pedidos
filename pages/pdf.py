@@ -5,6 +5,7 @@
 import time
 import os
 import glob
+from datetime import date
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -94,8 +95,9 @@ def baixar_pdf(codigo, cliente, data_pedido):
         d.find_element(By.CSS_SELECTOR, SEL_FILTRO["aba_filtro"]).click()
     time.sleep(0.8)
 
-    # 2. Preencher data e pesquisar
-    limpar_e_digitar(SEL_FILTRO["data_ini"], data_pedido)
+    # 2. Preencher data de HOJE (data em que o pedido foi feito) e pesquisar
+    data_hoje = date.today().strftime("%d/%m/%Y")
+    limpar_e_digitar(SEL_FILTRO["data_ini"], data_hoje)
     time.sleep(0.3)
     clicar_js(SEL_FILTRO["btn_pesq"])
     try:

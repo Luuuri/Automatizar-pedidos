@@ -375,3 +375,178 @@ INFERIOR — anotando em Observações
 [PDF] [AVISO] Diálogo não apareceu. Salve manualmente em:
 [PDF]         D:\Documento\#Pedidos
 [PDF] [AVISO] Não foi possível salvar automaticamente. Veja o log acima.
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 10/04/2026 00:00
+═══════════════════════════════════════════════════════
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 13/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: formosa_d
+[OK] Vendedor selecionado
+[OK] Pagamento: 30 DIAS
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90790
+[OK] Aba Itens Pedidos aberta
+
+
+[ITEM] CAMARAO | PA 0811 | 70.0 kg | R$ 100.00
+         Espécie: CAMARAO ROSA
+         Produto: PA0811 - M51/70 CAMARAO ROSA DESC CONG SC1KG CX14KG
+         Uni. Medida: KG
+         Sistema: R$ 100.00 | Pedido: R$ 100.00
+IGUAL — sem alteração
+         [OK] PA 0811 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0205 | 30.0 kg | R$ 120.00
+         Espécie mantida: camarao
+         Produto: PA0205 - GG21/30 CAMARAO ROSA DESC EVISC CONG SC400G CX10KG
+         Sistema: R$ 120.00 | Pedido: R$ 120.00
+IGUAL — sem alteração
+         [OK] PA 0205 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0204 | 30.0 kg | R$ 87.50
+         Espécie mantida: camarao
+         Produto: PA0204 - P71/110 CAMARAO ROSA DESC CONG SC400G CX10
+         Sistema: R$ 87.50 | Pedido: R$ 87.50
+IGUAL — sem alteração
+         [OK] PA 0204 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0302 | 24.0 kg | R$ 112.50
+         Espécie mantida: camarao
+         Produto: PA0302 - G31/50 CAMARAO ROSA DESC CONG SC800G CX12
+         Sistema: R$ 112.50 | Pedido: R$ 112.50
+IGUAL — sem alteração
+         [OK] PA 0302 gravado — Item do Pedido Incluido com sucesso !
+
+=== PEDIDO CONCLUÍDO! ===
+
+✔  PEDIDO CONCLUÍDO!
+
+[PDF] Buscando pedido #90790...
+
+[PDF] Iniciando download — Pedido #90790
+[PDF] [AVISO] Pedido #90790 não encontrado na lista.
+[PDF] [AVISO] Não foi possível salvar automaticamente. Veja o log acima.
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 14/04/2026 00:00
+═══════════════════════════════════════════════════════
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 15/04/2026
+[OK] Ordem de compra: 906109-6
+[OK] Cliente: lider
+[OK] Vendedor selecionado
+[OK] Pagamento: 30 DIAS
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90815
+[OK] Aba Itens Pedidos aberta
+
+
+[ITEM] CAMARAO | PA 0106 | 98.0 kg | R$ 92.00
+         Espécie: CAMARAO ROSA
+         Produto: PA0106 - 31/40 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+         Uni. Medida: KG
+         Sistema: R$ 101.00 | Pedido: R$ 92.00
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0106 92,00
+         [OBS] Pedido regravado com observação.
+         [AVISO] PA 0106 — resposta: Problemas ao Gravar. Você não tem permissão para alterar o preço para um menor do que foi definido!
+
+[ITEM] CAMARAO | PA 0804 | 98.0 kg | R$ 70.00
+         Espécie mantida: camarao
+         Produto: PA0804 - P71/110 CAMARAO ROSA S/CABECA CONG SC1KG CX14KG
+         Sistema: R$ 77.00 | Pedido: R$ 70.00
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0804 70,00
+         [OBS] Pedido regravado com observação.
+         [AVISO] PA 0804 — resposta: Problemas ao Gravar. Você não tem permissão para alterar o preço para um menor do que foi definido!
+
+=== PEDIDO CONCLUÍDO! ===
+
+✔  PEDIDO CONCLUÍDO!
+
+[PDF] Buscando pedido #90815...
+
+[PDF] Iniciando download — Pedido #90815
+[PDF] Pedido #90815 encontrado.
+[PDF] Chamando impressão com valor...
+[PDF] Aguardando download...
+[PDF] [AVISO] Download não detectado em D:\Documento\#Pedidos.
+[PDF] [AVISO] Não foi possível salvar automaticamente. Veja o log acima.
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 14/04/2026 00:00
+═══════════════════════════════════════════════════════
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 15/04/2026
+[OK] Ordem de compra: 906109-6
+[OK] Cliente: lider
+[OK] Vendedor selecionado
+[OK] Pagamento: 30 DIAS
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90816
+[OK] Aba Itens Pedidos aberta
+
+
+[ITEM] CAMARAO | PA 0106 | 98.0 kg | R$ 92.00
+         Espécie: CAMARAO ROSA
+         Produto: PA0106 - 31/40 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+         Uni. Medida: KG
+         Sistema: R$ 101.00 | Pedido: R$ 92.00
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0106 92,00
+         [OBS] Pedido regravado com observação.
+         [AVISO] PA 0106 — resposta: Problemas ao Gravar. Você não tem permissão para alterar o preço para um menor do que foi definido!
+
+[ITEM] CAMARAO | PA 0804 | 98.0 kg | R$ 70.00
+         Espécie mantida: camarao
+         Produto: PA0804 - P71/110 CAMARAO ROSA S/CABECA CONG SC1KG CX14KG
+         Sistema: R$ 77.00 | Pedido: R$ 70.00
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0804 70,00
+         [OBS] Pedido regravado com observação.
+         [AVISO] PA 0804 — resposta: Problemas ao Gravar. Você não tem permissão para alterar o preço para um menor do que foi definido!
+
+=== PEDIDO CONCLUÍDO! ===
+
+✔  PEDIDO CONCLUÍDO!
+
+[PDF] Buscando pedido #90816...
+
+[PDF] Iniciando download — Pedido #90816
+[PDF] Pedido #90816 encontrado.
+[PDF] Chamando impressão com valor...
+[PDF] Aguardando download...
+[PDF] [AVISO] Download não detectado em D:\Documento\#Pedidos.
+[PDF] [AVISO] Não foi possível salvar automaticamente. Veja o log acima.
+[WA] Enviando: LIDER 14_04_26.pdf
+[WA] [ERRO] Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=147.0.7727.56); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x10cc733+10b73]
+	chromedriver!GetHandleVerifier [0x10cc864+10ca4]
+	chromedriver!(No symbol) [0xea2100]
+	chromedriver!(No symbol) [0xe9109e]
+	chromedriver!(No symbol) [0xeafbd9]
+	chromedriver!(No symbol) [0xf1464c]
+	chromedriver!(No symbol) [0xf1c556]
+	chromedriver!(No symbol) [0xf0dbe3]
+	chromedriver!(No symbol) [0xee0339]
+	chromedriver!(No symbol) [0xee10f4]
+	chromedriver!GetHandleVerifier [0x132fe04+274244]
+	chromedriver!GetHandleVerifier [0x132b459+26f899]
+	chromedriver!GetHandleVerifier [0x1349bd5+28e015]
+	chromedriver!GetHandleVerifier [0x10e7188+2b5c8]
+	chromedriver!GetHandleVerifier [0x10ef23d+3367d]
+	chromedriver!GetHandleVerifier [0x10d5138+19578]
+	chromedriver!GetHandleVerifier [0x10d5302+19742]
+	chromedriver!GetHandleVerifier [0x10be48f+28cf]
+	KERNEL32!BaseThreadInitThunk [0x76b75d49+19]
+	ntdll!RtlInitializeExceptionChain [0x77ded81b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x77ded7a1+231]
+

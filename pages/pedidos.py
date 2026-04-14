@@ -273,8 +273,22 @@ def adicionar_item(especie, pa, quantidade, valor_pedido):
     if valor_pedido < valor_sistema:
         print("INFERIOR — anotando em Observações")
         _anotar_preco_observacao(pa, valor_pedido)
-        # Re-preenche quantidade após voltar para Itens
+
+        # Após voltar para Itens o sistema zera o valor do produto.
+        # Precisa re-selecionar o PA para o sistema preencher o valor novamente,
+        # depois re-preencher a quantidade (que também pode ter resetado).
+        print("         Re-selecionando produto para restaurar valor...")
+        _bsselect_buscar_e_selecionar("PROCODIGO", pa)
+        time.sleep(0.8)
+
         limpar_e_digitar(SEL["quantidade"], str(quantidade).replace(".", ","))
+
+        # Confirma que o valor voltou — se ainda estiver 0 loga aviso
+        valor_apos = ler_valor_sistema()
+        if valor_apos == 0.0:
+            print(f"         [AVISO] Valor ainda 0,00 após re-selecionar. Verifique o item manualmente.")
+        else:
+            print(f"         Valor restaurado pelo sistema: R$ {valor_apos:.2f} (usando valor do sistema, anotação já nas obs.)")
 
     elif valor_pedido > valor_sistema:
         print("SUPERIOR — alterando valor")
