@@ -322,6 +322,50 @@ def adicionar_item(especie, pa, quantidade, valor_pedido):
 
     time.sleep(0.5)
 
+
+def conferir_pedido(codigo):
+    """
+    Vai para o Filtro, pesquisa o pedido pelo código e clica em Conferir.
+    Equivale a clicar em GravarStatusPedido(codigo, '2') via JavaScript.
+    """
+    from config import URL_BASE
+    from datetime import date as _date
+
+    print(f"[CONFERIR] Buscando pedido #{codigo}...")
+
+    clicar_js(SEL["btn_pedidos"])
+    time.sleep(0.5)
+
+    try:
+        aguardar("#filtro").click()
+    except Exception:
+        _d().find_element("css selector", "#filtro").click()
+    time.sleep(0.8)
+
+    # Preenche a data de hoje e pesquisa
+    limpar_e_digitar("#DtaIni", _date.today().strftime("%d/%m/%Y"))
+    time.sleep(0.3)
+    clicar_js("#btnPesquisar")
+
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.webdriver.common.by import By
+
+    WebDriverWait(_d(), 10).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, "#example tbody tr"))
+    )
+    time.sleep(1)
+
+    # Chama GravarStatusPedido via JS — equivale ao botão Conferir
+    _d().execute_script(f"GravarStatusPedido({codigo}, '2')")
+    time.sleep(1.5)
+
+    texto = fechar_popup_swal(timeout=8)
+    if texto:
+        print(f"[CONFERIR] [OK] #{codigo} — {texto}")
+    else:
+        print(f"[CONFERIR] [OK] #{codigo} conferido.")
+
 # ── execução completa ─────────────────────────
 
 def executar_pedido(dados_pedido, itens):
