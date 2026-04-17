@@ -30,7 +30,7 @@ CLIENTES_ESPECIAIS = {
 # Clientes que o sistema reconhece só pelo nome digitado.
 CLIENTES_NORMAIS = {
     "compespa", "assembleia", "jo", "lucelia", "lider",
-    "cambuci", "r3x", "shopping", "kenko", "amazonia", "dumar",
+    "cambuci", "r3x", "shopping", "kenko", "amazonia", "dumar", "diniz",
 }
 
 # Lista unificada para a interface (dropdown)

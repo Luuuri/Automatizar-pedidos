@@ -274,21 +274,34 @@ def adicionar_item(especie, pa, quantidade, valor_pedido):
         print("INFERIOR — anotando em Observações")
         _anotar_preco_observacao(pa, valor_pedido)
 
-        # Após voltar para Itens o sistema zera o valor do produto.
-        # Precisa re-selecionar o PA para o sistema preencher o valor novamente,
-        # depois re-preencher a quantidade (que também pode ter resetado).
-        print("         Re-selecionando produto para restaurar valor...")
+        # Clica em Limpar para resetar todos os campos do item —
+        # só assim o sistema repopula o valor ao re-selecionar o produto.
+        print("         Clicando em Limpar para resetar campos...")
+        clicar_js("#btnLimpar")
+        time.sleep(0.5)
+
+        # Refaz o fluxo completo: espécie → PA → uni. medida → quantidade.
+        print("         Refazendo seleção completa...")
+
+        texto_opcao = "rosa" if "camar" in especie.lower() else None
+        _bsselect_buscar_e_selecionar("ESPCODIGO", especie, texto_opcao)
+        time.sleep(0.4)
+
         _bsselect_buscar_e_selecionar("PROCODIGO", pa)
         time.sleep(0.8)
 
+        # Uni. medida pode ter sido limpa também
+        limpar_e_digitar(SEL["und_medida"], "KG")
+
         limpar_e_digitar(SEL["quantidade"], str(quantidade).replace(".", ","))
 
-        # Confirma que o valor voltou — se ainda estiver 0 loga aviso
+        # Confirma que o valor foi restaurado pelo sistema
         valor_apos = ler_valor_sistema()
         if valor_apos == 0.0:
-            print(f"         [AVISO] Valor ainda 0,00 após re-selecionar. Verifique o item manualmente.")
+            print("         [AVISO] Valor ainda 0,00 após refazer seleção.")
+            print("         Verifique este item manualmente no sistema.")
         else:
-            print(f"         Valor restaurado pelo sistema: R$ {valor_apos:.2f} (usando valor do sistema, anotação já nas obs.)")
+            print(f"         Valor restaurado: R$ {valor_apos:.2f} (obs. já anotada)")
 
     elif valor_pedido > valor_sistema:
         print("SUPERIOR — alterando valor")

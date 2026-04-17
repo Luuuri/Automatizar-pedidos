@@ -12,7 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 import utils.driver as _drv
 
-CONTATO   = "Pai Américo"          # nome exato como aparece no WhatsApp Web
+CONTATO   = "Pai Américo"
 PASTA_PDF = r"D:\Documento\#Pedidos"
 URL_WA    = "https://web.whatsapp.com"
 
@@ -23,101 +23,168 @@ def _d():
 
 def _aguardar_wa_carregar(timeout=60):
     """
-    Aguarda o WhatsApp Web carregar completamente.
-    Na primeira vez, o usuário precisa escanear o QR code —
-    o timeout de 60s dá tempo para isso.
+    Aguarda o WhatsApp Web estar pronto.
+    Aceita tanto a tela principal quanto a tela de QR code
+    (nesse caso aguarda até o login ser feito).
     """
     print("[WA] Aguardando WhatsApp Web carregar...")
-    WebDriverWait(_d(), timeout).until(
-        EC.presence_of_element_located(
-            (By.CSS_SELECTOR, 'div[contenteditable="true"][data-tab="3"], '
-                              'div[role="textbox"]'))
+    d = _d()
+
+    # Aguarda desaparecer o splash de carregamento
+    WebDriverWait(d, timeout).until(
+        lambda drv: drv.execute_script(
+            "return document.readyState") == "complete"
     )
-    print("[WA] WhatsApp Web carregado.")
+    time.sleep(2)
+
+    # Se aparecer QR code, aguarda o usuário escanear (até timeout)
+    fim = time.time() + timeout
+    while time.time() < fim:
+        # Sinal de que está logado: existe a caixa de pesquisa de conversa
+        logado = d.find_elements(
+            By.CSS_SELECTOR,
+            '[data-testid="chat-list-search"], '
+            '[aria-label="Caixa de texto de pesquisa"], '
+            'div[contenteditable][data-tab="3"]'
+        )
+        if logado:
+            print("[WA] Logado e pronto.")
+            return
+        time.sleep(1.5)
+
+    raise Exception("WhatsApp Web não carregou dentro do tempo limite.")
 
 
 def _buscar_contato(nome):
-    """Abre a busca e encontra o contato pelo nome."""
+    """Abre a busca e clica no contato."""
     d = _d()
 
-    # Clica no botão de nova conversa / busca
-    btn_busca = WebDriverWait(d, 15).until(
-        EC.element_to_be_clickable((
-            By.CSS_SELECTOR,
-            'div[contenteditable="true"][data-tab="3"], '
-            'div[title="Caixa de texto de pesquisa"]'
-        ))
-    )
-    btn_busca.click()
-    time.sleep(0.5)
-    btn_busca.send_keys(nome)
+    # Clica na lupa / campo de busca — tenta vários seletores
+    for sel in [
+        '[data-testid="chat-list-search"]',
+        '[aria-label="Caixa de texto de pesquisa"]',
+        'div[contenteditable][data-tab="3"]',
+        'div[role="textbox"]',
+    ]:
+        try:
+            campo = WebDriverWait(d, 5).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, sel))
+            )
+            campo.click()
+            time.sleep(0.3)
+            campo.send_keys(nome)
+            break
+        except Exception:
+            continue
+    else:
+        raise Exception("Campo de busca do WhatsApp não encontrado.")
+
     time.sleep(1.5)
 
-    # Clica no primeiro resultado
-    resultado = WebDriverWait(d, 10).until(
-        EC.element_to_be_clickable((
-            By.XPATH,
-            f'//span[@title="{nome}"]'
-        ))
-    )
-    resultado.click()
-    time.sleep(1)
-    print(f"[WA] Conversa com '{nome}' aberta.")
+    # Clica no primeiro resultado que contenha o nome
+    for sel in [
+        f'span[title="{nome}"]',
+        f'span[title*="{nome.split()[0]}"]',
+        '[data-testid="cell-frame-title"]',
+    ]:
+        try:
+            resultado = WebDriverWait(d, 5).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, sel))
+            )
+            resultado.click()
+            time.sleep(1)
+            print(f"[WA] Conversa com '{nome}' aberta.")
+            return
+        except Exception:
+            continue
+
+    raise Exception(f"Contato '{nome}' não encontrado na busca do WhatsApp.")
 
 
 def _anexar_e_enviar(caminho_pdf):
-    """Anexa o PDF e envia na conversa aberta."""
+    """Anexa o PDF e envia."""
     d = _d()
 
-    # Clica no botão de anexo (clipe)
-    btn_anexo = WebDriverWait(d, 10).until(
-        EC.element_to_be_clickable((
-            By.CSS_SELECTOR,
-            'div[title="Anexar"], '
-            'button[aria-label="Anexar"], '
-            'span[data-icon="attach-menu-plus"]'
-        ))
-    )
-    btn_anexo.click()
-    time.sleep(0.8)
+    # Botão de clipe/anexo — tenta vários seletores
+    for sel in [
+        '[data-testid="attach-menu-plus"]',
+        '[title="Anexar"]',
+        'span[data-icon="attach-menu-plus"]',
+        '[data-testid="clip"]',
+        'button[aria-label="Anexar"]',
+    ]:
+        try:
+            btn = WebDriverWait(d, 5).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, sel))
+            )
+            d.execute_script("arguments[0].click();", btn)
+            time.sleep(0.8)
+            break
+        except Exception:
+            continue
+    else:
+        raise Exception("Botão de anexo não encontrado.")
 
-    # Input de arquivo (fica oculto — envia o caminho diretamente)
-    input_arquivo = WebDriverWait(d, 10).until(
-        EC.presence_of_element_located((
-            By.CSS_SELECTOR,
-            'input[type="file"][accept*="*"],'
-            'input[type="file"]'
-        ))
-    )
-    input_arquivo.send_keys(caminho_pdf)
-    time.sleep(2)
+    # Input de arquivo — fica oculto, envia o caminho diretamente
+    for sel in [
+        'input[type="file"][accept*="*"]',
+        'input[type="file"]',
+        '[data-testid="media-input"]',
+    ]:
+        try:
+            inp = WebDriverWait(d, 5).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, sel))
+            )
+            inp.send_keys(caminho_pdf)
+            time.sleep(2)
+            break
+        except Exception:
+            continue
+    else:
+        raise Exception("Input de arquivo não encontrado.")
 
-    # Clica em Enviar
-    btn_enviar = WebDriverWait(d, 10).until(
-        EC.element_to_be_clickable((
-            By.CSS_SELECTOR,
-            'div[aria-label="Enviar"], '
-            'span[data-icon="send"]'
-        ))
-    )
-    btn_enviar.click()
-    time.sleep(1.5)
-    print(f"[WA] PDF enviado: {os.path.basename(caminho_pdf)}")
+    # Botão de enviar — aparece após selecionar o arquivo
+    for sel in [
+        '[data-testid="send"]',
+        '[aria-label="Enviar"]',
+        'span[data-icon="send"]',
+        'button[aria-label="Enviar"]',
+    ]:
+        try:
+            btn_env = WebDriverWait(d, 8).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, sel))
+            )
+            d.execute_script("arguments[0].click();", btn_env)
+            time.sleep(1.5)
+            print(f"[WA] PDF enviado: {os.path.basename(caminho_pdf)}")
+            return
+        except Exception:
+            continue
+
+    # Fallback: tenta Enter na caixa de texto da conversa
+    try:
+        caixa = d.find_element(By.CSS_SELECTOR,
+            'div[contenteditable][data-tab="10"], '
+            'div[contenteditable][data-tab="6"]')
+        caixa.send_keys(Keys.ENTER)
+        time.sleep(1.5)
+        print(f"[WA] PDF enviado via Enter: {os.path.basename(caminho_pdf)}")
+    except Exception:
+        raise Exception("Botão de enviar não encontrado após anexar arquivo.")
 
 
 def enviar_pdf(caminho_pdf):
     """
-    Ponto de entrada — abre o WhatsApp Web, busca o contato e envia o PDF.
-    O Chrome já está aberto pela automação do pedido.
+    Abre o WhatsApp Web numa nova aba do Chrome já aberto,
+    busca o contato e envia o PDF.
     """
     d = _d()
     aba_original = d.current_window_handle
 
-    # Abre WhatsApp Web numa nova aba
-    d.execute_script("window.open(arguments[0], '_blank');", URL_WA)
+    # Abre nova aba com o WhatsApp Web
+    d.execute_script(f"window.open('{URL_WA}', '_blank');")
     time.sleep(1)
 
-    # Muda para a nova aba
     nova_aba = [h for h in d.window_handles if h != aba_original][-1]
     d.switch_to.window(nova_aba)
 
@@ -126,9 +193,11 @@ def enviar_pdf(caminho_pdf):
         _buscar_contato(CONTATO)
         _anexar_e_enviar(caminho_pdf)
     finally:
-        # Fecha a aba do WhatsApp e volta para o SGEP
         try:
             d.close()
         except Exception:
             pass
-        d.switch_to.window(aba_original)
+        try:
+            d.switch_to.window(aba_original)
+        except Exception:
+            pass
