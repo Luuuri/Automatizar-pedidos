@@ -921,3 +921,121 @@ INFERIOR — anotando em Observações
 [PDF] Aguardando download...
 [PDF] [OK] Arquivo salvo: PEDIDO_90860_FORMOSA_D_17-04-2026.pdf
 [PDF] [OK] PDF do pedido #90860 salvo em data/pedidos/
+═══════════════════════════════════════════════════════
+  NOVO PEDIDO — 17/04/2026 00:00
+═══════════════════════════════════════════════════════
+[OK] Login realizado
+[ERRO FATAL] Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=147.0.7727.56)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x6ec733+10b73]
+	chromedriver!GetHandleVerifier [0x6ec864+10ca4]
+	chromedriver!(No symbol) [0x4c2100]
+	chromedriver!(No symbol) [0x4a0c23]
+	chromedriver!(No symbol) [0x53445b]
+	chromedriver!(No symbol) [0x54ac29]
+	chromedriver!(No symbol) [0x52d9b6]
+	chromedriver!(No symbol) [0x500339]
+	chromedriver!(No symbol) [0x5010f4]
+	chromedriver!GetHandleVerifier [0x94fe04+274244]
+	chromedriver!GetHandleVerifier [0x94b459+26f899]
+	chromedriver!GetHandleVerifier [0x969bd5+28e015]
+	chromedriver!GetHandleVerifier [0x707188+2b5c8]
+	chromedriver!GetHandleVerifier [0x70f23d+3367d]
+	chromedriver!GetHandleVerifier [0x6f5138+19578]
+	chromedriver!GetHandleVerifier [0x6f5302+19742]
+	chromedriver!GetHandleVerifier [0x6de48f+28cf]
+	KERNEL32!BaseThreadInitThunk [0x755d5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x77e4d81b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x77e4d7a1+231]
+
+═══════════════════════════════════════════════════════
+  INICIANDO FILA — 2 pedido(s)  17/04/2026 00:00
+═══════════════════════════════════════════════════════
+
+───────────────────────────────────────────────────────
+  PEDIDO 1: AMAZONIA
+───────────────────────────────────────────────────────
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 17/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: amazonia
+[OK] Vendedor selecionado
+[OK] Pagamento: 30 DIAS
+[OK] Observação: teste
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90861
+[OK] Aba Itens Pedidos aberta
+
+
+[ITEM] CAMARAO | PA 0108 | 20.0 kg | R$ 50.00
+         Espécie: CAMARAO ROSA
+         Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+         Uni. Medida: KG
+         Sistema: R$ 89.00 | Pedido: R$ 50.00
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0108 50,00
+         [OBS] Pedido regravado com observação.
+         Clicando em Limpar para resetar campos...
+         Refazendo seleção completa...
+         Valor restaurado: R$ 89.00 (obs. já anotada)
+         [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0105 | 40.0 kg | R$ 109.00
+         Espécie mantida: camarao
+         Produto: PA0105 - 26/30 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+         Sistema: R$ 109.00 | Pedido: R$ 109.00
+IGUAL — sem alteração
+         [OK] PA 0105 gravado — Item do Pedido Incluido com sucesso !
+
+=== PEDIDO CONCLUÍDO! ===
+
+✔  Pedido concluído — Código: 90861
+
+───────────────────────────────────────────────────────
+  PEDIDO 2: CAMBUCI
+───────────────────────────────────────────────────────
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 17/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: cambuci
+[OK] Vendedor selecionado
+[OK] Pagamento: 7 DIAS
+[OK] Observação: teste
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90862
+[OK] Aba Itens Pedidos aberta
+
+
+[ITEM] CAMARAO | PA 0108 | 20.0 kg | R$ 10.00
+         Espécie: CAMARAO ROSA
+         Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+         Uni. Medida: KG
+         Sistema: R$ 89.00 | Pedido: R$ 10.00
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0108 10,00
+         [OBS] Pedido regravado com observação.
+         Clicando em Limpar para resetar campos...
+         Refazendo seleção completa...
+         Valor restaurado: R$ 89.00 (obs. já anotada)
+         [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0105 | 105.0 kg | R$ 223.00
+         Espécie mantida: camarao
+         Produto: PA0105 - 26/30 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+         Sistema: R$ 109.00 | Pedido: R$ 223.00
+SUPERIOR — alterando valor
+         [OK] PA 0105 gravado — Item do Pedido Incluido com sucesso !
+
+=== PEDIDO CONCLUÍDO! ===
+
+✔  Pedido concluído — Código: 90862
+
+═══════════════════════════════════════════════════════
+  FILA CONCLUÍDA — 2 ok  |  0 com erro
+═══════════════════════════════════════════════════════
