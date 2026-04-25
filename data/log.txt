@@ -1,0 +1,372 @@
+═══════════════════════════════════════════════════════
+  INICIANDO FILA — 1 pedido(s)  22/04/2026 00:00
+═══════════════════════════════════════════════════════
+
+───────────────────────────────────────────────────────
+  PEDIDO 1: TRS
+───────────────────────────────────────────────────────
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 22/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: trs
+[OK] Vendedor selecionado
+[OK] Pagamento: 14/21/28
+[OK] Observação: Retira hj
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90906
+[OK] Aba Itens Pedidos aberta
+
+
+[ITEM] CAMARAO | PA 0205 | 100.0 kg | R$ 132.00
+         Espécie: CAMARAO ROSA
+         Produto: PA0205 - GG21/30 CAMARAO ROSA DESC EVISC CONG SC400G CX10KG
+         Uni. Medida: KG
+         Sistema: R$ 132.00 | Pedido: R$ 132.00
+IGUAL — sem alteração
+         [OK] PA 0205 gravado — Item do Pedido Incluido com sucesso !
+
+=== PEDIDO CONCLUÍDO! ===
+
+✔  Pedido concluído — Código: 90906
+[PDF] Baixando pedido #90906...
+
+[PDF] Iniciando download — Pedido #90906
+[PDF] Pedido #90906 encontrado.
+[PDF] Chamando impressão com valor...
+[PDF] Aguardando download...
+═══════════════════════════════════════════════════════
+  INICIANDO FILA — 1 pedido(s)  22/04/2026 00:00
+═══════════════════════════════════════════════════════
+
+───────────────────────────────────────────────────────
+  PEDIDO 1: TRS
+───────────────────────────────────────────────────────
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 22/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: trs
+[OK] Vendedor selecionado
+[OK] Pagamento: 14/21/28
+[OK] Observação: Retira hoje
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90907
+[OK] Aba Itens Pedidos aberta
+
+
+[ITEM] CAMARAO | PA 0205 | 100.0 kg | R$ 132.00
+         Espécie: CAMARAO ROSA
+         Produto: PA0205 - GG21/30 CAMARAO ROSA DESC EVISC CONG SC400G CX10KG
+         Uni. Medida: KG
+         Sistema: R$ 132.00 | Pedido: R$ 132.00
+IGUAL — sem alteração
+         [OK] PA 0205 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0106 | 28.0 kg | R$ 101.00
+         Espécie mantida: camarao
+         Produto: PA0106 - 31/40 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+         Sistema: R$ 101.00 | Pedido: R$ 101.00
+IGUAL — sem alteração
+         [OK] PA 0106 gravado — Item do Pedido Incluido com sucesso !
+
+=== PEDIDO CONCLUÍDO! ===
+
+✔  Pedido concluído — Código: 90907
+[PDF] Baixando pedido #90907...
+
+[PDF] Iniciando download — Pedido #90907
+[PDF] Pedido #90907 encontrado.
+[PDF] Chamando impressão com valor...
+[PDF] Aguardando download...
+[PDF] [OK] Arquivo salvo: PEDIDO_90907_TRS_22-04-2026.pdf
+
+═══════════════════════════════════════════════════════
+  FILA CONCLUÍDA — 1 ok  |  0 com erro
+═══════════════════════════════════════════════════════
+
+───────────────────────────────────────────────────────
+  CONFERINDO 1 pedido(s)...
+[CONFERIR] Buscando pedido #90907...
+[CONFERIR] [OK] #90907 conferido.
+  [OK] #90907 — trs conferido.
+
+✔  1 pedido(s) conferidos.
+═══════════════════════════════════════════════════════
+  INICIANDO FILA — 2 pedido(s)  23/04/2026 00:00
+═══════════════════════════════════════════════════════
+
+───────────────────────────────────────────────────────
+  PEDIDO 1: FORMOSA_D
+───────────────────────────────────────────────────────
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 24/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: formosa_d
+[OK] Vendedor selecionado
+[OK] Pagamento: 30 DIAS
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90920
+[OK] Aba Itens Pedidos aberta
+
+
+[ITEM] CAMARAO | PA 0810 | 56.0 kg | R$ 112.50
+         Espécie: CAMARAO ROSA
+         Produto: PA0810 - G31/50 CAMARAO ROSA DESC CONG SC1KG CX14KG
+         Uni. Medida: KG
+         Sistema: R$ 124.00 | Pedido: R$ 112.50
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0810 112,50
+         [OBS] Pedido regravado com observação.
+         Clicando em Limpar para resetar campos...
+         Refazendo seleção completa...
+         Valor restaurado: R$ 124.00 (obs. já anotada)
+         [OK] PA 0810 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0108 | 70.0 kg | R$ 80.50
+         Espécie mantida: camarao
+         Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+         Sistema: R$ 89.00 | Pedido: R$ 80.50
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0108 80,50
+         [OBS] Pedido regravado com observação.
+         Clicando em Limpar para resetar campos...
+         Refazendo seleção completa...
+         Valor restaurado: R$ 89.00 (obs. já anotada)
+         [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0302 | 36.0 kg | R$ 112.50
+         Espécie mantida: camarao
+         Produto: PA0302 - G31/50 CAMARAO ROSA DESC CONG SC800G CX12
+         Sistema: R$ 124.00 | Pedido: R$ 112.50
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0302 112,50
+         [OBS] Pedido regravado com observação.
+         Clicando em Limpar para resetar campos...
+         Refazendo seleção completa...
+         Valor restaurado: R$ 124.00 (obs. já anotada)
+         [OK] PA 0302 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0303 | 24.0 kg | R$ 100.00
+         Espécie mantida: camarao
+         Produto: PA0303 - M51/70 CAMARAO ROSA DESC CONG SC800G CX12
+         Sistema: R$ 110.00 | Pedido: R$ 100.00
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0303 100,00
+         [OBS] Pedido regravado com observação.
+         Clicando em Limpar para resetar campos...
+         Refazendo seleção completa...
+         Valor restaurado: R$ 110.00 (obs. já anotada)
+         [OK] PA 0303 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0501 | 36.0 kg | R$ 120.00
+         Espécie mantida: camarao
+         Produto: PA0501 - GG21/30 CAMARAO ROSA DESC EVISC CONG SC800G CX12KG
+         Sistema: R$ 132.00 | Pedido: R$ 120.00
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0501 120,00
+         [OBS] Pedido regravado com observação.
+         Clicando em Limpar para resetar campos...
+         Refazendo seleção completa...
+         Valor restaurado: R$ 132.00 (obs. já anotada)
+         [OK] PA 0501 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0205 | 10.0 kg | R$ 120.00
+         Espécie mantida: camarao
+         Produto: PA0205 - GG21/30 CAMARAO ROSA DESC EVISC CONG SC400G CX10KG
+         Sistema: R$ 132.00 | Pedido: R$ 120.00
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0205 120,00
+         [OBS] Pedido regravado com observação.
+         Clicando em Limpar para resetar campos...
+         Refazendo seleção completa...
+         Valor restaurado: R$ 132.00 (obs. já anotada)
+         [OK] PA 0205 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0203 | 30.0 kg | R$ 100.00
+         Espécie mantida: camarao
+         Produto: PA0203 - M51/70 CAMARAO ROSA DESC CONG SC400G CX10
+         Sistema: R$ 110.00 | Pedido: R$ 100.00
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0203 100,00
+         [OBS] Pedido regravado com observação.
+         Clicando em Limpar para resetar campos...
+         Refazendo seleção completa...
+         Valor restaurado: R$ 110.00 (obs. já anotada)
+         [OK] PA 0203 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0204 | 50.0 kg | R$ 87.50
+         Espécie mantida: camarao
+         Produto: PA0204 - P71/110 CAMARAO ROSA DESC CONG SC400G CX10
+         Sistema: R$ 96.00 | Pedido: R$ 87.50
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0204 87,50
+         [OBS] Pedido regravado com observação.
+         Clicando em Limpar para resetar campos...
+         Refazendo seleção completa...
+         Valor restaurado: R$ 96.00 (obs. já anotada)
+         [OK] PA 0204 gravado — Item do Pedido Incluido com sucesso !
+
+=== PEDIDO CONCLUÍDO! ===
+
+✔  Pedido concluído — Código: 90920
+[PDF] Baixando pedido #90920...
+
+[PDF] Iniciando download — Pedido #90920
+[PDF] Pedido #90920 encontrado.
+[PDF] Chamando impressão com valor...
+[PDF] Aguardando download...
+[PDF] [OK] Arquivo salvo: PEDIDO_90920_FORMOSA_D_24-04-2026.pdf
+
+───────────────────────────────────────────────────────
+  PEDIDO 2: REST_CORTIZU
+───────────────────────────────────────────────────────
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 24/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: rest_cortizu
+[OK] Vendedor selecionado
+[OK] Pagamento: 28/35/42 DIAS
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90921
+[OK] Aba Itens Pedidos aberta
+
+
+[ITEM] CAMARAO | PA 0304 | 48.0 kg | R$ 96.00
+         Espécie: CAMARAO ROSA
+         Produto: PA0304 - P71/110 CAMARAO ROSA DESC CONG SC800G CX12
+         Uni. Medida: KG
+         Sistema: R$ 96.00 | Pedido: R$ 96.00
+IGUAL — sem alteração
+         [OK] PA 0304 gravado — Item do Pedido Incluido com sucesso !
+
+=== PEDIDO CONCLUÍDO! ===
+
+✔  Pedido concluído — Código: 90921
+[PDF] Baixando pedido #90921...
+
+[PDF] Iniciando download — Pedido #90921
+[PDF] Pedido #90921 encontrado.
+[PDF] Chamando impressão com valor...
+[PDF] Aguardando download...
+[PDF] [OK] Arquivo salvo: PEDIDO_90921_REST_CORTIZU_24-04-2026.pdf
+
+═══════════════════════════════════════════════════════
+  FILA CONCLUÍDA — 2 ok  |  0 com erro
+═══════════════════════════════════════════════════════
+
+───────────────────────────────────────────────────────
+  CONFERINDO 2 pedido(s)...
+[CONFERIR] Buscando pedido #90920...
+[CONFERIR] [OK] #90920 conferido.
+  [OK] #90920 — formosa_d conferido.
+[CONFERIR] Buscando pedido #90921...
+  [ERRO] #90921 — Message: element click intercepted: Element <a class="nav-link active" id="filtro" data-toggle="pill" href="#aba-1" role="tab" aria-controls="Lista" aria-selected="true">...</a> is not clickable at point (1143, 106). Other element would receive the click: <div class="swal-overlay swal-overlay--show-modal" tabindex="-1">...</div>
+  (Session info: chrome=147.0.7727.56); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xe8b373+10553]
+	chromedriver!GetHandleVerifier [0xe8b4a4+10684]
+	chromedriver!(No symbol) [0xc91e10]
+	chromedriver!(No symbol) [0xce10c8]
+	chromedriver!(No symbol) [0xcdf2d9]
+	chromedriver!(No symbol) [0xcdcc92]
+	chromedriver!(No symbol) [0xcdbea4]
+	chromedriver!(No symbol) [0xcd1ab8]
+	chromedriver!(No symbol) [0xcfd86c]
+	chromedriver!(No symbol) [0xcd14f4]
+	chromedriver!(No symbol) [0xcfda34]
+	chromedriver!(No symbol) [0xd1aa36]
+	chromedriver!(No symbol) [0xcfd606]
+	chromedriver!(No symbol) [0xcd0039]
+	chromedriver!(No symbol) [0xcd0df4]
+	chromedriver!GetHandleVerifier [0x110ddb4+292f94]
+	chromedriver!GetHandleVerifier [0x110937d+28e55d]
+	chromedriver!GetHandleVerifier [0x1128215+2ad3f5]
+	chromedriver!GetHandleVerifier [0xea4c18+29df8]
+	chromedriver!GetHandleVerifier [0xeac6fd+318dd]
+	chromedriver!GetHandleVerifier [0xe93c78+18e58]
+	chromedriver!GetHandleVerifier [0xe93e42+19022]
+	chromedriver!GetHandleVerifier [0xe7d45f+263f]
+	KERNEL32!BaseThreadInitThunk [0x75d55d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7751d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7751d7c1+231]
+
+
+✔  1 pedido(s) conferidos.
+═══════════════════════════════════════════════════════
+  INICIANDO FILA — 1 pedido(s)  23/04/2026 00:00
+═══════════════════════════════════════════════════════
+
+───────────────────────────────────────────────────────
+  PEDIDO 1: FORMOSA_CN
+───────────────────────────────────────────────────────
+[OK] Login realizado
+[OK] Aba Pedidos aberta
+[OK] Empresa selecionada
+[OK] Data de entrega: 24/04/2026
+[OK] Ordem de compra: 0
+[OK] Cliente: formosa_cn
+[OK] Vendedor selecionado
+[OK] Pagamento: 30 DIAS
+[OK] Pedido gravado — Pedido Incluido com Sucesso !
+[OK] Código do pedido capturado: 90928
+[OK] Aba Itens Pedidos aberta
+
+
+[ITEM] CAMARAO | PA 0202 | 30.0 kg | R$ 112.50
+         Espécie: CAMARAO ROSA
+         Produto: PA0202 - G31/50 CAMARAO ROSA DESC CONG SC400G CX10
+         Uni. Medida: KG
+         Sistema: R$ 124.00 | Pedido: R$ 112.50
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0202 112,50
+         [OBS] Pedido regravado com observação.
+         Clicando em Limpar para resetar campos...
+         Refazendo seleção completa...
+         Valor restaurado: R$ 124.00 (obs. já anotada)
+         [OK] PA 0202 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0203 | 30.0 kg | R$ 100.00
+         Espécie mantida: camarao
+         Produto: PA0203 - M51/70 CAMARAO ROSA DESC CONG SC400G CX10
+         Sistema: R$ 110.00 | Pedido: R$ 100.00
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0203 100,00
+         [OBS] Pedido regravado com observação.
+         Clicando em Limpar para resetar campos...
+         Refazendo seleção completa...
+         Valor restaurado: R$ 110.00 (obs. já anotada)
+         [OK] PA 0203 gravado — Item do Pedido Incluido com sucesso !
+
+[ITEM] CAMARAO | PA 0204 | 20.0 kg | R$ 87.50
+         Espécie mantida: camarao
+         Produto: PA0204 - P71/110 CAMARAO ROSA DESC CONG SC400G CX10
+         Sistema: R$ 96.00 | Pedido: R$ 87.50
+INFERIOR — anotando em Observações
+         [OBS] Anotado: PA 0204 87,50
+         [OBS] Pedido regravado com observação.
+         Clicando em Limpar para resetar campos...
+         Refazendo seleção completa...
+         Valor restaurado: R$ 96.00 (obs. já anotada)
+         [OK] PA 0204 gravado — Item do Pedido Incluido com sucesso !
+
+=== PEDIDO CONCLUÍDO! ===
+
+✔  Pedido concluído — Código: 90928
+[PDF] Baixando pedido #90928...
+
+[PDF] Iniciando download — Pedido #90928
+[PDF] Pedido #90928 encontrado.
+[PDF] Chamando impressão com valor...
+[PDF] Aguardando download...
+[PDF] [OK] Arquivo salvo: PEDIDO_90928_FORMOSA_CN_24-04-2026.pdf
+
+═══════════════════════════════════════════════════════
+  FILA CONCLUÍDA — 1 ok  |  0 com erro
+═══════════════════════════════════════════════════════
