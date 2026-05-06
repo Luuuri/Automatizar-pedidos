@@ -1,372 +1,1071 @@
-═══════════════════════════════════════════════════════
-  INICIANDO FILA — 1 pedido(s)  22/04/2026 00:00
-═══════════════════════════════════════════════════════
-
+[20:23:20] ═══════════════════════════════════════════════════════
+[20:23:20]   INICIANDO FILA — 2 pedido(s)  05/05/2026 00:00
+[20:23:20] ═══════════════════════════════════════════════════════
+[20:23:22] [INFO] Iniciando Chrome...
+[20:23:25] [INFO] Chrome iniciado. Começando pedidos...
+[20:23:25] 
 ───────────────────────────────────────────────────────
-  PEDIDO 1: TRS
+  PEDIDO 1: LIDER
 ───────────────────────────────────────────────────────
-[OK] Login realizado
-[OK] Aba Pedidos aberta
-[OK] Empresa selecionada
-[OK] Data de entrega: 22/04/2026
-[OK] Ordem de compra: 0
-[OK] Cliente: trs
-[OK] Vendedor selecionado
-[OK] Pagamento: 14/21/28
-[OK] Observação: Retira hj
-[OK] Pedido gravado — Pedido Incluido com Sucesso !
-[OK] Código do pedido capturado: 90906
-[OK] Aba Itens Pedidos aberta
+[20:23:28] [OK] Login realizado
+[20:23:33] [OK] Aba Pedidos aberta
+[20:23:34] [OK] Empresa selecionada
+[20:23:34] [OK] Data de entrega: 06/05/2026
+[20:23:34] [OK] Ordem de compra: 0
+[20:23:36] [OK] Cliente: lider
+[20:23:36] [OK] Vendedor selecionado
+[20:23:37] [OK] Pagamento: 14/28 DIAS
+[20:23:37] [OK] Observação: teste
+[20:23:38] [OK] Pedido gravado — Pedido Incluido com Sucesso !
+[20:23:39] [OK] Código do pedido capturado: 91059
+[20:23:40] [OK] Aba Itens Pedidos aberta
 
-
-[ITEM] CAMARAO | PA 0205 | 100.0 kg | R$ 132.00
-         Espécie: CAMARAO ROSA
-         Produto: PA0205 - GG21/30 CAMARAO ROSA DESC EVISC CONG SC400G CX10KG
-         Uni. Medida: KG
-         Sistema: R$ 132.00 | Pedido: R$ 132.00
-IGUAL — sem alteração
-         [OK] PA 0205 gravado — Item do Pedido Incluido com sucesso !
-
+[20:23:40] 
+[ITEM] CAMARAO | PA 0108 | 20.0 kg | R$ 102.00
+[20:23:42]          Espécie: CAMARAO ROSA
+[20:23:44]          Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[20:23:47]          Uni. Medida: KG
+[20:23:47]          Sistema: R$ 89.00 | Pedido: R$ 102.00
+[20:23:47] SUPERIOR — alterando valor
+[20:23:48]          [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
+[20:23:49] 
+[ITEM] CAMARAO | PA 0105 | 30.0 kg | R$ 202.00
+[20:23:49]          Espécie mantida: camarao
+[20:23:50]          Produto: PA0105 - 26/30 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[20:23:53]          Sistema: R$ 109.00 | Pedido: R$ 202.00
+[20:23:53] SUPERIOR — alterando valor
+[20:23:55]          [OK] PA 0105 gravado — Item do Pedido Incluido com sucesso !
+[20:23:55] 
 === PEDIDO CONCLUÍDO! ===
-
-✔  Pedido concluído — Código: 90906
-[PDF] Baixando pedido #90906...
-
-[PDF] Iniciando download — Pedido #90906
-[PDF] Pedido #90906 encontrado.
-[PDF] Chamando impressão com valor...
-[PDF] Aguardando download...
-═══════════════════════════════════════════════════════
-  INICIANDO FILA — 1 pedido(s)  22/04/2026 00:00
-═══════════════════════════════════════════════════════
-
+[20:23:55] 
+✔  Pedido concluído — Código: 91059
+[20:23:55] [PDF] Baixando pedido #91059...
+[20:23:55] 
+[PDF] Iniciando download — Pedido #91059
+[20:24:00] [PDF] Pedido #91059 encontrado.
+[20:24:00] [PDF] Chamando impressão com valor...
+[20:24:03] [PDF] Aguardando download...
+[20:24:05] [PDF] [OK] Arquivo salvo: PEDIDO_91059_LIDER_06-05-2026.pdf
+[20:24:05] 
 ───────────────────────────────────────────────────────
-  PEDIDO 1: TRS
+  PEDIDO 2: LUCELIA
 ───────────────────────────────────────────────────────
-[OK] Login realizado
-[OK] Aba Pedidos aberta
-[OK] Empresa selecionada
-[OK] Data de entrega: 22/04/2026
-[OK] Ordem de compra: 0
-[OK] Cliente: trs
-[OK] Vendedor selecionado
-[OK] Pagamento: 14/21/28
-[OK] Observação: Retira hoje
-[OK] Pedido gravado — Pedido Incluido com Sucesso !
-[OK] Código do pedido capturado: 90907
-[OK] Aba Itens Pedidos aberta
+[20:24:15] 
+[ERRO] Pedido falhou: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x82b373+10553]
+	chromedriver!GetHandleVerifier [0x82b4a4+10684]
+	chromedriver!(No symbol) [0x631e10]
+	chromedriver!(No symbol) [0x67a9da]
+	chromedriver!(No symbol) [0x67ac7b]
+	chromedriver!(No symbol) [0x6bd162]
+	chromedriver!(No symbol) [0x69d8b4]
+	chromedriver!(No symbol) [0x6baa36]
+	chromedriver!(No symbol) [0x69d606]
+	chromedriver!(No symbol) [0x670039]
+	chromedriver!(No symbol) [0x670df4]
+	chromedriver!GetHandleVerifier [0xaaddb4+292f94]
+	chromedriver!GetHandleVerifier [0xaa937d+28e55d]
+	chromedriver!GetHandleVerifier [0xac8215+2ad3f5]
+	chromedriver!GetHandleVerifier [0x844c18+29df8]
+	chromedriver!GetHandleVerifier [0x84c6fd+318dd]
+	chromedriver!GetHandleVerifier [0x833c78+18e58]
+	chromedriver!GetHandleVerifier [0x833e42+19022]
+	chromedriver!GetHandleVerifier [0x81d45f+263f]
+	KERNEL32!BaseThreadInitThunk [0x76b85d49+19]
+	ntdll!RtlInitializeExceptionChain [0x77a2d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x77a2d7c1+231]
 
-
-[ITEM] CAMARAO | PA 0205 | 100.0 kg | R$ 132.00
-         Espécie: CAMARAO ROSA
-         Produto: PA0205 - GG21/30 CAMARAO ROSA DESC EVISC CONG SC400G CX10KG
-         Uni. Medida: KG
-         Sistema: R$ 132.00 | Pedido: R$ 132.00
-IGUAL — sem alteração
-         [OK] PA 0205 gravado — Item do Pedido Incluido com sucesso !
-
-[ITEM] CAMARAO | PA 0106 | 28.0 kg | R$ 101.00
-         Espécie mantida: camarao
-         Produto: PA0106 - 31/40 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
-         Sistema: R$ 101.00 | Pedido: R$ 101.00
-IGUAL — sem alteração
-         [OK] PA 0106 gravado — Item do Pedido Incluido com sucesso !
-
-=== PEDIDO CONCLUÍDO! ===
-
-✔  Pedido concluído — Código: 90907
-[PDF] Baixando pedido #90907...
-
-[PDF] Iniciando download — Pedido #90907
-[PDF] Pedido #90907 encontrado.
-[PDF] Chamando impressão com valor...
-[PDF] Aguardando download...
-[PDF] [OK] Arquivo salvo: PEDIDO_90907_TRS_22-04-2026.pdf
-
+[20:24:15]   → Pedido de lucelia marcado como pendente para редаição
+[20:24:15] 
 ═══════════════════════════════════════════════════════
   FILA CONCLUÍDA — 1 ok  |  0 com erro
 ═══════════════════════════════════════════════════════
-
+[20:24:18] [INFO] Chrome encerrado.
+[20:25:20] ═══════════════════════════════════════════════════════
+[20:25:20]   INICIANDO FILA — 1 pedido(s)  05/05/2026 00:00
+[20:25:20] ═══════════════════════════════════════════════════════
+[20:25:20] [INFO] Iniciando Chrome...
+[20:25:22] [INFO] Chrome iniciado. Começando pedidos...
+[20:25:22] 
 ───────────────────────────────────────────────────────
-  CONFERINDO 1 pedido(s)...
-[CONFERIR] Buscando pedido #90907...
-[CONFERIR] [OK] #90907 conferido.
-  [OK] #90907 — trs conferido.
-
-✔  1 pedido(s) conferidos.
-═══════════════════════════════════════════════════════
-  INICIANDO FILA — 2 pedido(s)  23/04/2026 00:00
-═══════════════════════════════════════════════════════
-
+  PEDIDO 2: LUCELIA
 ───────────────────────────────────────────────────────
-  PEDIDO 1: FORMOSA_D
-───────────────────────────────────────────────────────
-[OK] Login realizado
-[OK] Aba Pedidos aberta
-[OK] Empresa selecionada
-[OK] Data de entrega: 24/04/2026
-[OK] Ordem de compra: 0
-[OK] Cliente: formosa_d
-[OK] Vendedor selecionado
-[OK] Pagamento: 30 DIAS
-[OK] Pedido gravado — Pedido Incluido com Sucesso !
-[OK] Código do pedido capturado: 90920
-[OK] Aba Itens Pedidos aberta
+[20:25:22] [OK] Login realizado
+[20:25:25] [OK] Aba Pedidos aberta
+[20:25:27] [OK] Empresa selecionada
+[20:25:27] [OK] Data de entrega: 07/05/2026
+[20:25:27] [OK] Ordem de compra: 0
+[20:25:29] [OK] Cliente: lucelia
+[20:25:29] [OK] Vendedor selecionado
+[20:25:31] [OK] Pagamento: 30 DIAS
+[20:25:31] [OK] Observação: teste
+[20:25:32] [OK] Pedido gravado — Pedido Incluido com Sucesso !
+[20:25:33] [OK] Código do pedido capturado: 91060
+[20:25:34] [OK] Aba Itens Pedidos aberta
 
-
-[ITEM] CAMARAO | PA 0810 | 56.0 kg | R$ 112.50
-         Espécie: CAMARAO ROSA
-         Produto: PA0810 - G31/50 CAMARAO ROSA DESC CONG SC1KG CX14KG
-         Uni. Medida: KG
-         Sistema: R$ 124.00 | Pedido: R$ 112.50
-INFERIOR — anotando em Observações
-         [OBS] Anotado: PA 0810 112,50
-         [OBS] Pedido regravado com observação.
-         Clicando em Limpar para resetar campos...
-         Refazendo seleção completa...
-         Valor restaurado: R$ 124.00 (obs. já anotada)
-         [OK] PA 0810 gravado — Item do Pedido Incluido com sucesso !
-
-[ITEM] CAMARAO | PA 0108 | 70.0 kg | R$ 80.50
-         Espécie mantida: camarao
-         Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
-         Sistema: R$ 89.00 | Pedido: R$ 80.50
-INFERIOR — anotando em Observações
-         [OBS] Anotado: PA 0108 80,50
-         [OBS] Pedido regravado com observação.
-         Clicando em Limpar para resetar campos...
-         Refazendo seleção completa...
-         Valor restaurado: R$ 89.00 (obs. já anotada)
-         [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
-
-[ITEM] CAMARAO | PA 0302 | 36.0 kg | R$ 112.50
-         Espécie mantida: camarao
-         Produto: PA0302 - G31/50 CAMARAO ROSA DESC CONG SC800G CX12
-         Sistema: R$ 124.00 | Pedido: R$ 112.50
-INFERIOR — anotando em Observações
-         [OBS] Anotado: PA 0302 112,50
-         [OBS] Pedido regravado com observação.
-         Clicando em Limpar para resetar campos...
-         Refazendo seleção completa...
-         Valor restaurado: R$ 124.00 (obs. já anotada)
-         [OK] PA 0302 gravado — Item do Pedido Incluido com sucesso !
-
-[ITEM] CAMARAO | PA 0303 | 24.0 kg | R$ 100.00
-         Espécie mantida: camarao
-         Produto: PA0303 - M51/70 CAMARAO ROSA DESC CONG SC800G CX12
-         Sistema: R$ 110.00 | Pedido: R$ 100.00
-INFERIOR — anotando em Observações
-         [OBS] Anotado: PA 0303 100,00
-         [OBS] Pedido regravado com observação.
-         Clicando em Limpar para resetar campos...
-         Refazendo seleção completa...
-         Valor restaurado: R$ 110.00 (obs. já anotada)
-         [OK] PA 0303 gravado — Item do Pedido Incluido com sucesso !
-
-[ITEM] CAMARAO | PA 0501 | 36.0 kg | R$ 120.00
-         Espécie mantida: camarao
-         Produto: PA0501 - GG21/30 CAMARAO ROSA DESC EVISC CONG SC800G CX12KG
-         Sistema: R$ 132.00 | Pedido: R$ 120.00
-INFERIOR — anotando em Observações
-         [OBS] Anotado: PA 0501 120,00
-         [OBS] Pedido regravado com observação.
-         Clicando em Limpar para resetar campos...
-         Refazendo seleção completa...
-         Valor restaurado: R$ 132.00 (obs. já anotada)
-         [OK] PA 0501 gravado — Item do Pedido Incluido com sucesso !
-
-[ITEM] CAMARAO | PA 0205 | 10.0 kg | R$ 120.00
-         Espécie mantida: camarao
-         Produto: PA0205 - GG21/30 CAMARAO ROSA DESC EVISC CONG SC400G CX10KG
-         Sistema: R$ 132.00 | Pedido: R$ 120.00
-INFERIOR — anotando em Observações
-         [OBS] Anotado: PA 0205 120,00
-         [OBS] Pedido regravado com observação.
-         Clicando em Limpar para resetar campos...
-         Refazendo seleção completa...
-         Valor restaurado: R$ 132.00 (obs. já anotada)
-         [OK] PA 0205 gravado — Item do Pedido Incluido com sucesso !
-
-[ITEM] CAMARAO | PA 0203 | 30.0 kg | R$ 100.00
-         Espécie mantida: camarao
-         Produto: PA0203 - M51/70 CAMARAO ROSA DESC CONG SC400G CX10
-         Sistema: R$ 110.00 | Pedido: R$ 100.00
-INFERIOR — anotando em Observações
-         [OBS] Anotado: PA 0203 100,00
-         [OBS] Pedido regravado com observação.
-         Clicando em Limpar para resetar campos...
-         Refazendo seleção completa...
-         Valor restaurado: R$ 110.00 (obs. já anotada)
-         [OK] PA 0203 gravado — Item do Pedido Incluido com sucesso !
-
-[ITEM] CAMARAO | PA 0204 | 50.0 kg | R$ 87.50
-         Espécie mantida: camarao
-         Produto: PA0204 - P71/110 CAMARAO ROSA DESC CONG SC400G CX10
-         Sistema: R$ 96.00 | Pedido: R$ 87.50
-INFERIOR — anotando em Observações
-         [OBS] Anotado: PA 0204 87,50
-         [OBS] Pedido regravado com observação.
-         Clicando em Limpar para resetar campos...
-         Refazendo seleção completa...
-         Valor restaurado: R$ 96.00 (obs. já anotada)
-         [OK] PA 0204 gravado — Item do Pedido Incluido com sucesso !
-
+[20:25:34] 
+[ITEM] CAMARAO | PA 0108 | 202.0 kg | R$ 20.00
+[20:25:36]          Espécie: CAMARAO ROSA
+[20:25:38]          Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[20:25:41]          Uni. Medida: KG
+[20:25:41]          Sistema: R$ 89.00 | Pedido: R$ 20.00
+[20:25:41] INFERIOR — anotando em Observações
+[20:25:42]          [OBS] Anotado: PA 0108 20,00
+[20:25:44]          [OBS] Pedido regravado com observação.
+[20:25:45]          Clicando em Limpar para resetar campos...
+[20:25:46]          Refazendo seleção completa...
+[20:25:50]          Valor restaurado: R$ 89.00 (obs. já anotada)
+[20:25:52]          [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
+[20:25:52] 
 === PEDIDO CONCLUÍDO! ===
-
-✔  Pedido concluído — Código: 90920
-[PDF] Baixando pedido #90920...
-
-[PDF] Iniciando download — Pedido #90920
-[PDF] Pedido #90920 encontrado.
-[PDF] Chamando impressão com valor...
-[PDF] Aguardando download...
-[PDF] [OK] Arquivo salvo: PEDIDO_90920_FORMOSA_D_24-04-2026.pdf
-
-───────────────────────────────────────────────────────
-  PEDIDO 2: REST_CORTIZU
-───────────────────────────────────────────────────────
-[OK] Login realizado
-[OK] Aba Pedidos aberta
-[OK] Empresa selecionada
-[OK] Data de entrega: 24/04/2026
-[OK] Ordem de compra: 0
-[OK] Cliente: rest_cortizu
-[OK] Vendedor selecionado
-[OK] Pagamento: 28/35/42 DIAS
-[OK] Pedido gravado — Pedido Incluido com Sucesso !
-[OK] Código do pedido capturado: 90921
-[OK] Aba Itens Pedidos aberta
-
-
-[ITEM] CAMARAO | PA 0304 | 48.0 kg | R$ 96.00
-         Espécie: CAMARAO ROSA
-         Produto: PA0304 - P71/110 CAMARAO ROSA DESC CONG SC800G CX12
-         Uni. Medida: KG
-         Sistema: R$ 96.00 | Pedido: R$ 96.00
-IGUAL — sem alteração
-         [OK] PA 0304 gravado — Item do Pedido Incluido com sucesso !
-
-=== PEDIDO CONCLUÍDO! ===
-
-✔  Pedido concluído — Código: 90921
-[PDF] Baixando pedido #90921...
-
-[PDF] Iniciando download — Pedido #90921
-[PDF] Pedido #90921 encontrado.
-[PDF] Chamando impressão com valor...
-[PDF] Aguardando download...
-[PDF] [OK] Arquivo salvo: PEDIDO_90921_REST_CORTIZU_24-04-2026.pdf
-
+[20:25:52] 
+✔  Pedido concluído — Código: 91060
+[20:25:52] [PDF] Baixando pedido #91060...
+[20:25:52] 
+[PDF] Iniciando download — Pedido #91060
+[20:25:57] [PDF] Pedido #91060 encontrado.
+[20:25:57] [PDF] Chamando impressão com valor...
+[20:26:00] [PDF] Aguardando download...
+[20:26:09] [PDF] [OK] Arquivo salvo: PEDIDO_91060_LUCELIA_07-05-2026.pdf
+[20:26:09] 
 ═══════════════════════════════════════════════════════
   FILA CONCLUÍDA — 2 ok  |  0 com erro
 ═══════════════════════════════════════════════════════
-
+[20:26:12] [INFO] Chrome encerrado.
+[20:34:36] ═══════════════════════════════════════════════════════
+[20:34:36]   INICIANDO FILA — 1 pedido(s)  05/05/2026 00:00
+[20:34:36] ═══════════════════════════════════════════════════════
+[20:34:37] [INFO] Iniciando Chrome...
+[20:34:39] [INFO] Chrome iniciado. Começando pedidos...
+[20:34:39] 
 ───────────────────────────────────────────────────────
-  CONFERINDO 2 pedido(s)...
-[CONFERIR] Buscando pedido #90920...
-[CONFERIR] [OK] #90920 conferido.
-  [OK] #90920 — formosa_d conferido.
-[CONFERIR] Buscando pedido #90921...
-  [ERRO] #90921 — Message: element click intercepted: Element <a class="nav-link active" id="filtro" data-toggle="pill" href="#aba-1" role="tab" aria-controls="Lista" aria-selected="true">...</a> is not clickable at point (1143, 106). Other element would receive the click: <div class="swal-overlay swal-overlay--show-modal" tabindex="-1">...</div>
-  (Session info: chrome=147.0.7727.56); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	chromedriver!GetHandleVerifier [0xe8b373+10553]
-	chromedriver!GetHandleVerifier [0xe8b4a4+10684]
-	chromedriver!(No symbol) [0xc91e10]
-	chromedriver!(No symbol) [0xce10c8]
-	chromedriver!(No symbol) [0xcdf2d9]
-	chromedriver!(No symbol) [0xcdcc92]
-	chromedriver!(No symbol) [0xcdbea4]
-	chromedriver!(No symbol) [0xcd1ab8]
-	chromedriver!(No symbol) [0xcfd86c]
-	chromedriver!(No symbol) [0xcd14f4]
-	chromedriver!(No symbol) [0xcfda34]
-	chromedriver!(No symbol) [0xd1aa36]
-	chromedriver!(No symbol) [0xcfd606]
-	chromedriver!(No symbol) [0xcd0039]
-	chromedriver!(No symbol) [0xcd0df4]
-	chromedriver!GetHandleVerifier [0x110ddb4+292f94]
-	chromedriver!GetHandleVerifier [0x110937d+28e55d]
-	chromedriver!GetHandleVerifier [0x1128215+2ad3f5]
-	chromedriver!GetHandleVerifier [0xea4c18+29df8]
-	chromedriver!GetHandleVerifier [0xeac6fd+318dd]
-	chromedriver!GetHandleVerifier [0xe93c78+18e58]
-	chromedriver!GetHandleVerifier [0xe93e42+19022]
-	chromedriver!GetHandleVerifier [0xe7d45f+263f]
-	KERNEL32!BaseThreadInitThunk [0x75d55d49+19]
-	ntdll!RtlInitializeExceptionChain [0x7751d83b+6b]
-	ntdll!RtlGetAppContainerNamedObjectPath [0x7751d7c1+231]
+  PEDIDO 1: LIDER
+───────────────────────────────────────────────────────
+[20:34:40] [OK] Login realizado
+[20:34:43] [OK] Aba Pedidos aberta
+[20:34:43] [OK] Empresa selecionada
+[20:34:43] [OK] Data de entrega: 07/05/2026
+[20:34:43] [OK] Ordem de compra: 0
+[20:34:45] [OK] Cliente: lider
+[20:34:45] [OK] Vendedor selecionado
+[20:34:46] [OK] Pagamento: 30 DIAS
+[20:34:46] [OK] Observação: teste
+[20:34:56] [AVISO] Popup não apareceu — continuando mesmo assim
+[20:34:57] [AVISO] Código não capturado.
+[20:34:58] [OK] Aba Itens Pedidos aberta
 
-
-✔  1 pedido(s) conferidos.
+[20:34:58] 
+[ITEM] 0108 | PA 0020 | 12.0 kg | R$ 120.00
+[20:34:59] 
+[ERRO] Pedido falhou: Opção '0108' não encontrada no bs-select [ESPCODIGO]
+[20:34:59]   → Pedido de lider marcado como pendente para редаição
+[20:34:59] 
 ═══════════════════════════════════════════════════════
-  INICIANDO FILA — 1 pedido(s)  23/04/2026 00:00
+  FILA CONCLUÍDA — 0 ok  |  0 com erro
 ═══════════════════════════════════════════════════════
-
+[20:35:01] [INFO] Chrome encerrado.
+[20:35:18] ═══════════════════════════════════════════════════════
+[20:35:18]   INICIANDO FILA — 1 pedido(s)  05/05/2026 00:00
+[20:35:18] ═══════════════════════════════════════════════════════
+[20:35:18] [INFO] Iniciando Chrome...
+[20:35:19] [INFO] Chrome iniciado. Começando pedidos...
+[20:35:19] 
 ───────────────────────────────────────────────────────
-  PEDIDO 1: FORMOSA_CN
+  PEDIDO 1: LIDER
 ───────────────────────────────────────────────────────
-[OK] Login realizado
-[OK] Aba Pedidos aberta
-[OK] Empresa selecionada
-[OK] Data de entrega: 24/04/2026
-[OK] Ordem de compra: 0
-[OK] Cliente: formosa_cn
-[OK] Vendedor selecionado
-[OK] Pagamento: 30 DIAS
-[OK] Pedido gravado — Pedido Incluido com Sucesso !
-[OK] Código do pedido capturado: 90928
-[OK] Aba Itens Pedidos aberta
+[20:35:20] [OK] Login realizado
+[20:35:23] [OK] Aba Pedidos aberta
+[20:35:23] [OK] Empresa selecionada
+[20:35:23] [OK] Data de entrega: 07/05/2026
+[20:35:23] [OK] Ordem de compra: 0
+[20:35:25] [OK] Cliente: lider
+[20:35:25] [OK] Vendedor selecionado
+[20:35:26] [OK] Pagamento: 30 DIAS
+[20:35:26] [OK] Observação: teste
+[20:35:27] [OK] Pedido gravado — Pedido Incluido com Sucesso !
+[20:35:28] [OK] Código do pedido capturado: 91061
+[20:35:29] [OK] Aba Itens Pedidos aberta
 
+[20:35:29] 
+[ITEM] 0108 | PA 0020 | 12.0 kg | R$ 120.00
+[20:35:30] 
+[ERRO] Pedido falhou: Opção '0108' não encontrada no bs-select [ESPCODIGO]
+[20:35:30]   → Pedido de lider marcado como pendente para редаição
+[20:35:30] 
+═══════════════════════════════════════════════════════
+  FILA CONCLUÍDA — 0 ok  |  0 com erro
+═══════════════════════════════════════════════════════
+[20:35:32] [INFO] Chrome encerrado.
+[20:37:25] ═══════════════════════════════════════════════════════
+[20:37:25]   INICIANDO FILA — 2 pedido(s)  05/05/2026 00:00
+[20:37:25] ═══════════════════════════════════════════════════════
+[20:37:25] [INFO] Iniciando Chrome...
+[20:37:26] [INFO] Chrome iniciado. Começando pedidos...
+[20:37:26] 
+───────────────────────────────────────────────────────
+  PEDIDO 1: LIDER
+───────────────────────────────────────────────────────
+[20:37:27] [OK] Login realizado
+[20:37:30] [OK] Aba Pedidos aberta
+[20:37:30] [OK] Empresa selecionada
+[20:37:30] [OK] Data de entrega: 07/05/2026
+[20:37:30] [OK] Ordem de compra: 0
+[20:37:32] [OK] Cliente: lider
+[20:37:32] [OK] Vendedor selecionado
+[20:37:33] [OK] Pagamento: 30 DIAS
+[20:37:33] [OK] Observação: teste
+[20:37:34] [OK] Pedido gravado — Pedido Incluido com Sucesso !
+[20:37:35] [OK] Código do pedido capturado: 91062
+[20:37:36] [OK] Aba Itens Pedidos aberta
 
-[ITEM] CAMARAO | PA 0202 | 30.0 kg | R$ 112.50
-         Espécie: CAMARAO ROSA
-         Produto: PA0202 - G31/50 CAMARAO ROSA DESC CONG SC400G CX10
-         Uni. Medida: KG
-         Sistema: R$ 124.00 | Pedido: R$ 112.50
-INFERIOR — anotando em Observações
-         [OBS] Anotado: PA 0202 112,50
-         [OBS] Pedido regravado com observação.
-         Clicando em Limpar para resetar campos...
-         Refazendo seleção completa...
-         Valor restaurado: R$ 124.00 (obs. já anotada)
-         [OK] PA 0202 gravado — Item do Pedido Incluido com sucesso !
-
-[ITEM] CAMARAO | PA 0203 | 30.0 kg | R$ 100.00
-         Espécie mantida: camarao
-         Produto: PA0203 - M51/70 CAMARAO ROSA DESC CONG SC400G CX10
-         Sistema: R$ 110.00 | Pedido: R$ 100.00
-INFERIOR — anotando em Observações
-         [OBS] Anotado: PA 0203 100,00
-         [OBS] Pedido regravado com observação.
-         Clicando em Limpar para resetar campos...
-         Refazendo seleção completa...
-         Valor restaurado: R$ 110.00 (obs. já anotada)
-         [OK] PA 0203 gravado — Item do Pedido Incluido com sucesso !
-
-[ITEM] CAMARAO | PA 0204 | 20.0 kg | R$ 87.50
-         Espécie mantida: camarao
-         Produto: PA0204 - P71/110 CAMARAO ROSA DESC CONG SC400G CX10
-         Sistema: R$ 96.00 | Pedido: R$ 87.50
-INFERIOR — anotando em Observações
-         [OBS] Anotado: PA 0204 87,50
-         [OBS] Pedido regravado com observação.
-         Clicando em Limpar para resetar campos...
-         Refazendo seleção completa...
-         Valor restaurado: R$ 96.00 (obs. já anotada)
-         [OK] PA 0204 gravado — Item do Pedido Incluido com sucesso !
-
+[20:37:36] 
+[ITEM] CAMARAO | PA 0108 | 20.0 kg | R$ 20.00
+[20:37:37]          Espécie: CAMARAO ROSA
+[20:37:39]          Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[20:37:42]          Uni. Medida: KG
+[20:37:42]          Sistema: R$ 89.00 | Pedido: R$ 20.00
+[20:37:42] INFERIOR — anotando em Observações
+[20:37:44]          [OBS] Anotado: PA 0108 20,00
+[20:37:45]          [OBS] Pedido regravado com observação.
+[20:37:46]          Clicando em Limpar para resetar campos...
+[20:37:47]          Refazendo seleção completa...
+[20:37:52]          Valor restaurado: R$ 89.00 (obs. já anotada)
+[20:37:53]          [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
+[20:37:54] 
 === PEDIDO CONCLUÍDO! ===
+[20:37:54] 
+✔  Pedido concluído — Código: 91062
+[20:37:54] 
+───────────────────────────────────────────────────────
+  PEDIDO 2: LIDER
+───────────────────────────────────────────────────────
+[20:37:55] [OK] Empresa selecionada
+[20:37:55] [OK] Data de entrega: 05/05/2026
+[20:37:55] [OK] Ordem de compra: 0
+[20:37:57] [OK] Cliente: lider
+[20:37:57] [OK] Vendedor selecionado
+[20:37:58] [OK] Pagamento: 30 DIAS
+[20:37:58] [OK] Observação: teste
+[20:38:08] [AVISO] Popup não apareceu — continuando mesmo assim
+[20:38:09] [AVISO] Código não capturado.
+[20:38:10] [OK] Aba Itens Pedidos aberta
 
-✔  Pedido concluído — Código: 90928
-[PDF] Baixando pedido #90928...
+[20:38:10] 
+[ITEM] CAMARAO | PA 0109 | 20.0 kg | R$ 20.00
+[20:38:12]          Espécie: CAMARAO ROSA
+[20:38:13]          Produto: PA0109 - 61/70 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[20:38:15] [ERRO] Pedido não encontrado
+[20:38:15] [PULADO] PA 0109 não encontrado.
+[20:38:15] 
+=== PEDIDO CONCLUÍDO! ===
+[20:38:15] 
+✔  Pedido concluído — Código: None
+[20:38:15] 
+═══════════════════════════════════════════════════════
+  FILA CONCLUÍDA — 2 ok  |  0 com erro
+═══════════════════════════════════════════════════════
+[20:38:17] [INFO] Chrome encerrado.
+[20:38:28] 
+───────────────────────────────────────────────────────
+[20:38:28]   CANCELANDO pedido #91062...
+[20:38:28] [INFO] Iniciando Chrome para cancelamento...
+[20:38:30] [CANCELAR] Cancelando pedido #91062...
+[20:38:51]   [ERRO] #91062 — Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x82b373+10553]
+	chromedriver!GetHandleVerifier [0x82b4a4+10684]
+	chromedriver!(No symbol) [0x631e10]
+	chromedriver!(No symbol) [0x67a9da]
+	chromedriver!(No symbol) [0x67ac7b]
+	chromedriver!(No symbol) [0x6bd162]
+	chromedriver!(No symbol) [0x69d8b4]
+	chromedriver!(No symbol) [0x6baa36]
+	chromedriver!(No symbol) [0x69d606]
+	chromedriver!(No symbol) [0x670039]
+	chromedriver!(No symbol) [0x670df4]
+	chromedriver!GetHandleVerifier [0xaaddb4+292f94]
+	chromedriver!GetHandleVerifier [0xaa937d+28e55d]
+	chromedriver!GetHandleVerifier [0xac8215+2ad3f5]
+	chromedriver!GetHandleVerifier [0x844c18+29df8]
+	chromedriver!GetHandleVerifier [0x84c6fd+318dd]
+	chromedriver!GetHandleVerifier [0x833c78+18e58]
+	chromedriver!GetHandleVerifier [0x833e42+19022]
+	chromedriver!GetHandleVerifier [0x81d45f+263f]
+	KERNEL32!BaseThreadInitThunk [0x76b85d49+19]
+	ntdll!RtlInitializeExceptionChain [0x77a2d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x77a2d7c1+231]
 
-[PDF] Iniciando download — Pedido #90928
-[PDF] Pedido #90928 encontrado.
-[PDF] Chamando impressão com valor...
-[PDF] Aguardando download...
-[PDF] [OK] Arquivo salvo: PEDIDO_90928_FORMOSA_CN_24-04-2026.pdf
+[20:38:53] 
+✔  0 pedido(s) cancelado(s).
+[20:55:23] ═══════════════════════════════════════════════════════
+[20:55:23]   INICIANDO FILA — 2 pedido(s)  05/05/2026 00:00
+[20:55:23] ═══════════════════════════════════════════════════════
+[20:55:23] [INFO] Iniciando Chrome...
+[20:55:25] [INFO] Chrome iniciado. Começando pedidos...
+[20:55:25] 
+───────────────────────────────────────────────────────
+  PEDIDO 1: LIDER
+───────────────────────────────────────────────────────
+[20:55:25] [OK] Login realizado
+[20:55:29] [OK] Aba Pedidos aberta
+[20:55:29] [OK] Empresa selecionada
+[20:55:29] [OK] Data de entrega: 07/05/2026
+[20:55:29] [OK] Ordem de compra: 0
+[20:55:32] [OK] Cliente: lider
+[20:55:32] [OK] Vendedor selecionado
+[20:55:33] [OK] Pagamento: 30 DIAS
+[20:55:33] [OK] Observação: teste
+[20:55:34] [OK] Pedido gravado — Pedido Incluido com Sucesso !
+[20:55:35] [OK] Código do pedido capturado: 91063
+[20:55:36] [OK] Aba Itens Pedidos aberta
 
+[20:55:36] 
+[ITEM] CAMARAO | PA 0109 | 20.0 kg | R$ 23.00
+[20:55:38]          Espécie: CAMARAO ROSA
+[20:55:40]          Produto: PA0109 - 61/70 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[20:55:43]          Uni. Medida: KG
+[20:55:43]          Sistema: R$ 81.00 | Pedido: R$ 23.00
+[20:55:43] INFERIOR — anotando em Observações
+[20:55:44]          [OBS] Anotado: PA 0109 23,00
+[20:55:45]          [OBS] Pedido regravado com observação.
+[20:55:47]          Clicando em Limpar para resetar campos...
+[20:55:47]          Refazendo seleção completa...
+[20:55:52]          Valor restaurado: R$ 81.00 (obs. já anotada)
+[20:55:53]          [OK] PA 0109 gravado — Item do Pedido Incluido com sucesso !
+[20:55:54] 
+[ITEM] CAMARAO | PA 0108 | 20.0 kg | R$ 20.00
+[20:55:54]          Espécie mantida: camarao
+[20:55:55]          Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[20:55:58]          Sistema: R$ 89.00 | Pedido: R$ 20.00
+[20:55:58] INFERIOR — anotando em Observações
+[20:56:00]          [OBS] Anotado: PA 0108 20,00
+[20:56:01]          [OBS] Pedido regravado com observação.
+[20:56:02]          Clicando em Limpar para resetar campos...
+[20:56:03]          Refazendo seleção completa...
+[20:56:08]          Valor restaurado: R$ 89.00 (obs. já anotada)
+[20:56:09]          [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
+[20:56:09] 
+=== PEDIDO CONCLUÍDO! ===
+[20:56:09] 
+✔  Pedido concluído — Código: 91063
+[20:56:09] 
+───────────────────────────────────────────────────────
+  PEDIDO 2: LIDER
+───────────────────────────────────────────────────────
+[20:56:11] [OK] Empresa selecionada
+[20:56:12] [OK] Data de entrega: 07/05/2026
+[20:56:12] [OK] Ordem de compra: 0
+[20:56:15] [OK] Cliente: lider
+[20:56:15] [OK] Vendedor selecionado
+[20:56:16] [OK] Pagamento: 30 DIAS
+[20:56:16] [OK] Observação: teste
+[20:56:17] [OK] Pedido gravado — Pedido Incluido com Sucesso !
+[20:56:18] [OK] Código do pedido capturado: 91064
+[20:56:19] [OK] Aba Itens Pedidos aberta
+
+[20:56:19] 
+[ITEM] CAMARAO | PA 0109 | 20.0 kg | R$ 23.00
+[20:56:20]          Espécie: CAMARAO ROSA
+[20:56:22]          Produto: PA0109 - 61/70 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[20:56:25]          Uni. Medida: KG
+[20:56:26]          Sistema: R$ 81.00 | Pedido: R$ 23.00
+[20:56:26] INFERIOR — anotando em Observações
+[20:56:27]          [OBS] Anotado: PA 0109 23,00
+[20:56:28]          [OBS] Pedido regravado com observação.
+[20:56:29]          Clicando em Limpar para resetar campos...
+[20:56:30]          Refazendo seleção completa...
+[20:56:35]          Valor restaurado: R$ 81.00 (obs. já anotada)
+[20:56:36]          [OK] PA 0109 gravado — Item do Pedido Incluido com sucesso !
+[20:56:37] 
+[ITEM] CAMARAO | PA 0108 | 20.0 kg | R$ 20.00
+[20:56:37]          Espécie mantida: camarao
+[20:56:38]          Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[20:56:41]          Sistema: R$ 89.00 | Pedido: R$ 20.00
+[20:56:41] INFERIOR — anotando em Observações
+[20:56:42]          [OBS] Anotado: PA 0108 20,00
+[20:56:44]          [OBS] Pedido regravado com observação.
+[20:56:45]          Clicando em Limpar para resetar campos...
+[20:56:46]          Refazendo seleção completa...
+[20:56:50]          Valor restaurado: R$ 89.00 (obs. já anotada)
+[20:56:52]          [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
+[20:56:52] 
+=== PEDIDO CONCLUÍDO! ===
+[20:56:52] 
+✔  Pedido concluído — Código: 91064
+[20:56:52] 
+═══════════════════════════════════════════════════════
+  FILA CONCLUÍDA — 2 ok  |  0 com erro
+═══════════════════════════════════════════════════════
+[20:56:54] [INFO] Chrome encerrado.
+[20:58:22] 
+───────────────────────────────────────────────────────
+[20:58:22]   CANCELANDO pedido #91064...
+[20:58:22] [INFO] Iniciando Chrome para cancelamento...
+[20:58:23] [CANCELAR] Cancelando pedido #91064...
+[20:58:30] [OK] Login realizado
+[20:58:43] [CANCELAR] [OK] #91064 cancelado.
+[20:58:43]   [OK] #91064 — lider cancelado.
+[20:58:45] 
+✔  1 pedido(s) cancelado(s).
+[21:08:53] ═══════════════════════════════════════════════════════
+[21:08:53]   INICIANDO FILA — 2 pedido(s)  05/05/2026 00:00
+[21:08:53] ═══════════════════════════════════════════════════════
+[21:08:54] [INFO] Iniciando Chrome...
+[21:08:55] [INFO] Chrome iniciado. Começando pedidos...
+[21:08:55] 
+───────────────────────────────────────────────────────
+  PEDIDO 1: LUCELIA
+───────────────────────────────────────────────────────
+[21:08:56] [OK] Login realizado
+[21:08:59] [OK] Aba Pedidos aberta
+[21:09:00] [OK] Empresa selecionada
+[21:09:00] [OK] Data de entrega: 07/05/2026
+[21:09:00] [OK] Ordem de compra: 0
+[21:09:03] [OK] Cliente: lucelia
+[21:09:03] [OK] Vendedor selecionado
+[21:09:03] [OK] Pagamento: 14 DIAS
+[21:09:03] [OK] Observação: teste
+[21:09:05] [OK] Pedido gravado — Pedido Incluido com Sucesso !
+[21:09:05] [OK] Código do pedido capturado: 91065
+[21:09:07] [OK] Aba Itens Pedidos aberta
+
+[21:09:07] 
+[ITEM] 0202 | PA 0202 | 20.0 kg | R$ 30.00
+[21:09:08] 
+[ERRO] Pedido falhou: Opção '0202' não encontrada no bs-select [ESPCODIGO]
+[21:09:08]   → Pedido de lucelia marcado como pendente para редаição
+[21:09:08] 
+───────────────────────────────────────────────────────
+  PEDIDO 2: LIDER
+───────────────────────────────────────────────────────
+[21:09:10] [OK] Empresa selecionada
+[21:09:10] [OK] Data de entrega: 06/05/2026
+[21:09:10] [OK] Ordem de compra: 0
+[21:09:13] [OK] Cliente: lider
+[21:09:14] [OK] Vendedor selecionado
+[21:09:14] [OK] Pagamento: 20 DIAS
+[21:09:14] [OK] Observação: teste
+[21:09:16] [OK] Pedido gravado — Pedido Incluido com Sucesso !
+[21:09:16] [OK] Código do pedido capturado: 91066
+[21:09:18] [OK] Aba Itens Pedidos aberta
+
+[21:09:18] 
+[ITEM] CAMARAO | PA 0108 | 50.0 kg | R$ 20.00
+[21:09:19]          Espécie: CAMARAO ROSA
+[21:09:21]          Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[21:09:24]          Uni. Medida: KG
+[21:09:24]          Sistema: R$ 89.00 | Pedido: R$ 20.00
+[21:09:24] INFERIOR — anotando em Observações
+[21:09:25]          [OBS] Anotado: PA 0108 20,00
+[21:09:27]          [OBS] Pedido regravado com observação.
+[21:09:28]          Clicando em Limpar para resetar campos...
+[21:09:29]          Refazendo seleção completa...
+[21:09:33]          Valor restaurado: R$ 89.00 (obs. já anotada)
+[21:09:35]          [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
+[21:09:35] 
+[ITEM] CAMARAO | PA 0202 | 50.0 kg | R$ 20.00
+[21:09:35]          Espécie mantida: camarao
+[21:09:37]          Produto: PA0202 - G31/50 CAMARAO ROSA DESC CONG SC400G CX10
+[21:09:40]          Sistema: R$ 124.00 | Pedido: R$ 20.00
+[21:09:40] INFERIOR — anotando em Observações
+[21:09:41]          [OBS] Anotado: PA 0202 20,00
+[21:09:42]          [OBS] Pedido regravado com observação.
+[21:09:43]          Clicando em Limpar para resetar campos...
+[21:09:44]          Refazendo seleção completa...
+[21:09:49]          Valor restaurado: R$ 124.00 (obs. já anotada)
+[21:09:50]          [OK] PA 0202 gravado — Item do Pedido Incluido com sucesso !
+[21:09:51] 
+[ITEM] CAMARAO | PA 0205 | 20.0 kg | R$ 50.00
+[21:09:51]          Espécie mantida: camarao
+[21:09:52]          Produto: PA0205 - GG21/30 CAMARAO ROSA DESC EVISC CONG SC400G CX10KG
+[21:09:55]          Sistema: R$ 132.00 | Pedido: R$ 50.00
+[21:09:55] INFERIOR — anotando em Observações
+[21:09:56]          [OBS] Anotado: PA 0205 50,00
+[21:09:58]          [OBS] Pedido regravado com observação.
+[21:09:59]          Clicando em Limpar para resetar campos...
+[21:10:00]          Refazendo seleção completa...
+[21:10:04]          Valor restaurado: R$ 132.00 (obs. já anotada)
+[21:10:06]          [OK] PA 0205 gravado — Item do Pedido Incluido com sucesso !
+[21:10:06] 
+=== PEDIDO CONCLUÍDO! ===
+[21:10:06] 
+✔  Pedido concluído — Código: 91066
+[21:10:06] [PDF] Baixando pedido #91066...
+[21:10:06] 
+[PDF] Iniciando download — Pedido #91066
+[21:10:11] [PDF] Pedido #91066 encontrado.
+[21:10:11] [PDF] Chamando impressão com valor...
+[21:10:14] [PDF] Aguardando download...
+[21:10:16] [PDF] [OK] Arquivo salvo: PEDIDO_91066_LIDER_06-05-2026.pdf
+[21:10:16] 
 ═══════════════════════════════════════════════════════
   FILA CONCLUÍDA — 1 ok  |  0 com erro
 ═══════════════════════════════════════════════════════
+[21:10:18] [INFO] Chrome encerrado.
+[21:10:53] 
+───────────────────────────────────────────────────────
+[21:10:53]   CANCELANDO pedido #91066...
+[21:10:53] [INFO] Iniciando Chrome para cancelamento...
+[21:10:55] [CANCELAR] Cancelando pedido #91066...
+[21:11:02] [OK] Login realizado
+[21:11:14] [CANCELAR] [OK] #91066 cancelado.
+[21:11:14]   [OK] #91066 — lider cancelado.
+[21:11:17] 
+✔  1 pedido(s) cancelado(s).
+[14:34:34] ═══════════════════════════════════════════════════════
+[14:34:34]   INICIANDO FILA — 3 pedido(s)  06/05/2026 00:00
+[14:34:34] ═══════════════════════════════════════════════════════
+[14:34:35] [INFO] Iniciando Chrome...
+[14:34:40] [INFO] Chrome iniciado. Começando pedidos...
+[14:34:40] 
+───────────────────────────────────────────────────────
+  PEDIDO 1: R3X
+───────────────────────────────────────────────────────
+[14:34:41] [OK] Login realizado
+[14:34:45] [OK] Aba Pedidos aberta
+[14:34:45] [OK] Empresa selecionada
+[14:34:45] [OK] Data de entrega: 07/05/2026
+[14:34:45] [OK] Ordem de compra: 0
+[14:34:48] [OK] Cliente: r3x
+[14:34:48] [OK] Vendedor selecionado
+[14:34:50] 
+[ERRO] Pedido falhou: Condição de pagamento '13/21/28' não encontrada.
+[14:34:50]   → Pedido de r3x marcado como pendente para редаição
+[14:34:50] 
+───────────────────────────────────────────────────────
+  PEDIDO 2: FORMOSA_CN
+───────────────────────────────────────────────────────
+[14:34:54] [OK] Empresa selecionada
+[14:34:54] [OK] Data de entrega: 07/05/2026
+[14:34:54] [OK] Ordem de compra: 0
+[14:34:55] [OK] Cliente: formosa_cn
+[14:34:55] [OK] Vendedor selecionado
+[14:34:56] [OK] Pagamento: 30 DIAS
+[14:34:58] [OK] Pedido gravado — Pedido Incluido com Sucesso !
+[14:34:58] [OK] Código do pedido capturado: 91074
+[14:34:59] [OK] Aba Itens Pedidos aberta
+
+[14:34:59] 
+[ITEM] CAMARAO | PA 0108 | 42.0 kg | R$ 80.50
+[14:35:01]          Espécie: CAMARAO ROSA
+[14:35:03]          Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[14:35:06]          Uni. Medida: KG
+[14:35:06]          Sistema: R$ 89.00 | Pedido: R$ 80.50
+[14:35:06] INFERIOR — anotando em Observações
+[14:35:07]          [OBS] Anotado: PA 0108 80,50
+[14:35:09]          [OBS] Pedido regravado com observação.
+[14:35:10]          Clicando em Limpar para resetar campos...
+[14:35:11]          Refazendo seleção completa...
+[14:35:15]          Valor restaurado: R$ 89.00 (obs. já anotada)
+[14:35:16]          [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
+[14:35:17] 
+[ITEM] CAMARAO | PA 0106 | 56.0 kg | R$ 92.00
+[14:35:17]          Espécie mantida: camarao
+[14:35:18]          Produto: PA0106 - 31/40 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[14:35:22]          Sistema: R$ 101.00 | Pedido: R$ 92.00
+[14:35:22] INFERIOR — anotando em Observações
+[14:35:23]          [OBS] Anotado: PA 0106 92,00
+[14:35:24]          [OBS] Pedido regravado com observação.
+[14:35:25]          Clicando em Limpar para resetar campos...
+[14:35:26]          Refazendo seleção completa...
+[14:35:31]          Valor restaurado: R$ 101.00 (obs. já anotada)
+[14:35:33]          [OK] PA 0106 gravado — Item do Pedido Incluido com sucesso !
+[14:35:33] 
+[ITEM] CAMARAO | PA 0303 | 144.0 kg | R$ 100.00
+[14:35:33]          Espécie mantida: camarao
+[14:35:35]          Produto: PA0303 - M51/70 CAMARAO ROSA DESC CONG SC800G CX12
+[14:35:38]          Sistema: R$ 110.00 | Pedido: R$ 100.00
+[14:35:38] INFERIOR — anotando em Observações
+[14:35:39]          [OBS] Anotado: PA 0303 100,00
+[14:35:40]          [OBS] Pedido regravado com observação.
+[14:35:41]          Clicando em Limpar para resetar campos...
+[14:35:42]          Refazendo seleção completa...
+[14:35:47]          Valor restaurado: R$ 110.00 (obs. já anotada)
+[14:35:48]          [OK] PA 0303 gravado — Item do Pedido Incluido com sucesso !
+[14:35:49] 
+[ITEM] CAMARAO | PA 0202 | 10.0 kg | R$ 112.50
+[14:35:49]          Espécie mantida: camarao
+[14:35:50]          Produto: PA0202 - G31/50 CAMARAO ROSA DESC CONG SC400G CX10
+[14:35:53]          Sistema: R$ 124.00 | Pedido: R$ 112.50
+[14:35:53] INFERIOR — anotando em Observações
+[14:35:54]          [OBS] Anotado: PA 0202 112,50
+[14:35:56]          [OBS] Pedido regravado com observação.
+[14:35:57]          Clicando em Limpar para resetar campos...
+[14:35:58]          Refazendo seleção completa...
+[14:36:02]          Valor restaurado: R$ 124.00 (obs. já anotada)
+[14:36:04]          [OK] PA 0202 gravado — Item do Pedido Incluido com sucesso !
+[14:36:04] 
+[ITEM] CAMARAO | PA 0203 | 10.0 kg | R$ 100.00
+[14:36:04]          Espécie mantida: camarao
+[14:36:06]          Produto: PA0203 - M51/70 CAMARAO ROSA DESC CONG SC400G CX10
+[14:36:09]          Sistema: R$ 110.00 | Pedido: R$ 100.00
+[14:36:09] INFERIOR — anotando em Observações
+[14:36:10]          [OBS] Anotado: PA 0203 100,00
+[14:36:11]          [OBS] Pedido regravado com observação.
+[14:36:12]          Clicando em Limpar para resetar campos...
+[14:36:13]          Refazendo seleção completa...
+[14:36:18]          Valor restaurado: R$ 110.00 (obs. já anotada)
+[14:36:19]          [OK] PA 0203 gravado — Item do Pedido Incluido com sucesso !
+[14:36:20] 
+[ITEM] CAMARAO | PA 0204 | 10.0 kg | R$ 87.50
+[14:36:20]          Espécie mantida: camarao
+[14:36:21]          Produto: PA0204 - P71/110 CAMARAO ROSA DESC CONG SC400G CX10
+[14:36:24]          Sistema: R$ 96.00 | Pedido: R$ 87.50
+[14:36:24] INFERIOR — anotando em Observações
+[14:36:26]          [OBS] Anotado: PA 0204 87,50
+[14:36:27]          [OBS] Pedido regravado com observação.
+[14:36:28]          Clicando em Limpar para resetar campos...
+[14:36:29]          Refazendo seleção completa...
+[14:36:33]          Valor restaurado: R$ 96.00 (obs. já anotada)
+[14:36:35]          [OK] PA 0204 gravado — Item do Pedido Incluido com sucesso !
+[14:36:35] 
+[ITEM] CAMARAO | PA 0105 | 60.0 kg | R$ 65.00
+[14:36:35]          Espécie mantida: camarao
+[14:36:37]          Produto: PA0105 - 26/30 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[14:36:40]          Sistema: R$ 109.00 | Pedido: R$ 65.00
+[14:36:40] INFERIOR — anotando em Observações
+[14:36:41]          [OBS] Anotado: PA 0105 65,00
+[14:36:42]          [OBS] Pedido regravado com observação.
+[14:36:44]          Clicando em Limpar para resetar campos...
+[14:36:44]          Refazendo seleção completa...
+[14:36:49]          Valor restaurado: R$ 109.00 (obs. já anotada)
+[14:36:50]          [OK] PA 0105 gravado — Item do Pedido Incluido com sucesso !
+[14:36:51] 
+=== PEDIDO CONCLUÍDO! ===
+[14:36:51] 
+✔  Pedido concluído — Código: 91074
+[14:36:51] [PDF] Baixando pedido #91074...
+[14:36:51] 
+[PDF] Iniciando download — Pedido #91074
+[14:36:55] [PDF] Pedido #91074 encontrado.
+[14:36:55] [PDF] Chamando impressão com valor...
+[14:36:58] [PDF] Aguardando download...
+[14:37:00] [PDF] [OK] Arquivo salvo: PEDIDO_91074_FORMOSA_CN_07-05-2026.pdf
+[14:37:00] 
+───────────────────────────────────────────────────────
+  PEDIDO 3: FORMOSA_CU
+───────────────────────────────────────────────────────
+[14:37:02] [OK] Empresa selecionada
+[14:37:02] [OK] Data de entrega: 08/05/2026
+[14:37:02] [OK] Ordem de compra: 0
+[14:37:04] [OK] Cliente: formosa_cu
+[14:37:04] [OK] Vendedor selecionado
+[14:37:05] [OK] Pagamento: 30 DIAS
+[14:37:06] [OK] Pedido gravado — Pedido Incluido com Sucesso !
+[14:37:07] [OK] Código do pedido capturado: 91075
+[14:37:08] [OK] Aba Itens Pedidos aberta
+
+[14:37:08] 
+[ITEM] CAMARAO | PA 0810 | 140.0 kg | R$ 112.50
+[14:37:10]          Espécie: CAMARAO ROSA
+[14:37:11]          Produto: PA0810 - G31/50 CAMARAO ROSA DESC CONG SC1KG CX14KG
+[14:37:14]          Uni. Medida: KG
+[14:37:15]          Sistema: R$ 124.00 | Pedido: R$ 112.50
+[14:37:15] INFERIOR — anotando em Observações
+[14:37:16]          [OBS] Anotado: PA 0810 112,50
+[14:37:17]          [OBS] Pedido regravado com observação.
+[14:37:18]          Clicando em Limpar para resetar campos...
+[14:37:19]          Refazendo seleção completa...
+[14:37:24]          Valor restaurado: R$ 124.00 (obs. já anotada)
+[14:37:25]          [OK] PA 0810 gravado — Item do Pedido Incluido com sucesso !
+[14:37:26] 
+[ITEM] CAMARAO | PA 0202 | 20.0 kg | R$ 112.50
+[14:37:26]          Espécie mantida: camarao
+[14:37:27]          Produto: PA0202 - G31/50 CAMARAO ROSA DESC CONG SC400G CX10
+[14:37:30]          Sistema: R$ 124.00 | Pedido: R$ 112.50
+[14:37:30] INFERIOR — anotando em Observações
+[14:37:31]          [OBS] Anotado: PA 0202 112,50
+[14:37:33]          [OBS] Pedido regravado com observação.
+[14:37:34]          Clicando em Limpar para resetar campos...
+[14:37:35]          Refazendo seleção completa...
+[14:37:39]          Valor restaurado: R$ 124.00 (obs. já anotada)
+[14:37:41]          [OK] PA 0202 gravado — Item do Pedido Incluido com sucesso !
+[14:37:41] 
+[ITEM] CAMARAO | PA 0204 | 20.0 kg | R$ 87.50
+[14:37:41]          Espécie mantida: camarao
+[14:37:43]          Produto: PA0204 - P71/110 CAMARAO ROSA DESC CONG SC400G CX10
+[14:37:46]          Sistema: R$ 96.00 | Pedido: R$ 87.50
+[14:37:46] INFERIOR — anotando em Observações
+[14:37:47]          [OBS] Anotado: PA 0204 87,50
+[14:37:48]          [OBS] Pedido regravado com observação.
+[14:37:49]          Clicando em Limpar para resetar campos...
+[14:37:50]          Refazendo seleção completa...
+[14:37:55]          Valor restaurado: R$ 96.00 (obs. já anotada)
+[14:37:56]          [OK] PA 0204 gravado — Item do Pedido Incluido com sucesso !
+[14:37:57] 
+[ITEM] CAMARAO | PA 0304 | 12.0 kg | R$ 87.50
+[14:37:57]          Espécie mantida: camarao
+[14:37:58]          Produto: PA0304 - P71/110 CAMARAO ROSA DESC CONG SC800G CX12
+[14:38:01]          Sistema: R$ 96.00 | Pedido: R$ 87.50
+[14:38:01] INFERIOR — anotando em Observações
+[14:38:02]          [OBS] Anotado: PA 0304 87,50
+[14:38:04]          [OBS] Pedido regravado com observação.
+[14:38:05]          Clicando em Limpar para resetar campos...
+[14:38:06]          Refazendo seleção completa...
+[14:38:10]          Valor restaurado: R$ 96.00 (obs. já anotada)
+[14:38:12]          [OK] PA 0304 gravado — Item do Pedido Incluido com sucesso !
+[14:38:12] 
+[ITEM] PARGO | PA 10105 | 100.0 kg | R$ 65.00
+[14:38:14]          Espécie: PARGO
+[14:38:15]          Produto: PA10105 - PEIXE CONG FILE C/PELE PARGO 800-1200G AMASA CX 20KG
+[14:38:18]          Sistema: R$ 65.00 | Pedido: R$ 65.00
+[14:38:18] IGUAL — sem alteração
+[14:38:20]          [OK] PA 10105 gravado — Item do Pedido Incluido com sucesso !
+[14:38:20] 
+=== PEDIDO CONCLUÍDO! ===
+[14:38:20] 
+✔  Pedido concluído — Código: 91075
+[14:38:20] [PDF] Baixando pedido #91075...
+[14:38:20] 
+[PDF] Iniciando download — Pedido #91075
+[14:38:24] [PDF] Pedido #91075 encontrado.
+[14:38:24] [PDF] Chamando impressão com valor...
+[14:38:28] [PDF] Aguardando download...
+[14:38:41] [PDF] [OK] Arquivo salvo: PEDIDO_91075_FORMOSA_CU_08-05-2026.pdf
+[14:38:41] 
+═══════════════════════════════════════════════════════
+  FILA CONCLUÍDA — 2 ok  |  0 com erro
+═══════════════════════════════════════════════════════
+[14:38:43] [INFO] Chrome encerrado.
+[14:39:30] ═══════════════════════════════════════════════════════
+[14:39:30]   INICIANDO FILA — 1 pedido(s)  06/05/2026 00:00
+[14:39:30] ═══════════════════════════════════════════════════════
+[14:39:30] [INFO] Iniciando Chrome...
+[14:39:32] [INFO] Chrome iniciado. Começando pedidos...
+[14:39:32] 
+───────────────────────────────────────────────────────
+  PEDIDO 3: R3X
+───────────────────────────────────────────────────────
+[14:39:32] [OK] Login realizado
+[14:39:36] [OK] Aba Pedidos aberta
+[14:39:36] [OK] Empresa selecionada
+[14:39:36] [OK] Data de entrega: 07/05/2026
+[14:39:36] [OK] Ordem de compra: 0
+[14:39:39] [OK] Cliente: r3x
+[14:39:39] [OK] Vendedor selecionado
+[14:39:40] [OK] Pagamento: 14/21/28
+[14:39:41] [OK] Pedido gravado — Pedido Incluido com Sucesso !
+[14:39:42] [OK] Código do pedido capturado: 91076
+[14:39:43] [OK] Aba Itens Pedidos aberta
+
+[14:39:43] 
+[ITEM] CAMARAO | PA 0104 | 112.0 kg | R$ 120.00
+[14:39:44]          Espécie: CAMARAO ROSA
+[14:39:46]          Produto: PA0104 - 21/25 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[14:39:49]          Uni. Medida: KG
+[14:39:49]          Sistema: R$ 120.00 | Pedido: R$ 120.00
+[14:39:49] IGUAL — sem alteração
+[14:39:51]          [OK] PA 0104 gravado — Item do Pedido Incluido com sucesso !
+[14:39:51] 
+=== PEDIDO CONCLUÍDO! ===
+[14:39:51] 
+✔  Pedido concluído — Código: 91076
+[14:39:51] [PDF] Baixando pedido #91076...
+[14:39:51] 
+[PDF] Iniciando download — Pedido #91076
+[14:39:55] [PDF] Pedido #91076 encontrado.
+[14:39:55] [PDF] Chamando impressão com valor...
+[14:39:59] [PDF] Aguardando download...
+[14:40:01] [PDF] [OK] Arquivo salvo: PEDIDO_91076_R3X_07-05-2026.pdf
+[14:40:01] 
+═══════════════════════════════════════════════════════
+  FILA CONCLUÍDA — 3 ok  |  0 com erro
+═══════════════════════════════════════════════════════
+[14:40:03] [INFO] Chrome encerrado.
+[14:42:34] ═══════════════════════════════════════════════════════
+[14:42:34]   INICIANDO FILA — 1 pedido(s)  06/05/2026 00:00
+[14:42:34] ═══════════════════════════════════════════════════════
+[14:42:34] [INFO] Iniciando Chrome...
+[14:42:36] [INFO] Chrome iniciado. Começando pedidos...
+[14:42:36] 
+───────────────────────────────────────────────────────
+  PEDIDO 4: R3X
+───────────────────────────────────────────────────────
+[14:42:36] [OK] Login realizado
+[14:42:40] [OK] Aba Pedidos aberta
+[14:42:40] [OK] Empresa selecionada
+[14:42:40] [OK] Data de entrega: 07/05/2026
+[14:42:40] [OK] Ordem de compra: 0
+[14:42:43] [OK] Cliente: r3x
+[14:42:43] [OK] Vendedor selecionado
+[14:42:43] [OK] Pagamento: 30 DIAS
+[14:42:45] [OK] Pedido gravado — Pedido Incluido com Sucesso !
+[14:42:45] [OK] Código do pedido capturado: 91077
+[14:42:47] [OK] Aba Itens Pedidos aberta
+
+[14:42:47] 
+[ITEM] CAMARAO | PA 1503 | 96.0 kg | R$ 118.00
+[14:42:48]          Espécie: CAMARAO ROSA
+[14:42:50]          Produto: PA1503 - G31/50 CAMARAO ROSA DESC CONG AMASA GRANEL CX 12KG
+[14:42:53]          Uni. Medida: KG
+[14:42:53]          Sistema: R$ 112.50 | Pedido: R$ 118.00
+[14:42:53] SUPERIOR — alterando valor
+[14:42:55]          [OK] PA 1503 gravado — Item do Pedido Incluido com sucesso !
+[14:42:55] 
+=== PEDIDO CONCLUÍDO! ===
+[14:42:55] 
+✔  Pedido concluído — Código: 91077
+[14:42:55] [PDF] Baixando pedido #91077...
+[14:42:55] 
+[PDF] Iniciando download — Pedido #91077
+[14:42:59] [PDF] Pedido #91077 encontrado.
+[14:43:00] [PDF] Chamando impressão com valor...
+[14:43:03] [PDF] Aguardando download...
+[14:43:03] [PDF] [OK] Arquivo salvo: PEDIDO_91077_R3X_07-05-2026.pdf
+[14:43:03] 
+═══════════════════════════════════════════════════════
+  FILA CONCLUÍDA — 4 ok  |  0 com erro
+═══════════════════════════════════════════════════════
+[14:43:05] [INFO] Chrome encerrado.
+[14:52:38] 
+───────────────────────────────────────────────────────
+[14:52:38]   CONFERINDO 3 pedido(s)...
+[14:52:38] [INFO] Iniciando Chrome para conferência...
+[14:52:40] [CONFERIR] Buscando pedido #91074...
+[14:52:50]   [ERRO] #91074 — Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x67b373+10553]
+	chromedriver!GetHandleVerifier [0x67b4a4+10684]
+	chromedriver!(No symbol) [0x481e10]
+	chromedriver!(No symbol) [0x4ca9da]
+	chromedriver!(No symbol) [0x4cac7b]
+	chromedriver!(No symbol) [0x50d162]
+	chromedriver!(No symbol) [0x4ed8b4]
+	chromedriver!(No symbol) [0x50aa36]
+	chromedriver!(No symbol) [0x4ed606]
+	chromedriver!(No symbol) [0x4c0039]
+	chromedriver!(No symbol) [0x4c0df4]
+	chromedriver!GetHandleVerifier [0x8fddb4+292f94]
+	chromedriver!GetHandleVerifier [0x8f937d+28e55d]
+	chromedriver!GetHandleVerifier [0x918215+2ad3f5]
+	chromedriver!GetHandleVerifier [0x694c18+29df8]
+	chromedriver!GetHandleVerifier [0x69c6fd+318dd]
+	chromedriver!GetHandleVerifier [0x683c78+18e58]
+	chromedriver!GetHandleVerifier [0x683e42+19022]
+	chromedriver!GetHandleVerifier [0x66d45f+263f]
+	KERNEL32!BaseThreadInitThunk [0x74a85d49+19]
+	ntdll!RtlInitializeExceptionChain [0x770ad83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x770ad7c1+231]
+
+[14:52:50] [CONFERIR] Buscando pedido #91075...
+[14:53:00]   [ERRO] #91075 — Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x67b373+10553]
+	chromedriver!GetHandleVerifier [0x67b4a4+10684]
+	chromedriver!(No symbol) [0x481e10]
+	chromedriver!(No symbol) [0x4ca9da]
+	chromedriver!(No symbol) [0x4cac7b]
+	chromedriver!(No symbol) [0x50d162]
+	chromedriver!(No symbol) [0x4ed8b4]
+	chromedriver!(No symbol) [0x50aa36]
+	chromedriver!(No symbol) [0x4ed606]
+	chromedriver!(No symbol) [0x4c0039]
+	chromedriver!(No symbol) [0x4c0df4]
+	chromedriver!GetHandleVerifier [0x8fddb4+292f94]
+	chromedriver!GetHandleVerifier [0x8f937d+28e55d]
+	chromedriver!GetHandleVerifier [0x918215+2ad3f5]
+	chromedriver!GetHandleVerifier [0x694c18+29df8]
+	chromedriver!GetHandleVerifier [0x69c6fd+318dd]
+	chromedriver!GetHandleVerifier [0x683c78+18e58]
+	chromedriver!GetHandleVerifier [0x683e42+19022]
+	chromedriver!GetHandleVerifier [0x66d45f+263f]
+	KERNEL32!BaseThreadInitThunk [0x74a85d49+19]
+	ntdll!RtlInitializeExceptionChain [0x770ad83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x770ad7c1+231]
+
+[14:53:00] [CONFERIR] Buscando pedido #91077...
+[14:53:11]   [ERRO] #91077 — Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x67b373+10553]
+	chromedriver!GetHandleVerifier [0x67b4a4+10684]
+	chromedriver!(No symbol) [0x481e10]
+	chromedriver!(No symbol) [0x4ca9da]
+	chromedriver!(No symbol) [0x4cac7b]
+	chromedriver!(No symbol) [0x50d162]
+	chromedriver!(No symbol) [0x4ed8b4]
+	chromedriver!(No symbol) [0x50aa36]
+	chromedriver!(No symbol) [0x4ed606]
+	chromedriver!(No symbol) [0x4c0039]
+	chromedriver!(No symbol) [0x4c0df4]
+	chromedriver!GetHandleVerifier [0x8fddb4+292f94]
+	chromedriver!GetHandleVerifier [0x8f937d+28e55d]
+	chromedriver!GetHandleVerifier [0x918215+2ad3f5]
+	chromedriver!GetHandleVerifier [0x694c18+29df8]
+	chromedriver!GetHandleVerifier [0x69c6fd+318dd]
+	chromedriver!GetHandleVerifier [0x683c78+18e58]
+	chromedriver!GetHandleVerifier [0x683e42+19022]
+	chromedriver!GetHandleVerifier [0x66d45f+263f]
+	KERNEL32!BaseThreadInitThunk [0x74a85d49+19]
+	ntdll!RtlInitializeExceptionChain [0x770ad83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x770ad7c1+231]
+
+[14:53:13] 
+✔  0 pedido(s) conferidos.
+[14:53:20] 
+───────────────────────────────────────────────────────
+[14:53:20]   CONFERINDO 3 pedido(s)...
+[14:53:20] [INFO] Iniciando Chrome para conferência...
+[14:53:22] [CONFERIR] Buscando pedido #91074...
+[14:53:32]   [ERRO] #91074 — Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x67b373+10553]
+	chromedriver!GetHandleVerifier [0x67b4a4+10684]
+	chromedriver!(No symbol) [0x481e10]
+	chromedriver!(No symbol) [0x4ca9da]
+	chromedriver!(No symbol) [0x4cac7b]
+	chromedriver!(No symbol) [0x50d162]
+	chromedriver!(No symbol) [0x4ed8b4]
+	chromedriver!(No symbol) [0x50aa36]
+	chromedriver!(No symbol) [0x4ed606]
+	chromedriver!(No symbol) [0x4c0039]
+	chromedriver!(No symbol) [0x4c0df4]
+	chromedriver!GetHandleVerifier [0x8fddb4+292f94]
+	chromedriver!GetHandleVerifier [0x8f937d+28e55d]
+	chromedriver!GetHandleVerifier [0x918215+2ad3f5]
+	chromedriver!GetHandleVerifier [0x694c18+29df8]
+	chromedriver!GetHandleVerifier [0x69c6fd+318dd]
+	chromedriver!GetHandleVerifier [0x683c78+18e58]
+	chromedriver!GetHandleVerifier [0x683e42+19022]
+	chromedriver!GetHandleVerifier [0x66d45f+263f]
+	KERNEL32!BaseThreadInitThunk [0x74a85d49+19]
+	ntdll!RtlInitializeExceptionChain [0x770ad83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x770ad7c1+231]
+
+[14:53:32] [CONFERIR] Buscando pedido #91075...
+[14:53:42]   [ERRO] #91075 — Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x67b373+10553]
+	chromedriver!GetHandleVerifier [0x67b4a4+10684]
+	chromedriver!(No symbol) [0x481e10]
+	chromedriver!(No symbol) [0x4ca9da]
+	chromedriver!(No symbol) [0x4cac7b]
+	chromedriver!(No symbol) [0x50d162]
+	chromedriver!(No symbol) [0x4ed8b4]
+	chromedriver!(No symbol) [0x50aa36]
+	chromedriver!(No symbol) [0x4ed606]
+	chromedriver!(No symbol) [0x4c0039]
+	chromedriver!(No symbol) [0x4c0df4]
+	chromedriver!GetHandleVerifier [0x8fddb4+292f94]
+	chromedriver!GetHandleVerifier [0x8f937d+28e55d]
+	chromedriver!GetHandleVerifier [0x918215+2ad3f5]
+	chromedriver!GetHandleVerifier [0x694c18+29df8]
+	chromedriver!GetHandleVerifier [0x69c6fd+318dd]
+	chromedriver!GetHandleVerifier [0x683c78+18e58]
+	chromedriver!GetHandleVerifier [0x683e42+19022]
+	chromedriver!GetHandleVerifier [0x66d45f+263f]
+	KERNEL32!BaseThreadInitThunk [0x74a85d49+19]
+	ntdll!RtlInitializeExceptionChain [0x770ad83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x770ad7c1+231]
+
+[14:53:42] [CONFERIR] Buscando pedido #91077...
+[14:53:51]   [ERRO] #91077 — Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=147.0.7727.56); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x67b373+10553]
+	chromedriver!GetHandleVerifier [0x67b4a4+10684]
+	chromedriver!(No symbol) [0x481e10]
+	chromedriver!(No symbol) [0x470d8e]
+	chromedriver!(No symbol) [0x48f8d9]
+	chromedriver!(No symbol) [0x4f3dbc]
+	chromedriver!(No symbol) [0x50a3a9]
+	chromedriver!(No symbol) [0x4ed606]
+	chromedriver!(No symbol) [0x4c0039]
+	chromedriver!(No symbol) [0x4c0df4]
+	chromedriver!GetHandleVerifier [0x8fddb4+292f94]
+	chromedriver!GetHandleVerifier [0x8f937d+28e55d]
+	chromedriver!GetHandleVerifier [0x918215+2ad3f5]
+	chromedriver!GetHandleVerifier [0x694c18+29df8]
+	chromedriver!GetHandleVerifier [0x69c6fd+318dd]
+	chromedriver!GetHandleVerifier [0x683c78+18e58]
+	chromedriver!GetHandleVerifier [0x683e42+19022]
+	chromedriver!GetHandleVerifier [0x66d45f+263f]
+	KERNEL32!BaseThreadInitThunk [0x74a85d49+19]
+	ntdll!RtlInitializeExceptionChain [0x770ad83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x770ad7c1+231]
+
+[14:53:53] 
+✔  0 pedido(s) conferidos.
+[16:12:49] ═══════════════════════════════════════════════════════
+[16:12:49]   INICIANDO FILA — 1 pedido(s)  06/05/2026 00:00
+[16:12:49] ═══════════════════════════════════════════════════════
+[16:12:49] [ERRO FATAL] 'await' outside async function (pedidos.py, line 501)
+[16:13:05] ═══════════════════════════════════════════════════════
+[16:13:05]   INICIANDO FILA — 1 pedido(s)  06/05/2026 00:00
+[16:13:05] ═══════════════════════════════════════════════════════
+[16:13:05] [ERRO FATAL] 'await' outside async function (pedidos.py, line 501)
+[16:14:57] ═══════════════════════════════════════════════════════
+[16:14:57]   INICIANDO FILA — 1 pedido(s)  06/05/2026 00:00
+[16:14:57] ═══════════════════════════════════════════════════════
+[16:14:58] [INFO] Iniciando Chrome...
+[16:15:01] [INFO] Chrome iniciado. Começando pedidos...
+[16:15:01] 
+───────────────────────────────────────────────────────
+  PEDIDO 1: SHOPPING
+───────────────────────────────────────────────────────
+[16:15:01] [OK] Login realizado
+[16:15:05] [OK] Aba Pedidos aberta
+[16:15:06] [OK] Empresa selecionada
+[16:15:06] [OK] Data de entrega: 07/05/2026
+[16:15:06] [OK] Ordem de compra: 0
+[16:15:09] [OK] Cliente: shopping
+[16:15:09] [OK] Vendedor selecionado
+[16:15:12] [OK] Pagamento: 30 DIAS
+[16:15:13] [OK] Pedido gravado — Pedido Incluido com Sucesso !
+[16:15:14] [OK] Código do pedido capturado: 91080
+[16:15:15] [OK] Aba Itens Pedidos aberta
+
+[16:15:15] 
+[ITEM] CAMARAO | PA 0109 | 28.0 kg | R$ 81.00
+[16:15:16]          Espécie: CAMARAO ROSA
+[16:15:18]          Produto: PA0109 - 61/70 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[16:15:21]          Uni. Medida: KG
+[16:15:21]          Sistema: R$ 81.00 | Pedido: R$ 81.00
+[16:15:21] IGUAL — sem alteração
+[16:15:23]          [OK] PA 0109 gravado — Item do Pedido Incluido com sucesso !
+[16:15:23] 
+[ITEM] CAMARAO | PA 0811 | 14.0 kg | R$ 110.00
+[16:15:23]          Espécie mantida: camarao
+[16:15:25]          Produto: PA0811 - M51/70 CAMARAO ROSA DESC CONG SC1KG CX14KG
+[16:15:28]          Sistema: R$ 110.00 | Pedido: R$ 110.00
+[16:15:28] IGUAL — sem alteração
+[16:15:29]          [OK] PA 0811 gravado — Item do Pedido Incluido com sucesso !
+[16:15:30] 
+[ITEM] CAMARAO | PA 0303 | 12.0 kg | R$ 110.00
+[16:15:30]          Espécie mantida: camarao
+[16:15:31]          Produto: PA0303 - M51/70 CAMARAO ROSA DESC CONG SC800G CX12
+[16:15:34]          Sistema: R$ 110.00 | Pedido: R$ 110.00
+[16:15:34] IGUAL — sem alteração
+[16:15:36]          [OK] PA 0303 gravado — Item do Pedido Incluido com sucesso !
+[16:15:36] 
+[ITEM] CAMARAO | PA 0304 | 12.0 kg | R$ 96.00
+[16:15:36]          Espécie mantida: camarao
+[16:15:38]          Produto: PA0304 - P71/110 CAMARAO ROSA DESC CONG SC800G CX12
+[16:15:41]          Sistema: R$ 96.00 | Pedido: R$ 96.00
+[16:15:41] IGUAL — sem alteração
+[16:15:42]          [OK] PA 0304 gravado — Item do Pedido Incluido com sucesso !
+[16:15:43] 
+=== PEDIDO CONCLUÍDO! ===
+[16:15:43] 
+✔  Pedido concluído — Código: 91080
+[16:15:43] [PDF] Baixando pedido #91080...
+[16:15:43] 
+[PDF] Iniciando download — Pedido #91080
+[16:15:47] [PDF] Pedido #91080 encontrado.
+[16:15:47] [PDF] Chamando impressão com valor...
+[16:15:50] [PDF] Aguardando download...
+[16:15:54] [PDF] [OK] Arquivo salvo: PEDIDO_91080_SHOPPING_07-05-2026.pdf
+[16:15:54] 
+═══════════════════════════════════════════════════════
+  FILA CONCLUÍDA — 1 ok  |  0 com erro
+═══════════════════════════════════════════════════════
+[16:15:56] [INFO] Chrome encerrado.
+[16:18:46] 
+───────────────────────────────────────────────────────
+[16:18:46]   CONFERINDO 1 pedido(s)...
+[16:18:46] [ERRO FATAL] cannot import name 'driver' from 'pages.pedidos' (d:\Documento\#Estudo & Trabalho\Código\Automatizar pedidos - Copia\pages\pedidos.py)
+[16:19:37] 
+───────────────────────────────────────────────────────
+[16:19:37]   CONFERINDO 1 pedido(s)...
+[16:19:37] [ERRO FATAL] cannot import name 'driver' from 'pages.pedidos' (d:\Documento\#Estudo & Trabalho\Código\Automatizar pedidos - Copia\pages\pedidos.py)

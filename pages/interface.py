@@ -118,13 +118,15 @@ def _entry(parent, var=None, width=24, readonly=False):
                  highlightcolor=COR["borda_focus"],
                  state="disabled" if readonly else "normal",
                  disabledforeground=COR["texto_fraco"],
-                 disabledbackground=COR["janela"])
+                 disabledbackground=COR["janela"],
+                 takefocus=True)
     return e
 
 def _combo(parent, values, var=None, width=22):
-    return ttk.Combobox(parent, values=values, textvariable=var,
-                        font=FONTE_INPUT, style="SGEP.TCombobox",
-                        width=width, state="normal")
+    c = ttk.Combobox(parent, values=values, textvariable=var,
+                     font=FONTE_INPUT, style="SGEP.TCombobox",
+                     width=width, state="normal", takefocus=True)
+    return c
 
 def _label(parent, texto, fraco=False, bg=None):
     return tk.Label(parent, text=texto, font=FONTE_LABEL,
@@ -210,7 +212,6 @@ class App(tk.Tk):
         self._aba_itens()
         self._aba_fila()
         self._aba_conferir()
-        self._aba_planilhas()
         self._aba_log()
 
         rod = tk.Frame(self, bg=COR["rodape"], height=28)
@@ -220,9 +221,24 @@ class App(tk.Tk):
         tk.Label(rod, textvariable=self._status_var,
                  font=("Segoe UI", 8), bg=COR["rodape"],
                  fg=COR["texto_fraco"]).pack(side="left", padx=10, pady=4)
+        
+        self._progresso_var = tk.StringVar(value="")
+        self._progresso_lbl = tk.Label(rod, textvariable=self._progresso_var,
+                 font=("Segoe UI", 8, "bold"), bg=COR["rodape"],
+                 fg=COR["acento_btn"])
+        self._progresso_lbl.pack(side="right", padx=10, pady=4)
 
     def _status(self, msg):
         self._status_var.set(msg)
+
+    def _atualizar_progresso(self, atual, total, mensagem=""):
+        if total > 0:
+            self._progresso_var.set(f"Pedido {atual}/{total}")
+            self._status_var.set(mensagem or f"Processando pedido {atual} de {total}...")
+
+    def _limpar_progresso(self):
+        self._progresso_var.set("")
+        self._status_var.set("Pronto.")
 
     # ── Aba 1 — Pedido ───────────────────────
 
@@ -248,15 +264,18 @@ class App(tk.Tk):
         self.v_data = tk.StringVar(value=date.today().strftime("%d/%m/%Y"))
         _label(corpo, "Prev. Entrega", fraco=True).grid(
             row=0, column=2, sticky="w", padx=(0,6), pady=(10,2))
-        _entry(corpo, self.v_data, width=14).grid(
-            row=0, column=3, sticky="w", padx=(0,12), pady=(10,2))
+        self.entry_data = _entry(corpo, self.v_data, width=14)
+        self.entry_data.grid(row=0, column=3, sticky="w", padx=(0,12), pady=(10,2))
+        self.entry_data.bind("<Up>", lambda e: self._alterar_data(1))
+        self.entry_data.bind("<Down>", lambda e: self._alterar_data(-1))
 
         self.v_empresa = tk.StringVar(
             value="AMAZONAS INDUSTRIAS ALIMENTICIAS S A AMASA — BELÉM")
         _label(corpo, "Empresa", fraco=True).grid(
             row=1, column=0, sticky="w", padx=(12,6), pady=(6,2))
-        _entry(corpo, self.v_empresa, width=52, readonly=True).grid(
-            row=1, column=1, columnspan=3, sticky="ew", padx=(0,12), pady=(6,2))
+        emp_entry = _entry(corpo, self.v_empresa, width=52, readonly=True)
+        emp_entry.grid(row=1, column=1, columnspan=3, sticky="ew", padx=(0,12), pady=(6,2))
+        emp_entry.configure(takefocus=False)
 
         self.v_cliente = tk.StringVar()
         _label(corpo, "Cliente", fraco=True).grid(
@@ -269,8 +288,9 @@ class App(tk.Tk):
         self.v_vendedor = tk.StringVar(value="Americo Lima  (único disponível)")
         _label(corpo, "Vendedor", fraco=True).grid(
             row=3, column=0, sticky="w", padx=(12,6), pady=(6,2))
-        _entry(corpo, self.v_vendedor, width=28, readonly=True).grid(
-            row=3, column=1, sticky="ew", padx=(0,20), pady=(6,2))
+        vend_entry = _entry(corpo, self.v_vendedor, width=28, readonly=True)
+        vend_entry.grid(row=3, column=1, sticky="ew", padx=(0,20), pady=(6,2))
+        vend_entry.configure(takefocus=False)
 
         self.v_pagto = tk.StringVar()
         _label(corpo, "Cond. Pagto", fraco=True).grid(
@@ -288,6 +308,8 @@ class App(tk.Tk):
             relief="solid", bd=1, width=52, height=3, wrap="word")
         self.txt_obs.grid(row=4, column=1, columnspan=3, sticky="ew",
                           padx=(0,12), pady=(6,8))
+        self.txt_obs.bind("<Tab>", lambda e: self._navegar_campo(e, "next"))
+        self.txt_obs.bind("<Shift-Tab>", lambda e: self._navegar_campo(e, "prev"))
 
         # Opções
         outer_op, corpo_op = _card(frame, titulo="Opções")
@@ -326,6 +348,7 @@ class App(tk.Tk):
         corpo.columnconfigure(5, weight=1)
 
         self.v_esp = tk.StringVar()
+        self._ultima_esp = ""
         _label(corpo, "Espécie", fraco=True).grid(
             row=0, column=0, sticky="w", padx=(12,6), pady=(10,2))
         cb_esp = _combo(corpo, ESPECIES, self.v_esp, width=14)
@@ -374,11 +397,17 @@ class App(tk.Tk):
         self.tree.configure(yscrollcommand=sb.set)
         self.tree.grid(row=0, column=0, sticky="nsew", padx=(6,0), pady=6)
         sb.grid(row=0, column=1, sticky="ns", pady=6, padx=(0,4))
+        self.tree.bind("<Double-Button-1>", lambda e: self._editar_item())
+        self.tree.bind("<Return>", lambda e: self._editar_item())
+        self.tree.bind("<space>", lambda e: self._editar_item())
+        self.tree.bind("<FocusIn>", lambda e: self._selecionar_primeiro_item(self.tree))
+        self.tree.config(takefocus=True)
 
         btn_row = tk.Frame(frame, bg=COR["janela"])
         btn_row.grid(row=2, column=0, sticky="ew", padx=12, pady=(0,10))
 
         _btn_secundario(btn_row, "✕  Remover Item", self._remover).pack(side="left")
+        _btn_secundario(btn_row, "✎  Editar Item", self._editar_item).pack(side="left", padx=(8,0))
         _btn_secundario(btn_row, "← Voltar ao Pedido",
                         lambda: self.nb.select(0)).pack(side="left", padx=(8,0))
         _btn_primario(btn_row, "＋  Adicionar à Fila",
@@ -411,6 +440,11 @@ class App(tk.Tk):
         self.tree_fila.configure(yscrollcommand=sb.set)
         self.tree_fila.grid(row=0, column=0, sticky="nsew", padx=(6,0), pady=6)
         sb.grid(row=0, column=1, sticky="ns", pady=6, padx=(0,4))
+        self.tree_fila.bind("<Double-Button-1>", lambda e: self._editar_pedido_fila())
+        self.tree_fila.bind("<Return>", lambda e: self._editar_pedido_fila())
+        self.tree_fila.bind("<space>", lambda e: self._editar_pedido_fila())
+        self.tree_fila.bind("<FocusIn>", lambda e: self._selecionar_primeiro_item(self.tree_fila))
+        self.tree_fila.config(takefocus=True)
 
         # tags de cor por status
         self.tree_fila.tag_configure("pendente",  background="#fff9e6")
@@ -423,6 +457,8 @@ class App(tk.Tk):
 
         _btn_secundario(btn_row, "✕  Remover da Fila",
                         self._remover_da_fila).pack(side="left")
+        _btn_secundario(btn_row, "✎  Editar Pedido",
+                        self._editar_pedido_fila).pack(side="left", padx=(8,0))
         _btn_secundario(btn_row, "↑  Mover para Cima",
                         lambda: self._mover_fila(-1)).pack(side="left", padx=(8,0))
         _btn_secundario(btn_row, "↓  Mover para Baixo",
@@ -444,11 +480,11 @@ class App(tk.Tk):
         corpo_t.columnconfigure(0, weight=1)
         corpo_t.rowconfigure(0, weight=1)
 
-        cols = ("Código", "Cliente", "Data", "PDF")
+        cols = ("Código", "Cliente", "Data", "PDF", "Pagamento")
         self.tree_conf = ttk.Treeview(corpo_t, columns=cols, show="headings",
                                        style="SGEP.Treeview", height=12,
                                        selectmode="extended")
-        for col, w in zip(cols, (80, 280, 100, 60)):
+        for col, w in zip(cols, (70, 200, 80, 40, 90)):
             self.tree_conf.heading(col, text=col)
             self.tree_conf.column(col, width=w, anchor="center")
         self.tree_conf.column("Cliente", anchor="w")
@@ -459,6 +495,11 @@ class App(tk.Tk):
         self.tree_conf.configure(yscrollcommand=sb.set)
         self.tree_conf.grid(row=0, column=0, sticky="nsew", padx=(6,0), pady=6)
         sb.grid(row=0, column=1, sticky="ns", pady=6, padx=(0,4))
+        self.tree_conf.config(takefocus=True)
+        self.tree_conf.bind("<Return>", lambda e: self._editar_pedido_conferir())
+        self.tree_conf.bind("<space>", lambda e: self._editar_pedido_conferir())
+        self.tree_conf.bind("<FocusIn>", lambda e: self._selecionar_primeiro_item(self.tree_conf))
+        self.tree_conf.bind("<Delete>", lambda e: self._cancelar_pedido_pressed())
 
         _label(corpo_t,
                "Selecione um ou mais pedidos (Ctrl+clique) e clique em Conferir.",
@@ -470,93 +511,12 @@ class App(tk.Tk):
 
         _btn_secundario(btn_row, "✕  Remover da Lista",
                         self._remover_da_conferencia).pack(side="left")
+        _btn_secundario(btn_row, "↩  Retornar para Fila",
+                        self._retornar_para_fila).pack(side="left", padx=(8,0))
         _btn_primario(btn_row, "✔  Conferir Selecionados no Sistema",
                       self._conferir_selecionados).pack(side="right")
 
-    # ── Aba 5 — Planilhas ────────────────────
-
-    def _aba_planilhas(self):
-        frame = tk.Frame(self.nb, bg=COR["janela"])
-        self.nb.add(frame, text="  Planilhas  ")
-        frame.columnconfigure(0, weight=1)
-
-        cfg = _carregar_config()
-
-        outer_c, corpo_c = _card(frame, titulo="Arquivos Excel")
-        outer_c.grid(row=0, column=0, sticky="ew", padx=12, pady=(10,6))
-        corpo_c.columnconfigure(1, weight=1)
-
-        _label(corpo_c, "Relatório Mensal", fraco=True).grid(
-            row=0, column=0, sticky="w", padx=(12,8), pady=(10,4))
-        self.v_rel = tk.StringVar(value=cfg.get("relatorio", ""))
-        _entry(corpo_c, self.v_rel, width=46).grid(
-            row=0, column=1, sticky="ew", padx=(0,4), pady=(10,4))
-        tk.Button(corpo_c, text="...", font=FONTE_LABEL,
-                  bg=COR["borda"], fg=COR["texto"], relief="flat",
-                  cursor="hand2", padx=6,
-                  command=lambda: self._escolher_arquivo(
-                      self.v_rel, "Selecione o Relatório Mensal")).grid(
-            row=0, column=2, padx=(0,12), pady=(10,4))
-
-        _label(corpo_c, "Programação de Vendas", fraco=True).grid(
-            row=1, column=0, sticky="w", padx=(12,8), pady=(4,4))
-        self.v_prog = tk.StringVar(value=cfg.get("programacao", ""))
-        _entry(corpo_c, self.v_prog, width=46).grid(
-            row=1, column=1, sticky="ew", padx=(0,4), pady=(4,4))
-        tk.Button(corpo_c, text="...", font=FONTE_LABEL,
-                  bg=COR["borda"], fg=COR["texto"], relief="flat",
-                  cursor="hand2", padx=6,
-                  command=lambda: self._escolher_arquivo(
-                      self.v_prog, "Selecione a Programação de Vendas")).grid(
-            row=1, column=2, padx=(0,12), pady=(4,4))
-
-        _btn_primario(corpo_c, "Salvar caminhos",
-                      self._salvar_caminhos_planilhas).grid(
-            row=2, column=0, columnspan=3, pady=(4,12), padx=12, sticky="e")
-
-        outer_f, corpo_f = _card(frame, titulo="Preencher via Foto do Impresso")
-        outer_f.grid(row=1, column=0, sticky="ew", padx=12, pady=(0,6))
-        corpo_f.columnconfigure(0, weight=1)
-
-        _label(corpo_f,
-               "Fotografe o impresso do seu pai e selecione a imagem. "
-               "A IA lê os dados e preenche as duas planilhas automaticamente.",
-               fraco=True).pack(anchor="w", padx=12, pady=(10,6))
-
-        pf = tk.Frame(corpo_f, bg=COR["fundo"])
-        pf.pack(fill="x", padx=12, pady=(0,8))
-        _label(pf, "Período da semana:").pack(side="left")
-        self.v_periodo = tk.StringVar(value="C")
-        for letra, rotulo in [("C","01–10"),("D","13–17"),("E","20–24"),("F","27–30")]:
-            tk.Radiobutton(pf, text=rotulo, value=letra, variable=self.v_periodo,
-                           font=FONTE_LABEL, bg=COR["fundo"], fg=COR["texto"],
-                           selectcolor=COR["fundo"], activebackground=COR["fundo"],
-                           cursor="hand2").pack(side="left", padx=(8,0))
-
-        _btn_primario(corpo_f, "📷  Selecionar Foto e Preencher",
-                      self._preencher_via_foto).pack(pady=(0,12), padx=12, fill="x")
-
-        outer_r, corpo_r = _card(frame, titulo="Resultado")
-        outer_r.grid(row=2, column=0, sticky="nsew", padx=12, pady=(0,10))
-        frame.rowconfigure(2, weight=1)
-        corpo_r.columnconfigure(0, weight=1)
-        corpo_r.rowconfigure(0, weight=1)
-
-        self.txt_planilha_resultado = tk.Text(
-            corpo_r, font=FONTE_LOG, bg="#1a1e2e", fg="#c8d3e0",
-            relief="flat", state="disabled", wrap="word", height=7)
-        sb2 = ttk.Scrollbar(corpo_r, orient="vertical",
-                            command=self.txt_planilha_resultado.yview,
-                            style="SGEP.Vertical.TScrollbar")
-        self.txt_planilha_resultado.configure(yscrollcommand=sb2.set)
-        self.txt_planilha_resultado.grid(row=0, column=0, sticky="nsew",
-                                          padx=(6,0), pady=6)
-        sb2.grid(row=0, column=1, sticky="ns", pady=6, padx=(0,4))
-        for tag, cor in [("ok","#4ade80"),("erro","#f87171"),
-                         ("aviso","#fbbf24"),("info","#60a5fa")]:
-            self.txt_planilha_resultado.tag_config(tag, foreground=cor)
-
-    # ── Aba 6 — Log ──────────────────────────
+    # ── Aba 5 — Log ──────────────────────────
 
     def _aba_log(self):
         frame = tk.Frame(self.nb, bg=COR["janela"])
@@ -564,24 +524,32 @@ class App(tk.Tk):
         frame.columnconfigure(0, weight=1)
         frame.rowconfigure(0, weight=1)
 
-        outer, corpo = _card(frame, titulo="Histórico de Execuções")
+        outer, corpo = _card(frame, titulo="Console de Execução")
         outer.grid(row=0, column=0, sticky="nsew", padx=12, pady=(10,6))
         corpo.columnconfigure(0, weight=1)
         corpo.rowconfigure(0, weight=1)
 
+        log_container = tk.Frame(corpo, bg="#0d1117", relief="solid", bd=1)
+        log_container.pack(fill="both", expand=True, padx=4, pady=4)
+
         self.log_txt = tk.Text(
-            corpo, font=FONTE_LOG, bg="#1a1e2e", fg="#c8d3e0",
-            insertbackground=COR["acento_btn"],
-            relief="flat", state="disabled", wrap="word")
-        sb = ttk.Scrollbar(corpo, orient="vertical",
+            log_container, font=("Consolas", 10), bg="#0d1117", fg="#c9d1d9",
+            insertbackground="#58a6ff", relief="flat", wrap="word",
+            highlightthickness=0, borderwidth=0)
+        
+        sb = ttk.Scrollbar(log_container, orient="vertical",
                            command=self.log_txt.yview,
                            style="SGEP.Vertical.TScrollbar")
         self.log_txt.configure(yscrollcommand=sb.set)
-        self.log_txt.grid(row=0, column=0, sticky="nsew", padx=(6,0), pady=6)
-        sb.grid(row=0, column=1, sticky="ns", pady=6, padx=(0,4))
-        for tag, cor in [("ok","#4ade80"),("erro","#f87171"),
-                         ("aviso","#fbbf24"),("info","#60a5fa"),("normal","#c8d3e0")]:
-            self.log_txt.tag_config(tag, foreground=cor)
+        self.log_txt.pack(side="left", fill="both", expand=True)
+        sb.pack(side="right", fill="y", padx=(0,4), pady=4)
+        
+        self.log_txt.tag_config("ok", foreground="#3fb950", font=("Consolas", 10, "bold"))
+        self.log_txt.tag_config("erro", foreground="#f85149", font=("Consolas", 10, "bold"))
+        self.log_txt.tag_config("aviso", foreground="#d29922", font=("Consolas", 10, "bold"))
+        self.log_txt.tag_config("info", foreground="#58a6ff", font=("Consolas", 10, "bold"))
+        self.log_txt.tag_config("normal", foreground="#c9d1d9", font=("Consolas", 10))
+        self.log_txt.tag_config("hora", foreground="#8b949e", font=("Consolas", 10))
 
         btn_row = tk.Frame(frame, bg=COR["janela"])
         btn_row.grid(row=1, column=0, sticky="ew", padx=12, pady=(0,10))
@@ -590,11 +558,30 @@ class App(tk.Tk):
     # ── Helpers de log ────────────────────────
 
     def log(self, msg, tipo="normal"):
+        from datetime import datetime
+        hora = datetime.now().strftime("%H:%M:%S")
+        
         self.log_txt.configure(state="normal")
-        self.log_txt.insert("end", msg + "\n", tipo)
+        
+        prefixos = {
+            "ok": "✓",
+            "erro": "✗",
+            "aviso": "⚠",
+            "info": "ℹ",
+            "normal": "•"
+        }
+        
+        self.log_txt.insert("end", f"[{hora}] ", "hora")
+        
+        if tipo in ["ok", "erro", "aviso", "info"]:
+            self.log_txt.insert("end", f"{prefixos.get(tipo, '•')} ", tipo)
+            self.log_txt.insert("end", msg + "\n", tipo)
+        else:
+            self.log_txt.insert("end", f"{prefixos.get(tipo, '•')} {msg}\n", "normal")
+        
         self.log_txt.see("end")
         self.log_txt.configure(state="disabled")
-        _salvar_log(msg)
+        _salvar_log(f"[{hora}] {msg}")
 
     def _carregar_log_salvo(self):
         conteudo = _carregar_log()
@@ -615,6 +602,31 @@ class App(tk.Tk):
                 pass
 
     # ── Helpers do formulário ─────────────────
+
+    def _selecionar_primeiro_item(self, tree):
+        children = tree.get_children()
+        if children:
+            tree.selection_set(children[0])
+            tree.focus(children[0])
+
+    def _alterar_data(self, dias):
+        try:
+            from datetime import datetime, timedelta
+            data_atual = self.v_data.get().strip()
+            if not data_atual:
+                data_atual = date.today().strftime("%d/%m/%Y")
+            dt = datetime.strptime(data_atual, "%d/%m/%Y")
+            dt += timedelta(days=dias)
+            self.v_data.set(dt.strftime("%d/%m/%Y"))
+        except ValueError:
+            pass
+
+    def _navegar_campo(self, event, direction="next"):
+        if direction == "next":
+            event.widget.tk_focusNext().focus_set()
+        else:
+            event.widget.tk_focusPrev().focus_set()
+        return "break"
 
     def _limpar_pedido(self):
         self.v_ordem.set("0")
@@ -654,8 +666,10 @@ class App(tk.Tk):
             esp.capitalize(), pa,
             f"{qtd_f:.3f}".rstrip("0").rstrip("."),
             f"R$ {val_f:.2f}"))
-        self.v_esp.set(""); self.v_pa.set("")
-        self.v_qtd.set(""); self.v_val.set("")
+        self._ultima_esp = esp
+        self.v_pa.set("")
+        self.v_qtd.set("")
+        self.v_val.set("")
 
     def _remover(self):
         sel = self.tree.selection()
@@ -663,6 +677,80 @@ class App(tk.Tk):
         idx = self.tree.index(sel[0])
         self.tree.delete(sel[0])
         self.itens.pop(idx)
+
+    def _editar_item(self):
+        sel = self.tree.selection()
+        if not sel:
+            messagebox.showinfo("Nenhum item", "Selecione um item para editar.")
+            return
+        
+        idx = self.tree.index(sel[0])
+        item = self.itens[idx]
+        
+        top = tk.Toplevel(self)
+        top.title("Editar Item")
+        top.geometry("400x350")
+        top.resizable(False, False)
+        top.configure(bg=COR["janela"])
+        
+        container = tk.Frame(top, bg=COR["janela"])
+        container.pack(fill="both", expand=True, padx=20, pady=20)
+        
+        tk.Label(container, text="Espécie:", bg=COR["janela"], fg=COR["texto"], anchor="w").pack(fill="x")
+        esp_var = tk.StringVar(value=item["especie"])
+        esp_cb = _combo(container, ESPECIES, esp_var, width=30)
+        esp_cb.pack(fill="x", pady=(0,10))
+        
+        tk.Label(container, text="PA:", bg=COR["janela"], fg=COR["texto"], anchor="w").pack(fill="x")
+        pa_var = tk.StringVar(value=item["pa"])
+        pa_entry = _entry(container, pa_var, width=10)
+        pa_entry.pack(fill="x", pady=(0,10))
+        
+        tk.Label(container, text="Quantidade (kg):", bg=COR["janela"], fg=COR["texto"], anchor="w").pack(fill="x")
+        qtd_var = tk.StringVar(value=str(item["quantidade"]))
+        qtd_entry = _entry(container, qtd_var, width=12)
+        qtd_entry.pack(fill="x", pady=(0,10))
+        
+        tk.Label(container, text="Valor Unitário:", bg=COR["janela"], fg=COR["texto"], anchor="w").pack(fill="x")
+        val_var = tk.StringVar(value=str(item["valor"]))
+        val_entry = _entry(container, val_var, width=12)
+        val_entry.pack(fill="x", pady=(0,15))
+        
+        def salvar():
+            esp = esp_var.get().strip().lower()
+            pa = pa_var.get().strip().zfill(4)
+            qtd = qtd_var.get().strip().replace(",", ".")
+            val = val_var.get().strip().replace(",", ".")
+            
+            if not esp:
+                messagebox.showwarning("Erro", "Preencha a Espécie."); return
+            if pa == "0000":
+                messagebox.showwarning("Erro", "Preencha o PA."); return
+            try:
+                qtd_f = float(qtd)
+            except ValueError:
+                messagebox.showerror("Inválido", "Quantidade deve ser número."); return
+            try:
+                val_f = float(val)
+            except ValueError:
+                messagebox.showerror("Inválido", "Valor deve ser número."); return
+            
+            self.itens[idx] = {"especie": esp, "pa": pa, "quantidade": qtd_f, "valor": val_f}
+            self.tree.item(sel[0], values=(
+                esp.capitalize(), pa,
+                f"{qtd_f:.3f}".rstrip("0").rstrip("."),
+                f"R$ {val_f:.2f}"))
+            top.destroy()
+        
+        btn_frame = tk.Frame(container, bg=COR["janela"])
+        btn_frame.pack(fill="x", pady=(10,0))
+        tk.Button(btn_frame, text="Cancelar", command=top.destroy,
+                  bg=COR["borda"], fg=COR["texto"], relief="flat", padx=20, pady=8).pack(side="left", padx=(0,10))
+        tk.Button(btn_frame, text="Salvar", command=salvar,
+                  bg=COR["acento_btn"], fg=COR["texto_branco"], relief="flat", padx=20, pady=8).pack(side="right", padx=(10,0))
+        
+        top.geometry(f"+{self.winfo_x()+100}+{self.winfo_y()+100}")
+        pa_entry.focus_set()
 
     def _validar_pedido(self):
         erros = []
@@ -733,6 +821,66 @@ class App(tk.Tk):
         # Renumera
         self._atualizar_tree_fila()
 
+    def _editar_pedido_fila(self):
+        sel = self.tree_fila.selection()
+        if not sel:
+            messagebox.showinfo("Nenhum pedido", "Selecione um pedido para editar.")
+            return
+        idx = int(sel[0])
+        pedido = self.fila[idx]
+        
+        if pedido["status"] == "rodando":
+            messagebox.showwarning("Em execução",
+                "Não é possível editar um pedido que está sendo executado.")
+            return
+        
+        if not messagebox.askyesno("Editar Pedido",
+            f"Editar pedido de {pedido['dados']['cliente'].upper()}?\n\n"
+            "Isso carregará os dados na tela principal de pedidos.\n"
+            "Você poderá editar todos os campos e itens.\n"
+            "O pedido será removido da fila."):
+            return
+        
+        dados = pedido["dados"]
+        
+        self.v_ordem.set(dados["ordem"])
+        self.v_data.set(dados["data"])
+        self.v_cliente.set(dados["cliente"])
+        self.v_pagto.set(dados["pagamento"])
+        self.txt_obs.delete("1.0", "end")
+        self.txt_obs.insert("1.0", dados.get("observacao", ""))
+        
+        self.itens.clear()
+        for item in self.tree.get_children():
+            self.tree.delete(item)
+        
+        for item in pedido["itens"]:
+            self.itens.append(item)
+            self.tree.insert("", "end", values=(
+                item["especie"].capitalize(),
+                item["pa"],
+                f"{item['quantidade']:.3f}".rstrip("0").rstrip("."),
+                f"R$ {item['valor']:.2f}"
+            ))
+        
+        self._ultima_esp = ""
+        if self.itens:
+            self._ultima_esp = self.itens[-1]["especie"]
+        
+        self.tree_fila.delete(sel[0])
+        self.fila.pop(idx)
+        self._atualizar_tree_fila()
+        
+        self.nb.select(0)
+        self._status(f"Editando pedido de {dados['cliente']}")
+        
+        messagebox.showinfo("Modo Edição",
+            "Pedido carregado na tela principal.\n"
+            "Edite os dados e itens conforme necessário.\n"
+            "Para incluir na fila novamente, vá na aba Itens e clique em 'Adicionar à Fila'.")
+        tk.Button(btn_frame, text="Salvar", command=salvar,
+                  bg=COR["acento_btn"], fg=COR["texto_branco"], relief="flat", padx=20, pady=8).pack(side="right", padx=(10,0))
+
     def _mover_fila(self, direcao):
         sel = self.tree_fila.selection()
         if not sel: return
@@ -772,7 +920,7 @@ class App(tk.Tk):
             f"{len(pendentes)} pedido(s) serão executados em sequência.\n\nContinuar?"):
             return
 
-        self.nb.select(5)  # aba Log
+        self.nb.select(4)  # aba Log
         self.log("═" * 55, "info")
         self.log(f"  INICIANDO FILA — {len(pendentes)} pedido(s)"
                  f"  {date.today().strftime('%d/%m/%Y %H:%M')}", "info")
@@ -797,12 +945,24 @@ class App(tk.Tk):
         builtins.print = _gui_print
 
         try:
-            from pages.pedidos import executar_pedido
+            from pages.pedidos import executar_pedido, iniciar_driver, encerrar_driver
             from pages.pdf import baixar_pdf
+
+            self.log("[INFO] Iniciando Chrome...", "info")
+            iniciar_driver()
+            self.log("[INFO] Chrome iniciado. Começando pedidos...", "info")
+
+            pendentes = [p for p in self.fila if p["status"] == "pendente"]
+            total_pedidos = len(pendentes)
+            contador = 0
 
             for i, pedido in enumerate(self.fila):
                 if pedido["status"] != "pendente":
                     continue
+
+                contador += 1
+                self.after(0, lambda a=contador, t=total_pedidos, c=pedido["dados"]["cliente"]:
+                    self._atualizar_progresso(a, t, f"Criando pedido para {c}..."))
 
                 pedido["status"] = "rodando"
                 self.after(0, self._atualizar_tree_fila)
@@ -822,7 +982,8 @@ class App(tk.Tk):
                             cd or "—",
                             p["dados"]["cliente"],
                             p["dados"]["data"],
-                            "Sim" if p["baixar_pdf"] else "Não")))
+                            "Sim" if p["baixar_pdf"] else "Não",
+                            p["dados"].get("pagamento", ""))))
 
                     self.after(0, lambda c=codigo:
                         self.log(f"\n✔  Pedido concluído — Código: {c}", "ok"))
@@ -839,10 +1000,12 @@ class App(tk.Tk):
                                 self.log(f"[PDF] [ERRO] {e}", "erro"))
 
                 except Exception as ex:
-                    pedido["status"] = "erro"
+                    pedido["status"] = "pendente"
                     self.after(0, self._atualizar_tree_fila)
                     self.after(0, lambda e=str(ex):
                         self.log(f"\n[ERRO] Pedido falhou: {e}", "erro"))
+                    self.after(0, lambda c=pedido["dados"]["cliente"]:
+                        self.log(f"  → Pedido de {c} marcado como pendente para редаição", "aviso"))
 
             concluidos = sum(1 for p in self.fila if p["status"] == "concluido")
             erros      = sum(1 for p in self.fila if p["status"] == "erro")
@@ -850,18 +1013,25 @@ class App(tk.Tk):
                 self.log(f"\n{'═'*55}\n  FILA CONCLUÍDA — "
                          f"{concluidos} ok  |  {erros} com erro\n{'═'*55}", "info"))
             self.after(0, lambda: self._status("Fila concluída."))
+            self.after(0, lambda: self._limpar_progresso())
             self.after(0, lambda:
                 messagebox.showinfo("Fila Concluída",
                     f"{concluidos} pedido(s) criados com sucesso.\n"
-                    + (f"{erros} com erro — verifique o log." if erros else "")
+                    + (f"{erros} com erro — edite e reenvie na aba Fila." if erros else "")
                     + "\n\nVá para a aba Conferir para liberar os pedidos quando seu pai pedir."))
 
         except Exception as ex:
             self.after(0, lambda e=str(ex):
                 self.log(f"[ERRO FATAL] {e}", "erro"))
             self.after(0, lambda: self._status("Erro na fila."))
+            self.after(0, self._limpar_progresso)
         finally:
             builtins.print = _orig
+            try:
+                encerrar_driver()
+                self.after(0, lambda: self.log("[INFO] Chrome encerrado.", "info"))
+            except Exception:
+                pass
 
     # ── Conferir ─────────────────────────────
 
@@ -869,6 +1039,304 @@ class App(tk.Tk):
         sel = self.tree_conf.selection()
         for item in sel:
             self.tree_conf.delete(item)
+
+    def _retornar_para_fila(self):
+        sel = self.tree_conf.selection()
+        if not sel:
+            messagebox.showinfo("Nenhum selecionado",
+                "Selecione um ou mais pedidos para retornar à fila.")
+            return
+        
+        if not messagebox.askyesno("Confirmar",
+            f"Retornar {len(sel)} pedido(s) para a fila de pedidos?\n\n"
+            "Nota: Os itens não serão incluídos (ficaram no sistema).\n"
+            "Você precisará adicionar os itens novamente na aba Itens."):
+            return
+        
+        for item in sel:
+            vals = self.tree_conf.item(item, "values")
+            codigo = vals[0]
+            cliente = vals[1]
+            data = vals[2]
+            pagamento = vals[4] if len(vals) > 4 else "30 dias"
+            
+            self.fila.append({
+                "dados": {
+                    "ordem": "0",
+                    "data": data,
+                    "cliente": cliente.lower(),
+                    "pagamento": pagamento,
+                    "observacao": "",
+                    "empresa_index": 1,
+                    "vendedor_index": 1,
+                },
+                "itens": [],
+                "baixar_pdf": False,
+                "codigo": codigo,
+                "status": "pendente",
+            })
+            self.tree_conf.delete(item)
+        
+        self._atualizar_tree_fila()
+        messagebox.showinfo("Sucesso", f"{len(sel)} pedido(s) retornaram para a fila.\nAdicione os itens na aba Itens.")
+
+    def _editar_pedido_conferir(self):
+        sel = self.tree_conf.selection()
+        if not sel:
+            messagebox.showinfo("Nenhum pedido", "Selecione um pedido para editar.")
+            return
+        
+        item = sel[0]
+        vals = self.tree_conf.item(item, "values")
+        codigo = vals[0]
+        cliente = vals[1]
+        data = vals[2]
+        pagamento = vals[4] if len(vals) > 4 else "30 dias"
+        
+        top_edit = tk.Toplevel(self)
+        top_edit.title(f"Editar Pedido #{codigo}")
+        top_edit.geometry("400x250")
+        top_edit.resizable(False, False)
+        top_edit.configure(bg=COR["janela"])
+        
+        tk.Label(top_edit, text=f"Pedido #{codigo} - {cliente}",
+                 bg=COR["janela"], fg=COR["texto"], font=("Segoe UI", 11, "bold")).pack(pady=(20,15))
+        
+        tk.Label(top_edit, text="Escolha uma opção:",
+                 bg=COR["janela"], fg=COR["texto_fraco"]).pack()
+        
+        btn_frame = tk.Frame(top_edit, bg=COR["janela"])
+        btn_frame.pack(pady=20)
+        
+        resposta = [None]
+        
+        def opcao_sistema():
+            resposta[0] = True
+            top_edit.destroy()
+        
+        def opcao_tela():
+            resposta[0] = False
+            top_edit.destroy()
+        
+        def opcao_cancelar():
+            resposta[0] = "cancelar"
+            top_edit.destroy()
+        
+        tk.Button(btn_frame, text="✏️ EDITAR NO SISTEMA",
+                  command=opcao_sistema,
+                  bg=COR["acento_btn"], fg=COR["texto_branco"],
+                  font=("Segoe UI", 10), padx=15, pady=10).pack(fill="x", pady=5)
+        
+        tk.Button(btn_frame, text="📝 CARREGAR NA TELA",
+                  command=opcao_tela,
+                  bg=COR["borda"], fg=COR["texto"],
+                  font=("Segoe UI", 10), padx=15, pady=10).pack(fill="x", pady=5)
+        
+        tk.Button(btn_frame, text="❌ CANCELAR E CRIAR NOVO",
+                  command=opcao_cancelar,
+                  bg="#f85149", fg=COR["texto_branco"],
+                  font=("Segoe UI", 10), padx=15, pady=10).pack(fill="x", pady=5)
+        
+        top_edit.transient(self)
+        top_edit.grab_set()
+        self.wait_window(top_edit)
+        
+        if resposta[0] is None:
+            return
+        
+        if resposta[0] == "cancelar":
+            if not messagebox.askyesno("Confirmar",
+                f"Cancelar pedido #{codigo} no sistema e criar novo?"):
+                return
+            
+            self.nb.select(4)
+            self.log(f"\n{'─'*55}", "info")
+            self.log(f"  CANCELANDO pedido #{codigo}...", "info")
+            self._status("Cancelando pedido...")
+            
+            self.tree_conf.delete(item)
+            
+            threading.Thread(
+                target=self._rodar_cancelamento,
+                args=([(codigo, cliente, None)], []),
+                daemon=True
+            ).start()
+            
+            messagebox.showinfo("Pedido Cancelado",
+                f"Pedido #{codigo} foi cancelado no sistema.\n"
+                "Agora você pode criar um novo pedido com os itens necessários.")
+            return
+        
+        if resposta[0]:
+            self.nb.select(4)
+            self.log(f"\n{'─'*55}", "info")
+            self.log(f"  ABRINDO pedido #{codigo} para edição no sistema...", "info")
+            self._status(f"Editando pedido #{codigo} no sistema...")
+            
+            self.tree_conf.delete(item)
+            
+            threading.Thread(
+                target=self._rodar_edicao_sistema,
+                args=([(codigo, cliente)], [item]),
+                daemon=True
+            ).start()
+            
+            messagebox.showinfo("Modo Edição no Sistema",
+                f"O sistema será aberto na tela de edição do pedido #{codigo}.\n\n"
+                "Após editar no site, feche a aba do Chrome e o pedido\n"
+                "ficará na lista de conferidos para liberado ou cancelado.")
+        else:
+            self.v_ordem.set("0")
+            self.v_data.set(data)
+            self.v_cliente.set(cliente.lower())
+            self.v_pagto.set(pagamento)
+            self.txt_obs.delete("1.0", "end")
+            
+            self.itens.clear()
+            for i in self.tree.get_children():
+                self.tree.delete(i)
+            
+            self._ultima_esp = ""
+            
+            self.tree_conf.delete(item)
+            
+            self.nb.select(0)
+            self._status(f"Editando pedido de {cliente}")
+            
+            messagebox.showinfo("Modo Edição",
+                f"Pedido #{codigo} carregado na tela principal.\n"
+                "Os itens não foram carregados (estão no sistema).\n"
+                f"Condição de pagamento: {pagamento}\n"
+                "Adicione os itens manualmente na aba Itens.")
+
+    def _cancelar_pedido_pressed(self):
+        sel = self.tree_conf.selection()
+        if not sel:
+            return
+        
+        pedido = None
+        for item in sel:
+            vals = self.tree_conf.item(item, "values")
+            codigo = vals[0]
+            cliente = vals[1]
+            if codigo and codigo != "—":
+                pedido = (codigo, cliente, item)
+                break
+        
+        if not pedido:
+            messagebox.showwarning("Sem código", "O pedido não tem código para cancelar.")
+            return
+        
+        codigo, cliente, tree_item = pedido
+        
+        if not messagebox.askyesno("Confirmar Cancelamento",
+            f"Cancelar o pedido #{codigo} ({cliente}) no sistema?\n\n"
+            "Esta ação não pode ser desfeita."):
+            return
+        
+        self.nb.select(4)
+        self.log(f"\n{'─'*55}", "info")
+        self.log(f"  CANCELANDO pedido #{codigo}...", "info")
+        self._status("Cancelando pedido...")
+        
+        threading.Thread(
+            target=self._rodar_cancelamento,
+            args=([pedido], [tree_item]),
+            daemon=True
+        ).start()
+
+    def _rodar_cancelamento(self, pedidos_sel, itens_tree):
+        import builtins
+        _orig = builtins.print
+
+        def _gui_print(*args, **kw):
+            msg = " ".join(str(a) for a in args)
+            tipo = "ok" if "[OK]" in msg else "erro" if "[ERRO]" in msg else "normal"
+            self.after(0, lambda m=msg, t=tipo: self.log(m, t))
+            _orig(*args, **kw)
+
+        builtins.print = _gui_print
+
+        try:
+            from pages.pedidos import cancelar_pedido, iniciar_driver, encerrar_driver
+            import utils.driver as drv
+
+            if drv.driver is None:
+                self.log("[INFO] Iniciando Chrome para cancelamento...", "info")
+                iniciar_driver()
+                driver_iniciado_aqui = True
+            else:
+                driver_iniciado_aqui = False
+
+            ok_count = 0
+            for codigo, cliente, tree_item in pedidos_sel:
+                try:
+                    cancelar_pedido(codigo)
+                    ok_count += 1
+                    self.after(0, lambda c=codigo, cl=cliente:
+                        self.log(f"  [OK] #{c} — {cl} cancelado.", "ok"))
+                    self.after(0, lambda ti=tree_item:
+                        self.tree_conf.delete(ti))
+                except Exception as ex:
+                    self.after(0, lambda c=codigo, e=str(ex):
+                        self.log(f"  [ERRO] #{c} — {e}", "erro"))
+
+            if driver_iniciado_aqui:
+                encerrar_driver()
+
+            self.after(0, lambda n=ok_count:
+                self.log(f"\n✔  {n} pedido(s) cancelado(s).", "ok"))
+            self.after(0, lambda: self._status("Cancelamento concluído."))
+
+        except Exception as ex:
+            self.after(0, lambda e=str(ex):
+                self.log(f"[ERRO FATAL] {e}", "erro"))
+            self.after(0, lambda: self._status("Erro no cancelamento."))
+        finally:
+            builtins.print = _orig
+
+    def _rodar_edicao_sistema(self, pedidos_sel, itens_tree):
+        import builtins
+        _orig = builtins.print
+
+        def _gui_print(*args, **kw):
+            msg = " ".join(str(a) for a in args)
+            tipo = "ok" if "[OK]" in msg else "erro" if "[ERRO]" in msg else "normal"
+            self.after(0, lambda m=msg, t=tipo: self.log(m, t))
+            _orig(*args, **kw)
+
+        builtins.print = _gui_print
+
+        try:
+            from pages.pedidos import editar_pedido_sistema, iniciar_driver, encerrar_driver
+            import utils.driver as drv
+
+            if drv.driver is None:
+                self.log("[INFO] Iniciando Chrome para edição...", "info")
+                iniciar_driver()
+                driver_iniciado_aqui = True
+            else:
+                driver_iniciado_aqui = False
+
+            for codigo, cliente in pedidos_sel:
+                try:
+                    editar_pedido_sistema(codigo)
+                    self.after(0, lambda c=codigo, cl=cliente:
+                        self.log(f"  [OK] #{c} — {cl} aberto para edição.", "ok"))
+                except Exception as ex:
+                    self.after(0, lambda c=codigo, e=str(ex):
+                        self.log(f"  [ERRO] #{c} — {e}", "erro"))
+
+            self.after(0, lambda:
+                self.log(f"\n✔  Pedido aberto para edição no sistema.", "ok"))
+            self.after(0, lambda: self._status("Edite o pedido no Chrome e feche quando terminar."))
+
+        except Exception as ex:
+            self.after(0, lambda e=str(ex):
+                self.log(f"[ERRO FATAL] {e}", "erro"))
+            self.after(0, lambda: self._status("Erro na edição."))
+        finally:
+            builtins.print = _orig
 
     def _conferir_selecionados(self):
         sel = self.tree_conf.selection()
@@ -896,7 +1364,7 @@ class App(tk.Tk):
             f"Confirmar os seguintes pedidos no sistema?\n\n{nomes}"):
             return
 
-        self.nb.select(5)
+        self.nb.select(4)
         self.log(f"\n{'─'*55}", "info")
         self.log(f"  CONFERINDO {len(pedidos_sel)} pedido(s)...", "info")
         self._status("Conferindo pedidos...")
@@ -911,6 +1379,7 @@ class App(tk.Tk):
 
     def _rodar_conferencia(self, pedidos_sel, itens_tree):
         import builtins
+        import time
         _orig = builtins.print
 
         def _gui_print(*args, **kw):
@@ -922,11 +1391,37 @@ class App(tk.Tk):
         builtins.print = _gui_print
 
         try:
-            from pages.pedidos import conferir_pedido
+            from pages.pedidos import conferir_pedido, iniciar_driver, encerrar_driver, _d
+            from config import URL_BASE
+
+            self.log("[INFO] Iniciando Chrome para conferência...", "info")
+            iniciar_driver()
+            driver_iniciado_aqui = True
+            
+            driver_atual = _d()
+            driver_atual.get(URL_BASE)
+            time.sleep(2)
+            
+            from pages.pedidos import fazer_login
+            try:
+                fazer_login()
+            except Exception:
+                pass
+            time.sleep(1)
 
             ok_count = 0
             for codigo, cliente, tree_item in pedidos_sel:
                 try:
+                    verificar = driver_atual.current_url
+                    if not verificar or "WebSGEP" not in verificar:
+                        driver_atual.get(URL_BASE)
+                        time.sleep(1)
+                        try:
+                            fazer_login()
+                        except:
+                            pass
+                        time.sleep(1)
+                    
                     conferir_pedido(codigo)
                     ok_count += 1
                     self.after(0, lambda c=codigo, cl=cliente:
@@ -936,6 +1431,9 @@ class App(tk.Tk):
                 except Exception as ex:
                     self.after(0, lambda c=codigo, e=str(ex):
                         self.log(f"  [ERRO] #{c} — {e}", "erro"))
+
+            if driver_iniciado_aqui:
+                encerrar_driver()
 
             self.after(0, lambda n=ok_count:
                 self.log(f"\n✔  {n} pedido(s) conferidos.", "ok"))

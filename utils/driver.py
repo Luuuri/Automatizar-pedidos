@@ -13,9 +13,17 @@ driver = None
 
 def iniciar():
     global driver
+    if driver is not None:
+        try:
+            driver.current_url
+            return driver
+        except Exception:
+            driver = None
+    
     opts = webdriver.ChromeOptions()
     opts.add_argument("--force-device-scale-factor=0.8")
     opts.add_argument("--start-maximized")
+    opts.add_argument("--new-window")
 
     # ── Configura download automático sem perguntar ──────────────────
     # Define a pasta de destino e desativa o aviso de download perigoso
