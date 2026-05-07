@@ -48,28 +48,28 @@ def _carregar_log():
 
 # ── Paleta Divertida ───────────────────────────
 COR = {
-    "janela":      "#1a1a2e",
-    "fundo":       "#16213e",
-    "fundo_card":  "#1f3460",
-    "borda":       "#4a69bd",
-    "borda_focus": "#d870e1",
-    "acento":      "#867bdd",
-    "acento_btn":  "#a29bfe",
-    "acento_btn_hover": "#8176f3",
-    "acento_verde": "#d870e1",
-    "acento_rosa": "#fd79a8",
-    "acento_amarelo": "#ffeaa7",
-    "texto":       "#dfe6e9",
-    "texto_fraco": "#a4b0be",
-    "texto_branco":"#ffffff",
-    "texto_dark":  "#2d3436",
-    "verde":       "#00d2d3",
-    "amarelo":     "#ffeaa7",
-    "vermelho":    "#ff7675",
-    "aba_inativa": "#2d4059",
-    "aba_ativa":   "#1f3460",
-    "cabecalho":   "#2d4059",
-    "rodape":      "#2d4059",
+    "janela":            "#1a1a2e",
+    "fundo":             "#16213e",
+    "fundo_card":        "#1f3460",
+    "borda":             "#4a69bd",
+    "borda_focus":       "#d870e1",
+    "acento":            "#867bdd",
+    "acento_btn":        "#a29bfe",
+    "acento_btn_hover":  "#8176f3",
+    "acento_verde":      "#d870e1",
+    "acento_rosa":       "#fd79a8",
+    "acento_amarelo":    "#ffeaa7",
+    "texto":             "#dfe6e9",
+    "texto_fraco":       "#c2cfdf",
+    "texto_branco":      "#ffffff",
+    "texto_dark":        "#2d3436",
+    "verde":             "#00d2d3",
+    "amarelo":           "#ffeaa7",
+    "vermelho":          "#ff7675",
+    "aba_inativa":       "#2d4059",
+    "aba_ativa":         "#1f3460",
+    "cabecalho":         "#2d4059",
+    "rodape":            "#2d4059",
 }
 
 FONTE_LABEL  = ("Nunito", 10)
@@ -187,6 +187,14 @@ class App(tk.Tk):
         self.resizable(True, True)
         self.minsize(860, 700)
         self.geometry("960x760")
+        
+        # Tentar carregar ícone
+        icon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "icon.ico")
+        if os.path.exists(icon_path):
+            try:
+                self.iconbitmap(icon_path)
+            except:
+                pass
 
         # fila: lista de dicts {dados, itens, baixar_pdf, codigo, status}
         self.fila = []
@@ -214,13 +222,13 @@ class App(tk.Tk):
         
         titulo_frame = tk.Frame(cab, bg=COR["cabecalho"])
         titulo_frame.pack(side="left", padx=16, pady=14)
-        tk.Label(titulo_frame, text="✨", font=("Segoe UI", 18), bg=COR["cabecalho"]).pack(side="left")
+        tk.Label(titulo_frame, text="✨", font=("Segoe UI", 18), bg=COR["cabecalho"], fg=COR["texto_fraco"]).pack(side="left")
         tk.Label(titulo_frame, text=" Automação de Pedidos ",
                  font=("Nunito", 16, "bold"), bg=COR["cabecalho"],
                  fg=COR["acento"]).pack(side="left")
-        tk.Label(titulo_frame, text="✨", font=("Segoe UI", 18), bg=COR["cabecalho"]).pack(side="left")
+        tk.Label(titulo_frame, text="✨", font=("Segoe UI", 18), bg=COR["cabecalho"], fg=COR["texto_fraco"]).pack(side="left")
         
-        tk.Label(cab, text="Americo Lima • AMASA Belém",
+        tk.Label(cab, text="SGEP • Amasa",
                  font=("Nunito", 10), bg=COR["cabecalho"],
                  fg=COR["texto_fraco"]).pack(side="right", padx=20, pady=20)
         
@@ -236,7 +244,7 @@ class App(tk.Tk):
         rod = tk.Frame(self, bg=COR["rodape"], height=32)
         rod.pack(fill="x", side="bottom")
         rod.pack_propagate(False)
-        self._status_var = tk.StringVar(value="✨ Pronto para usar!")
+        self._status_var = tk.StringVar(value="✨ Pedidos! Pedidos! Pedidos! ✨")
         tk.Label(rod, textvariable=self._status_var,
                  font=("Nunito", 10), bg=COR["rodape"],
                  fg=COR["texto"]).pack(side="left", padx=14, pady=6)
@@ -396,8 +404,13 @@ class App(tk.Tk):
         _label(corpo, "Uni. Medida sempre KG — valor comparado com o sistema automaticamente",
                fraco=True).grid(
             row=1, column=0, columnspan=6, sticky="w", padx=(12,0), pady=(0,6))
-        _btn_primario(corpo, "+ Adicionar", self._add_item).grid(
-            row=1, column=6, columnspan=2, padx=(0,12), pady=(0,8), sticky="e")
+        
+        btn_add = tk.Button(corpo, text="+", command=self._add_item, font=("Nunito", 11, "bold"),
+                     bg=COR["acento_btn"], fg=COR["texto_dark"],
+                     activebackground=COR["acento_btn_hover"], activeforeground=COR["texto_dark"],
+                     relief="flat", cursor="hand2", padx=8, pady=2, bd=0, width=3, height=1)
+        btn_add.config(highlightthickness=2, highlightbackground="#ffffff", highlightcolor="#ffffff")
+        btn_add.grid(row=1, column=6, columnspan=2, padx=(0,12), pady=(0,8), sticky="e")
 
         outer_t, corpo_t = _card(frame, titulo="Itens do Pedido Atual")
         outer_t.grid(row=1, column=0, sticky="nsew", padx=12, pady=(0,6))
@@ -897,8 +910,6 @@ class App(tk.Tk):
             "Pedido carregado na tela principal.\n"
             "Edite os dados e itens conforme necessário.\n"
             "Para incluir na fila novamente, vá na aba Itens e clique em 'Adicionar à Fila'.")
-        tk.Button(btn_frame, text="Salvar", command=salvar,
-                  bg=COR["acento_btn"], fg=COR["texto_branco"], relief="flat", padx=20, pady=8).pack(side="right", padx=(10,0))
 
     def _mover_fila(self, direcao):
         sel = self.tree_fila.selection()
@@ -1521,7 +1532,12 @@ class App(tk.Tk):
             if base not in sys.path:
                 sys.path.insert(0, base)
             try:
-                import preencher_planilhas as pp
+                try:
+                    import preencher_planilhas as pp
+                except ImportError:
+                    self.after(0, lambda: self._log_planilha("[ERRO] Módulo 'preencher_planilhas' não encontrado.", "erro"))
+                    self.after(0, lambda: messagebox.showerror("Erro", "Módulo 'preencher_planilhas' não encontrado.\nEste recurso está indisponível."))
+                    return
                 from pathlib import Path
                 pp.RELATORIO   = Path(rel)
                 pp.PROGRAMACAO = Path(prog)
