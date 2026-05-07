@@ -48,28 +48,28 @@ def _carregar_log():
 
 # ── Paleta Divertida ───────────────────────────
 COR = {
-    "janela":            "#1a1a2e",
-    "fundo":             "#16213e",
-    "fundo_card":        "#1f3460",
-    "borda":             "#4a69bd",
-    "borda_focus":       "#d870e1",
-    "acento":            "#867bdd",
-    "acento_btn":        "#a29bfe",
-    "acento_btn_hover":  "#8176f3",
-    "acento_verde":      "#d870e1",
-    "acento_rosa":       "#fd79a8",
-    "acento_amarelo":    "#ffeaa7",
-    "texto":             "#dfe6e9",
-    "texto_fraco":       "#c2cfdf",
-    "texto_branco":      "#ffffff",
-    "texto_dark":        "#2d3436",
-    "verde":             "#00d2d3",
-    "amarelo":           "#ffeaa7",
-    "vermelho":          "#ff7675",
-    "aba_inativa":       "#2d4059",
-    "aba_ativa":         "#1f3460",
-    "cabecalho":         "#2d4059",
-    "rodape":            "#2d4059",
+    "janela":      "#1a1a2e",
+    "fundo":       "#16213e",
+    "fundo_card":  "#1f3460",
+    "borda":       "#4a69bd",
+    "borda_focus": "#00d2d3",
+    "acento":      "#6c5ce7",
+    "acento_btn":  "#a29bfe",
+    "acento_btn_hover": "#8176f3",
+    "acento_verde": "#00d2d3",
+    "acento_rosa": "#fd79a8",
+    "acento_amarelo": "#ffeaa7",
+    "texto":       "#dfe6e9",
+    "texto_fraco": "#a4b0be",
+    "texto_branco":"#ffffff",
+    "texto_dark":  "#2d3436",
+    "verde":       "#00d2d3",
+    "amarelo":     "#ffeaa7",
+    "vermelho":    "#ff7675",
+    "aba_inativa": "#2d4059",
+    "aba_ativa":   "#1f3460",
+    "cabecalho":   "#2d4059",
+    "rodape":      "#2d4059",
 }
 
 FONTE_LABEL  = ("Nunito", 10)
@@ -86,32 +86,32 @@ def _aplicar_estilos():
         background=COR["janela"], borderwidth=0, tabmargins=[0,0,0,0])
     s.configure("SGEP.TNotebook.Tab",
         background=COR["aba_inativa"], foreground=COR["texto_fraco"],
-        font=("Nunito", 10, "bold"), padding=[18, 8], borderwidth=0, relief="flat")
+        font=("Segoe UI", 9, "bold"), padding=[14, 6], borderwidth=1, relief="flat")
     s.map("SGEP.TNotebook.Tab",
         background=[("selected", COR["aba_ativa"])],
-        foreground=[("selected", COR["acento_verde"])])
+        foreground=[("selected", COR["acento_btn"])])
     s.configure("SGEP.TCombobox",
         fieldbackground=COR["fundo"], background=COR["fundo"],
-        foreground=COR["texto"], selectbackground=COR["acento"],
-        selectforeground=COR["texto_branco"], arrowcolor=COR["acento_verde"],
+        foreground=COR["texto"], selectbackground=COR["acento_btn"],
+        selectforeground=COR["texto_branco"], arrowcolor=COR["acento_btn"],
         bordercolor=COR["borda"], lightcolor=COR["borda"], darkcolor=COR["borda"])
     s.map("SGEP.TCombobox",
         fieldbackground=[("readonly", COR["fundo"])],
         foreground=[("readonly", COR["texto"])],
         bordercolor=[("focus", COR["borda_focus"])])
     s.configure("SGEP.Treeview",
-        background=COR["fundo_card"], foreground=COR["texto"],
-        fieldbackground=COR["fundo_card"], borderwidth=1,
-        font=FONTE_INPUT, rowheight=28, relief="solid")
+        background=COR["fundo"], foreground=COR["texto"],
+        fieldbackground=COR["fundo"], borderwidth=1,
+        font=FONTE_INPUT, rowheight=26, relief="solid")
     s.configure("SGEP.Treeview.Heading",
-        background=COR["acento"], foreground=COR["texto_branco"],
-        font=("Nunito", 10, "bold"), borderwidth=0, relief="flat", padding=6)
+        background=COR["acento_btn"], foreground=COR["texto_branco"],
+        font=("Segoe UI", 9, "bold"), borderwidth=0, relief="flat", padding=4)
     s.map("SGEP.Treeview",
         background=[("selected", COR["acento_btn"])],
         foreground=[("selected", COR["texto_branco"])])
     s.configure("SGEP.Vertical.TScrollbar",
         background=COR["borda"], troughcolor=COR["janela"],
-        arrowcolor=COR["acento_verde"], borderwidth=0)
+        arrowcolor=COR["texto_fraco"], borderwidth=0)
 
 # ── Widgets ───────────────────────────────────
 def _entry(parent, var=None, width=24, readonly=False):
@@ -139,26 +139,19 @@ def _label(parent, texto, fraco=False, bg=None):
                     bg=bg or COR["fundo"],
                     fg=COR["texto_fraco"] if fraco else COR["texto"])
 
-def _add_focus_highlight(widget):
-    widget.config(highlightthickness=3, highlightbackground="#ffffff", highlightcolor="#ffffff")
-
 def _btn_primario(parent, texto, cmd, **kw):
-    btn = tk.Button(parent, text=texto, command=cmd, font=FONTE_BTN,
+    return tk.Button(parent, text=texto, command=cmd, font=FONTE_BTN,
                      bg=COR["acento_btn"], fg=COR["texto_dark"],
                      activebackground=COR["acento_btn_hover"],
                      activeforeground=COR["texto_dark"],
-                     relief="flat", cursor="hand2", padx=20, pady=8, bd=0, **kw)
-    btn.config(highlightthickness=3, highlightbackground="#ffffff", highlightcolor="#ffffff")
-    return btn
+                     relief="flat", cursor="hand2", padx=14, pady=5, **kw)
 
 def _btn_secundario(parent, texto, cmd, **kw):
-    btn = tk.Button(parent, text=texto, command=cmd, font=FONTE_BTN,
+    return tk.Button(parent, text=texto, command=cmd, font=FONTE_BTN,
                      bg=COR["fundo_card"], fg=COR["texto"],
                      activebackground=COR["borda"],
                      activeforeground=COR["texto"],
-                     relief="flat", cursor="hand2", padx=20, pady=8, bd=0, **kw)
-    btn.config(highlightthickness=3, highlightbackground="#ffffff", highlightcolor="#ffffff")
-    return btn
+                     relief="flat", cursor="hand2", padx=14, pady=5, **kw)
 
 def _card(parent, titulo=None):
     outer = tk.Frame(parent, bg=COR["borda"])
@@ -187,14 +180,11 @@ class App(tk.Tk):
         self.resizable(True, True)
         self.minsize(860, 700)
         self.geometry("960x760")
-        
-        # Tentar carregar ícone
+
+        # Carregar ícone da janela
         icon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "icon.ico")
         if os.path.exists(icon_path):
-            try:
-                self.iconbitmap(icon_path)
-            except:
-                pass
+            self.iconbitmap(icon_path)
 
         # fila: lista de dicts {dados, itens, baixar_pdf, codigo, status}
         self.fila = []
@@ -228,32 +218,32 @@ class App(tk.Tk):
                  fg=COR["acento"]).pack(side="left")
         tk.Label(titulo_frame, text="✨", font=("Segoe UI", 18), bg=COR["cabecalho"], fg=COR["texto_fraco"]).pack(side="left")
         
-        tk.Label(cab, text="SGEP • Amasa",
+        tk.Label(cab, text="Americo Lima • AMASA Belém",
                  font=("Nunito", 10), bg=COR["cabecalho"],
                  fg=COR["texto_fraco"]).pack(side="right", padx=20, pady=20)
         
         self.nb = ttk.Notebook(self, style="SGEP.TNotebook")
         self.nb.pack(fill="both", expand=True, padx=10, pady=10)
-        
+
         self._aba_pedido()
         self._aba_itens()
         self._aba_fila()
         self._aba_conferir()
         self._aba_log()
-        
-        rod = tk.Frame(self, bg=COR["rodape"], height=32)
+
+        rod = tk.Frame(self, bg=COR["rodape"], height=28)
         rod.pack(fill="x", side="bottom")
         rod.pack_propagate(False)
-        self._status_var = tk.StringVar(value="✨ Pedidos! Pedidos! Pedidos! ✨")
+        self._status_var = tk.StringVar(value="Pedidos! Pedidos! Pedidos!")
         tk.Label(rod, textvariable=self._status_var,
-                 font=("Nunito", 10), bg=COR["rodape"],
-                 fg=COR["texto"]).pack(side="left", padx=14, pady=6)
+                 font=("Segoe UI", 8), bg=COR["rodape"],
+                 fg=COR["texto_fraco"]).pack(side="left", padx=10, pady=4)
         
         self._progresso_var = tk.StringVar(value="")
         self._progresso_lbl = tk.Label(rod, textvariable=self._progresso_var,
-                 font=("Nunito", 10, "bold"), bg=COR["rodape"],
-                 fg=COR["acento_verde"])
-        self._progresso_lbl.pack(side="right", padx=14, pady=6)
+                 font=("Segoe UI", 8, "bold"), bg=COR["rodape"],
+                 fg=COR["acento_btn"])
+        self._progresso_lbl.pack(side="right", padx=10, pady=4)
 
     def _status(self, msg):
         self._status_var.set(msg)
@@ -404,13 +394,8 @@ class App(tk.Tk):
         _label(corpo, "Uni. Medida sempre KG — valor comparado com o sistema automaticamente",
                fraco=True).grid(
             row=1, column=0, columnspan=6, sticky="w", padx=(12,0), pady=(0,6))
-        
-        btn_add = tk.Button(corpo, text="+", command=self._add_item, font=("Nunito", 11, "bold"),
-                     bg=COR["acento_btn"], fg=COR["texto_dark"],
-                     activebackground=COR["acento_btn_hover"], activeforeground=COR["texto_dark"],
-                     relief="flat", cursor="hand2", padx=8, pady=2, bd=0, width=3, height=1)
-        btn_add.config(highlightthickness=2, highlightbackground="#ffffff", highlightcolor="#ffffff")
-        btn_add.grid(row=1, column=6, columnspan=2, padx=(0,12), pady=(0,8), sticky="e")
+        _btn_primario(corpo, "+ Adicionar", self._add_item).grid(
+            row=1, column=6, columnspan=2, padx=(0,12), pady=(0,8), sticky="e")
 
         outer_t, corpo_t = _card(frame, titulo="Itens do Pedido Atual")
         outer_t.grid(row=1, column=0, sticky="nsew", padx=12, pady=(0,6))
@@ -561,12 +546,12 @@ class App(tk.Tk):
         corpo.columnconfigure(0, weight=1)
         corpo.rowconfigure(0, weight=1)
 
-        log_container = tk.Frame(corpo, bg="#12121f", relief="solid", bd=1, highlightthickness=1, highlightcolor=COR["acento"])
+        log_container = tk.Frame(corpo, bg="#0d1117", relief="solid", bd=1)
         log_container.pack(fill="both", expand=True, padx=4, pady=4)
 
         self.log_txt = tk.Text(
-            log_container, font=("Fira Code", 10), bg="#12121f", fg=COR["texto"],
-            insertbackground=COR["acento_verde"], relief="flat", wrap="word",
+            log_container, font=("Consolas", 10), bg="#0d1117", fg="#c9d1d9",
+            insertbackground="#58a6ff", relief="flat", wrap="word",
             highlightthickness=0, borderwidth=0)
         
         sb = ttk.Scrollbar(log_container, orient="vertical",
@@ -576,12 +561,12 @@ class App(tk.Tk):
         self.log_txt.pack(side="left", fill="both", expand=True)
         sb.pack(side="right", fill="y", padx=(0,4), pady=4)
         
-        self.log_txt.tag_config("ok", foreground=COR["acento_verde"], font=("Fira Code", 10, "bold"))
-        self.log_txt.tag_config("erro", foreground=COR["vermelho"], font=("Fira Code", 10, "bold"))
-        self.log_txt.tag_config("aviso", foreground=COR["amarelo"], font=("Fira Code", 10, "bold"))
-        self.log_txt.tag_config("info", foreground=COR["acento_btn"], font=("Fira Code", 10, "bold"))
-        self.log_txt.tag_config("normal", foreground=COR["texto"], font=("Fira Code", 10))
-        self.log_txt.tag_config("hora", foreground=COR["texto_fraco"], font=("Fira Code", 10))
+        self.log_txt.tag_config("ok", foreground="#3fb950", font=("Consolas", 10, "bold"))
+        self.log_txt.tag_config("erro", foreground="#f85149", font=("Consolas", 10, "bold"))
+        self.log_txt.tag_config("aviso", foreground="#d29922", font=("Consolas", 10, "bold"))
+        self.log_txt.tag_config("info", foreground="#58a6ff", font=("Consolas", 10, "bold"))
+        self.log_txt.tag_config("normal", foreground="#c9d1d9", font=("Consolas", 10))
+        self.log_txt.tag_config("hora", foreground="#8b949e", font=("Consolas", 10))
 
         btn_row = tk.Frame(frame, bg=COR["janela"])
         btn_row.grid(row=1, column=0, sticky="ew", padx=12, pady=(0,10))
@@ -910,6 +895,8 @@ class App(tk.Tk):
             "Pedido carregado na tela principal.\n"
             "Edite os dados e itens conforme necessário.\n"
             "Para incluir na fila novamente, vá na aba Itens e clique em 'Adicionar à Fila'.")
+        tk.Button(btn_frame, text="Salvar", command=salvar,
+                  bg=COR["acento_btn"], fg=COR["texto_branco"], relief="flat", padx=20, pady=8).pack(side="right", padx=(10,0))
 
     def _mover_fila(self, direcao):
         sel = self.tree_fila.selection()
@@ -1532,12 +1519,7 @@ class App(tk.Tk):
             if base not in sys.path:
                 sys.path.insert(0, base)
             try:
-                try:
-                    import preencher_planilhas as pp
-                except ImportError:
-                    self.after(0, lambda: self._log_planilha("[ERRO] Módulo 'preencher_planilhas' não encontrado.", "erro"))
-                    self.after(0, lambda: messagebox.showerror("Erro", "Módulo 'preencher_planilhas' não encontrado.\nEste recurso está indisponível."))
-                    return
+                import preencher_planilhas as pp
                 from pathlib import Path
                 pp.RELATORIO   = Path(rel)
                 pp.PROGRAMACAO = Path(prog)

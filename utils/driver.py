@@ -24,23 +24,30 @@ def iniciar():
     opts.add_argument("--force-device-scale-factor=0.8")
     opts.add_argument("--start-maximized")
     opts.add_argument("--new-window")
+    opts.add_argument("--disable-blink-features=AutomationControlled")
+    opts.add_argument("--disable-web-security")
+    opts.add_argument("--allow-running-insecure-content")
 
     # ── Configura download automático sem perguntar ──────────────────
-    # Define a pasta de destino e desativa o aviso de download perigoso
     prefs = {
-        # Pasta onde os arquivos vão ser salvos automaticamente
         "download.default_directory": PASTA_PDF,
-
-        # Não pergunta onde salvar — baixa direto na pasta acima
         "download.prompt_for_download": False,
         "download.directory_upgrade": True,
-
-        # Desativa o aviso de "arquivo perigoso" para sites HTTP
+        
+        # Desativa completamente o Safe Browsing
         "safebrowsing.enabled": False,
         "safebrowsing.disable_download_protection": True,
-
-        # Permite PDFs serem baixados em vez de abrir no visualizador
+        "safebrowsing.disable_extension_thumbnail_detection": True,
+        
+        # Permite downloads inseguros
+        "profile.default_content_setting_values.notifications": 2,
+        "profile.content_settings.exceptions.automatic_downloads.*.setting": 1,
+        
+        # PDFs abrem diretamente sem visualizador
         "plugins.always_open_pdf_externally": True,
+        
+        # Permite downloads sem URL segura
+        "profile.default_content_setting_values.unsandboxed_https_responses": 1,
     }
     opts.add_experimental_option("prefs", prefs)
 
