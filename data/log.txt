@@ -1069,3 +1069,54 @@ Stacktrace:
 ───────────────────────────────────────────────────────
 [16:19:37]   CONFERINDO 1 pedido(s)...
 [16:19:37] [ERRO FATAL] cannot import name 'driver' from 'pages.pedidos' (d:\Documento\#Estudo & Trabalho\Código\Automatizar pedidos - Copia\pages\pedidos.py)
+[21:02:46] ═══════════════════════════════════════════════════════
+[21:02:46]   INICIANDO FILA — 1 pedido(s)  06/05/2026 00:00
+[21:02:46] ═══════════════════════════════════════════════════════
+[21:02:47] [INFO] Iniciando Chrome...
+[21:02:50] [INFO] Chrome iniciado. Começando pedidos...
+[21:02:50] 
+───────────────────────────────────────────────────────
+  PEDIDO 1: COMPESPA
+───────────────────────────────────────────────────────
+[21:02:54] [OK] Login realizado
+[21:02:59] [OK] Aba Pedidos aberta
+[21:02:59] [OK] Empresa selecionada
+[21:02:59] [OK] Data de entrega: 07/05/2026
+[21:02:59] [OK] Ordem de compra: 0
+[21:03:03] [OK] Cliente: compespa
+[21:03:03] [OK] Vendedor selecionado
+[21:03:04] [OK] Pagamento: 14/21/28
+[21:03:04] [OK] Observação: teste
+[21:03:06] [OK] Pedido gravado — Pedido Incluido com Sucesso !
+[21:03:06] [OK] Código do pedido capturado: 91081
+[21:03:08] [OK] Aba Itens Pedidos aberta
+
+[21:03:08] 
+[ITEM] CAMARAO | PA 0108 | 20.0 kg | R$ 20.00
+[21:03:09]          Espécie: CAMARAO ROSA
+[21:03:11]          Produto: PA0108 - 51/60 CAMARAO ROSA S/CABECA CONG AMAZ 2KG CX14KG
+[21:03:14]          Uni. Medida: KG
+[21:03:14]          Sistema: R$ 89.00 | Pedido: R$ 20.00
+[21:03:14] INFERIOR — anotando em Observações
+[21:03:15]          [OBS] Anotado: PA 0108 20,00
+[21:03:17]          [OBS] Pedido regravado com observação.
+[21:03:18]          Clicando em Limpar para resetar campos...
+[21:03:19]          Refazendo seleção completa...
+[21:03:23]          Valor restaurado: R$ 89.00 (obs. já anotada)
+[21:03:25]          [OK] PA 0108 gravado — Item do Pedido Incluido com sucesso !
+[21:03:25] 
+=== PEDIDO CONCLUÍDO! ===
+[21:03:25] 
+✔  Pedido concluído — Código: 91081
+[21:03:25] [PDF] Baixando pedido #91081...
+[21:03:25] 
+[PDF] Iniciando download — Pedido #91081
+[21:03:29] [PDF] Pedido #91081 encontrado.
+[21:03:29] [PDF] Chamando impressão com valor...
+[21:03:32] [PDF] Aguardando download...
+[21:04:03] [PDF] [AVISO] Download não detectado em D:\Documento\#Pedidos.
+[21:04:03] 
+═══════════════════════════════════════════════════════
+  FILA CONCLUÍDA — 1 ok  |  0 com erro
+═══════════════════════════════════════════════════════
+[21:04:05] [INFO] Chrome encerrado.
