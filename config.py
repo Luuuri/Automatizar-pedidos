@@ -25,6 +25,8 @@ CLIENTES_ESPECIAIS = {
     "s_alb":        {"busca": "s albuquerque", "value": "409"},
     "fas":          {"busca": "fas queiroz",   "value": "595"},
     "ds":           {"busca": "ds muller",     "value": "330"},
+    "boteco":           {"busca": "boteco di",       "value": "9836"},
+    "rede_mais_barato": {"busca": "mais barato",     "value": "7015"},
 }
 
 # Clientes que o sistema reconhece só pelo nome digitado.
@@ -38,14 +40,14 @@ TODOS_CLIENTES = sorted(list(CLIENTES_ESPECIAIS.keys()) + sorted(CLIENTES_NORMAI
 
 # ── Condições de pagamento ────────────────────
 PAGAMENTOS = [
-    "a vista", "contrato", "7 dias", "14 dias", "21 dias", "28 dias",
-    "28/42", "30 dias", "30/60", "30/60/90", "45 dias", "60 dias",
+    "a vista", "contrato", "7 dias", "14 dias", "21 dias", "21/28", "28 dias",
+    "28/42", "30 dias", "30/60", "30/60/90", "45 dias", "60 dias", "28/35/42", "14/21/28"
 ]
 
 # ── Espécies ──────────────────────────────────
 ESPECIES = [
     "camarao", "dourada", "filhote", "jaraqui", "pirarucu",
-    "pescada", "surubim", "tambaqui", "tucunare", "outros",
+    "pescada", "surubim", "tambaqui", "tucunare", "outros", "pargo"
 ]
 
 # ── Seletores CSS do sistema SGEP ────────────
