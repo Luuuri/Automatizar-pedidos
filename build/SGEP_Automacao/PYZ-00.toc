@@ -6,12 +6,12 @@
   ('_colorize', 'C:\\Python314\\Lib\\_colorize.py', 'PYMODULE'),
   ('_compat_pickle', 'C:\\Python314\\Lib\\_compat_pickle.py', 'PYMODULE'),
   ('_distutils_hack',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\_distutils_hack\\__init__.py',
    'PYMODULE'),
   ('_distutils_hack.override',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\_distutils_hack\\override.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\_distutils_hack\\override.py',
    'PYMODULE'),
   ('_ios_support', 'C:\\Python314\\Lib\\_ios_support.py', 'PYMODULE'),
   ('_opcode_metadata', 'C:\\Python314\\Lib\\_opcode_metadata.py', 'PYMODULE'),
@@ -141,184 +141,184 @@
    'C:\\Python314\\Lib\\asyncio\\windows_utils.py',
    'PYMODULE'),
   ('attr',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attr\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attr\\__init__.py',
    'PYMODULE'),
   ('attr._cmp',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attr\\_cmp.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attr\\_cmp.py',
    'PYMODULE'),
   ('attr._compat',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attr\\_compat.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attr\\_compat.py',
    'PYMODULE'),
   ('attr._config',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attr\\_config.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attr\\_config.py',
    'PYMODULE'),
   ('attr._funcs',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attr\\_funcs.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attr\\_funcs.py',
    'PYMODULE'),
   ('attr._make',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attr\\_make.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attr\\_make.py',
    'PYMODULE'),
   ('attr._next_gen',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attr\\_next_gen.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attr\\_next_gen.py',
    'PYMODULE'),
   ('attr._version_info',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attr\\_version_info.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attr\\_version_info.py',
    'PYMODULE'),
   ('attr.converters',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attr\\converters.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attr\\converters.py',
    'PYMODULE'),
   ('attr.exceptions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attr\\exceptions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attr\\exceptions.py',
    'PYMODULE'),
   ('attr.filters',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attr\\filters.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attr\\filters.py',
    'PYMODULE'),
   ('attr.setters',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attr\\setters.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attr\\setters.py',
    'PYMODULE'),
   ('attr.validators',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attr\\validators.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attr\\validators.py',
    'PYMODULE'),
   ('attrs',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attrs\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attrs\\__init__.py',
    'PYMODULE'),
   ('attrs.converters',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attrs\\converters.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attrs\\converters.py',
    'PYMODULE'),
   ('attrs.exceptions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attrs\\exceptions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attrs\\exceptions.py',
    'PYMODULE'),
   ('attrs.filters',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attrs\\filters.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attrs\\filters.py',
    'PYMODULE'),
   ('attrs.setters',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attrs\\setters.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attrs\\setters.py',
    'PYMODULE'),
   ('attrs.validators',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\attrs\\validators.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\attrs\\validators.py',
    'PYMODULE'),
   ('base64', 'C:\\Python314\\Lib\\base64.py', 'PYMODULE'),
   ('bisect', 'C:\\Python314\\Lib\\bisect.py', 'PYMODULE'),
   ('bz2', 'C:\\Python314\\Lib\\bz2.py', 'PYMODULE'),
   ('calendar', 'C:\\Python314\\Lib\\calendar.py', 'PYMODULE'),
   ('certifi',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\certifi\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\certifi\\__init__.py',
    'PYMODULE'),
   ('certifi.core',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\certifi\\core.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\certifi\\core.py',
    'PYMODULE'),
   ('cffi',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\__init__.py',
    'PYMODULE'),
   ('cffi._imp_emulation',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\_imp_emulation.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\_imp_emulation.py',
    'PYMODULE'),
   ('cffi._shimmed_dist_utils',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\_shimmed_dist_utils.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\_shimmed_dist_utils.py',
    'PYMODULE'),
   ('cffi.api',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\api.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\api.py',
    'PYMODULE'),
   ('cffi.cffi_opcode',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\cffi_opcode.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\cffi_opcode.py',
    'PYMODULE'),
   ('cffi.commontypes',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\commontypes.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\commontypes.py',
    'PYMODULE'),
   ('cffi.cparser',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\cparser.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\cparser.py',
    'PYMODULE'),
   ('cffi.error',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\error.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\error.py',
    'PYMODULE'),
   ('cffi.ffiplatform',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\ffiplatform.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\ffiplatform.py',
    'PYMODULE'),
   ('cffi.lock',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\lock.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\lock.py',
    'PYMODULE'),
   ('cffi.model',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\model.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\model.py',
    'PYMODULE'),
   ('cffi.pkgconfig',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\pkgconfig.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\pkgconfig.py',
    'PYMODULE'),
   ('cffi.recompiler',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\recompiler.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\recompiler.py',
    'PYMODULE'),
   ('cffi.vengine_cpy',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\vengine_cpy.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\vengine_cpy.py',
    'PYMODULE'),
   ('cffi.vengine_gen',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\vengine_gen.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\vengine_gen.py',
    'PYMODULE'),
   ('cffi.verifier',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\cffi\\verifier.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\cffi\\verifier.py',
    'PYMODULE'),
   ('charset_normalizer',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\charset_normalizer\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\charset_normalizer\\__init__.py',
    'PYMODULE'),
   ('charset_normalizer.api',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\charset_normalizer\\api.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\charset_normalizer\\api.py',
    'PYMODULE'),
   ('charset_normalizer.constant',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\charset_normalizer\\constant.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\charset_normalizer\\constant.py',
    'PYMODULE'),
   ('charset_normalizer.legacy',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\charset_normalizer\\legacy.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\charset_normalizer\\legacy.py',
    'PYMODULE'),
   ('charset_normalizer.models',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\charset_normalizer\\models.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\charset_normalizer\\models.py',
    'PYMODULE'),
   ('charset_normalizer.utils',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\charset_normalizer\\utils.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\charset_normalizer\\utils.py',
    'PYMODULE'),
   ('charset_normalizer.version',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\charset_normalizer\\version.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\charset_normalizer\\version.py',
    'PYMODULE'),
   ('code', 'C:\\Python314\\Lib\\code.py', 'PYMODULE'),
   ('codeop', 'C:\\Python314\\Lib\\codeop.py', 'PYMODULE'),
@@ -393,24 +393,24 @@
   ('difflib', 'C:\\Python314\\Lib\\difflib.py', 'PYMODULE'),
   ('dis', 'C:\\Python314\\Lib\\dis.py', 'PYMODULE'),
   ('dotenv',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\dotenv\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\dotenv\\__init__.py',
    'PYMODULE'),
   ('dotenv.ipython',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\dotenv\\ipython.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\dotenv\\ipython.py',
    'PYMODULE'),
   ('dotenv.main',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\dotenv\\main.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\dotenv\\main.py',
    'PYMODULE'),
   ('dotenv.parser',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\dotenv\\parser.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\dotenv\\parser.py',
    'PYMODULE'),
   ('dotenv.variables',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\dotenv\\variables.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\dotenv\\variables.py',
    'PYMODULE'),
   ('email', 'C:\\Python314\\Lib\\email\\__init__.py', 'PYMODULE'),
   ('email._encoded_words',
@@ -450,48 +450,48 @@
   ('glob', 'C:\\Python314\\Lib\\glob.py', 'PYMODULE'),
   ('gzip', 'C:\\Python314\\Lib\\gzip.py', 'PYMODULE'),
   ('h11',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\h11\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\h11\\__init__.py',
    'PYMODULE'),
   ('h11._abnf',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\h11\\_abnf.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\h11\\_abnf.py',
    'PYMODULE'),
   ('h11._connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\h11\\_connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\h11\\_connection.py',
    'PYMODULE'),
   ('h11._events',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\h11\\_events.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\h11\\_events.py',
    'PYMODULE'),
   ('h11._headers',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\h11\\_headers.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\h11\\_headers.py',
    'PYMODULE'),
   ('h11._readers',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\h11\\_readers.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\h11\\_readers.py',
    'PYMODULE'),
   ('h11._receivebuffer',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\h11\\_receivebuffer.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\h11\\_receivebuffer.py',
    'PYMODULE'),
   ('h11._state',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\h11\\_state.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\h11\\_state.py',
    'PYMODULE'),
   ('h11._util',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\h11\\_util.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\h11\\_util.py',
    'PYMODULE'),
   ('h11._version',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\h11\\_version.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\h11\\_version.py',
    'PYMODULE'),
   ('h11._writers',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\h11\\_writers.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\h11\\_writers.py',
    'PYMODULE'),
   ('hashlib', 'C:\\Python314\\Lib\\hashlib.py', 'PYMODULE'),
   ('hmac', 'C:\\Python314\\Lib\\hmac.py', 'PYMODULE'),
@@ -503,28 +503,28 @@
   ('http.cookies', 'C:\\Python314\\Lib\\http\\cookies.py', 'PYMODULE'),
   ('http.server', 'C:\\Python314\\Lib\\http\\server.py', 'PYMODULE'),
   ('idna',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\idna\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\idna\\__init__.py',
    'PYMODULE'),
   ('idna.core',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\idna\\core.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\idna\\core.py',
    'PYMODULE'),
   ('idna.idnadata',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\idna\\idnadata.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\idna\\idnadata.py',
    'PYMODULE'),
   ('idna.intranges',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\idna\\intranges.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\idna\\intranges.py',
    'PYMODULE'),
   ('idna.package_data',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\idna\\package_data.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\idna\\package_data.py',
    'PYMODULE'),
   ('idna.uts46data',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\idna\\uts46data.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\idna\\uts46data.py',
    'PYMODULE'),
   ('importlib', 'C:\\Python314\\Lib\\importlib\\__init__.py', 'PYMODULE'),
   ('importlib._abc', 'C:\\Python314\\Lib\\importlib\\_abc.py', 'PYMODULE'),
@@ -666,80 +666,80 @@
   ('numbers', 'C:\\Python314\\Lib\\numbers.py', 'PYMODULE'),
   ('opcode', 'C:\\Python314\\Lib\\opcode.py', 'PYMODULE'),
   ('outcome',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\outcome\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\outcome\\__init__.py',
    'PYMODULE'),
   ('outcome._impl',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\outcome\\_impl.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\outcome\\_impl.py',
    'PYMODULE'),
   ('outcome._util',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\outcome\\_util.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\outcome\\_util.py',
    'PYMODULE'),
   ('outcome._version',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\outcome\\_version.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\outcome\\_version.py',
    'PYMODULE'),
   ('packaging',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\__init__.py',
    'PYMODULE'),
   ('packaging._elffile',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\_elffile.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\_elffile.py',
    'PYMODULE'),
   ('packaging._manylinux',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\_manylinux.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\_manylinux.py',
    'PYMODULE'),
   ('packaging._musllinux',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\_musllinux.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\_musllinux.py',
    'PYMODULE'),
   ('packaging._parser',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\_parser.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\_parser.py',
    'PYMODULE'),
   ('packaging._structures',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\_structures.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\_structures.py',
    'PYMODULE'),
   ('packaging._tokenizer',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\_tokenizer.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\_tokenizer.py',
    'PYMODULE'),
   ('packaging.licenses',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\licenses\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\licenses\\__init__.py',
    'PYMODULE'),
   ('packaging.licenses._spdx',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\licenses\\_spdx.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\licenses\\_spdx.py',
    'PYMODULE'),
   ('packaging.markers',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\markers.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\markers.py',
    'PYMODULE'),
   ('packaging.requirements',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\requirements.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\requirements.py',
    'PYMODULE'),
   ('packaging.specifiers',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\specifiers.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\specifiers.py',
    'PYMODULE'),
   ('packaging.tags',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\tags.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\tags.py',
    'PYMODULE'),
   ('packaging.utils',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\utils.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\utils.py',
    'PYMODULE'),
   ('packaging.version',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\packaging\\version.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\packaging\\version.py',
    'PYMODULE'),
   ('pages', '-', 'PYMODULE'),
   ('pages.interface',
@@ -762,24 +762,24 @@
   ('pprint', 'C:\\Python314\\Lib\\pprint.py', 'PYMODULE'),
   ('py_compile', 'C:\\Python314\\Lib\\py_compile.py', 'PYMODULE'),
   ('pycparser',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\pycparser\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\pycparser\\__init__.py',
    'PYMODULE'),
   ('pycparser.ast_transforms',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\pycparser\\ast_transforms.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\pycparser\\ast_transforms.py',
    'PYMODULE'),
   ('pycparser.c_ast',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\pycparser\\c_ast.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\pycparser\\c_ast.py',
    'PYMODULE'),
   ('pycparser.c_lexer',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\pycparser\\c_lexer.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\pycparser\\c_lexer.py',
    'PYMODULE'),
   ('pycparser.c_parser',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\pycparser\\c_parser.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\pycparser\\c_parser.py',
    'PYMODULE'),
   ('pydoc', 'C:\\Python314\\Lib\\pydoc.py', 'PYMODULE'),
   ('pydoc_data', 'C:\\Python314\\Lib\\pydoc_data\\__init__.py', 'PYMODULE'),
@@ -793,1126 +793,1126 @@
   ('quopri', 'C:\\Python314\\Lib\\quopri.py', 'PYMODULE'),
   ('random', 'C:\\Python314\\Lib\\random.py', 'PYMODULE'),
   ('requests',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\__init__.py',
    'PYMODULE'),
   ('requests.__version__',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\__version__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\__version__.py',
    'PYMODULE'),
   ('requests._internal_utils',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\_internal_utils.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\_internal_utils.py',
    'PYMODULE'),
   ('requests.adapters',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\adapters.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\adapters.py',
    'PYMODULE'),
   ('requests.api',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\api.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\api.py',
    'PYMODULE'),
   ('requests.auth',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\auth.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\auth.py',
    'PYMODULE'),
   ('requests.certs',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\certs.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\certs.py',
    'PYMODULE'),
   ('requests.compat',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\compat.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\compat.py',
    'PYMODULE'),
   ('requests.cookies',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\cookies.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\cookies.py',
    'PYMODULE'),
   ('requests.exceptions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\exceptions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\exceptions.py',
    'PYMODULE'),
   ('requests.hooks',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\hooks.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\hooks.py',
    'PYMODULE'),
   ('requests.models',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\models.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\models.py',
    'PYMODULE'),
   ('requests.packages',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\packages.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\packages.py',
    'PYMODULE'),
   ('requests.sessions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\sessions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\sessions.py',
    'PYMODULE'),
   ('requests.status_codes',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\status_codes.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\status_codes.py',
    'PYMODULE'),
   ('requests.structures',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\structures.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\structures.py',
    'PYMODULE'),
   ('requests.utils',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\requests\\utils.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\requests\\utils.py',
    'PYMODULE'),
   ('rlcompleter', 'C:\\Python314\\Lib\\rlcompleter.py', 'PYMODULE'),
   ('runpy', 'C:\\Python314\\Lib\\runpy.py', 'PYMODULE'),
   ('secrets', 'C:\\Python314\\Lib\\secrets.py', 'PYMODULE'),
   ('selectors', 'C:\\Python314\\Lib\\selectors.py', 'PYMODULE'),
   ('selenium',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\__init__.py',
    'PYMODULE'),
   ('selenium.common',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\common\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\common\\__init__.py',
    'PYMODULE'),
   ('selenium.common.exceptions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\common\\exceptions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\common\\exceptions.py',
    'PYMODULE'),
   ('selenium.webdriver',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.chrome',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chrome\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chrome\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.chrome.options',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chrome\\options.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chrome\\options.py',
    'PYMODULE'),
   ('selenium.webdriver.chrome.remote_connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chrome\\remote_connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chrome\\remote_connection.py',
    'PYMODULE'),
   ('selenium.webdriver.chrome.service',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chrome\\service.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chrome\\service.py',
    'PYMODULE'),
   ('selenium.webdriver.chrome.webdriver',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chrome\\webdriver.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chrome\\webdriver.py',
    'PYMODULE'),
   ('selenium.webdriver.chromium',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chromium\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chromium\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.chromium.options',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chromium\\options.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chromium\\options.py',
    'PYMODULE'),
   ('selenium.webdriver.chromium.remote_connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chromium\\remote_connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chromium\\remote_connection.py',
    'PYMODULE'),
   ('selenium.webdriver.chromium.service',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chromium\\service.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chromium\\service.py',
    'PYMODULE'),
   ('selenium.webdriver.chromium.webdriver',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chromium\\webdriver.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\chromium\\webdriver.py',
    'PYMODULE'),
   ('selenium.webdriver.common',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.common.action_chains',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\action_chains.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\action_chains.py',
    'PYMODULE'),
   ('selenium.webdriver.common.actions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.common.actions.action_builder',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\action_builder.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\action_builder.py',
    'PYMODULE'),
   ('selenium.webdriver.common.actions.input_device',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\input_device.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\input_device.py',
    'PYMODULE'),
   ('selenium.webdriver.common.actions.interaction',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\interaction.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\interaction.py',
    'PYMODULE'),
   ('selenium.webdriver.common.actions.key_actions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\key_actions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\key_actions.py',
    'PYMODULE'),
   ('selenium.webdriver.common.actions.key_input',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\key_input.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\key_input.py',
    'PYMODULE'),
   ('selenium.webdriver.common.actions.mouse_button',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\mouse_button.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\mouse_button.py',
    'PYMODULE'),
   ('selenium.webdriver.common.actions.pointer_actions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\pointer_actions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\pointer_actions.py',
    'PYMODULE'),
   ('selenium.webdriver.common.actions.pointer_input',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\pointer_input.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\pointer_input.py',
    'PYMODULE'),
   ('selenium.webdriver.common.actions.wheel_actions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\wheel_actions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\wheel_actions.py',
    'PYMODULE'),
   ('selenium.webdriver.common.actions.wheel_input',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\wheel_input.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\actions\\wheel_input.py',
    'PYMODULE'),
   ('selenium.webdriver.common.alert',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\alert.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\alert.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi.browser',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\browser.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\browser.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi.browsing_context',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\browsing_context.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\browsing_context.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi.cdp',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\cdp.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\cdp.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi.common',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\common.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\common.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi.console',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\console.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\console.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi.emulation',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\emulation.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\emulation.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi.input',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\input.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\input.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi.log',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\log.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\log.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi.network',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\network.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\network.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi.permissions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\permissions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\permissions.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi.script',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\script.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\script.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi.session',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\session.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\session.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi.storage',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\storage.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\storage.py',
    'PYMODULE'),
   ('selenium.webdriver.common.bidi.webextension',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\webextension.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\bidi\\webextension.py',
    'PYMODULE'),
   ('selenium.webdriver.common.by',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\by.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\by.py',
    'PYMODULE'),
   ('selenium.webdriver.common.desired_capabilities',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\desired_capabilities.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\desired_capabilities.py',
    'PYMODULE'),
   ('selenium.webdriver.common.driver_finder',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\driver_finder.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\driver_finder.py',
    'PYMODULE'),
   ('selenium.webdriver.common.fedcm',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\fedcm\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\fedcm\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.common.fedcm.account',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\fedcm\\account.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\fedcm\\account.py',
    'PYMODULE'),
   ('selenium.webdriver.common.fedcm.dialog',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\fedcm\\dialog.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\fedcm\\dialog.py',
    'PYMODULE'),
   ('selenium.webdriver.common.keys',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\keys.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\keys.py',
    'PYMODULE'),
   ('selenium.webdriver.common.log',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\log.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\log.py',
    'PYMODULE'),
   ('selenium.webdriver.common.options',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\options.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\options.py',
    'PYMODULE'),
   ('selenium.webdriver.common.print_page_options',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\print_page_options.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\print_page_options.py',
    'PYMODULE'),
   ('selenium.webdriver.common.proxy',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\proxy.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\proxy.py',
    'PYMODULE'),
   ('selenium.webdriver.common.selenium_manager',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\selenium_manager.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\selenium_manager.py',
    'PYMODULE'),
   ('selenium.webdriver.common.service',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\service.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\service.py',
    'PYMODULE'),
   ('selenium.webdriver.common.timeouts',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\timeouts.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\timeouts.py',
    'PYMODULE'),
   ('selenium.webdriver.common.utils',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\utils.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\utils.py',
    'PYMODULE'),
   ('selenium.webdriver.common.virtual_authenticator',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\virtual_authenticator.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\virtual_authenticator.py',
    'PYMODULE'),
   ('selenium.webdriver.common.webdriver',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\webdriver.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\webdriver.py',
    'PYMODULE'),
   ('selenium.webdriver.common.window',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\window.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\common\\window.py',
    'PYMODULE'),
   ('selenium.webdriver.edge',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\edge\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\edge\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.edge.options',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\edge\\options.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\edge\\options.py',
    'PYMODULE'),
   ('selenium.webdriver.edge.remote_connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\edge\\remote_connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\edge\\remote_connection.py',
    'PYMODULE'),
   ('selenium.webdriver.edge.service',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\edge\\service.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\edge\\service.py',
    'PYMODULE'),
   ('selenium.webdriver.edge.webdriver',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\edge\\webdriver.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\edge\\webdriver.py',
    'PYMODULE'),
   ('selenium.webdriver.firefox',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\firefox\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\firefox\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.firefox.firefox_profile',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\firefox\\firefox_profile.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\firefox\\firefox_profile.py',
    'PYMODULE'),
   ('selenium.webdriver.firefox.options',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\firefox\\options.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\firefox\\options.py',
    'PYMODULE'),
   ('selenium.webdriver.firefox.remote_connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\firefox\\remote_connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\firefox\\remote_connection.py',
    'PYMODULE'),
   ('selenium.webdriver.firefox.service',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\firefox\\service.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\firefox\\service.py',
    'PYMODULE'),
   ('selenium.webdriver.firefox.webdriver',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\firefox\\webdriver.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\firefox\\webdriver.py',
    'PYMODULE'),
   ('selenium.webdriver.ie',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\ie\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\ie\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.ie.options',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\ie\\options.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\ie\\options.py',
    'PYMODULE'),
   ('selenium.webdriver.ie.service',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\ie\\service.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\ie\\service.py',
    'PYMODULE'),
   ('selenium.webdriver.ie.webdriver',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\ie\\webdriver.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\ie\\webdriver.py',
    'PYMODULE'),
   ('selenium.webdriver.remote',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.bidi_connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\bidi_connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\bidi_connection.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.client_config',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\client_config.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\client_config.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.command',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\command.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\command.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.errorhandler',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.fedcm',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\fedcm.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\fedcm.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.file_detector',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\file_detector.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\file_detector.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.locator_converter',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\locator_converter.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\locator_converter.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.mobile',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\mobile.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\mobile.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.remote_connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\remote_connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\remote_connection.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.script_key',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\script_key.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\script_key.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.server',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\server.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\server.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.shadowroot',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\shadowroot.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\shadowroot.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.switch_to',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\switch_to.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\switch_to.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.utils',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\utils.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\utils.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.webdriver',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.webelement',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\webelement.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\webelement.py',
    'PYMODULE'),
   ('selenium.webdriver.remote.websocket_connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\websocket_connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\remote\\websocket_connection.py',
    'PYMODULE'),
   ('selenium.webdriver.safari',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\safari\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\safari\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.safari.options',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\safari\\options.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\safari\\options.py',
    'PYMODULE'),
   ('selenium.webdriver.safari.permissions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\safari\\permissions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\safari\\permissions.py',
    'PYMODULE'),
   ('selenium.webdriver.safari.remote_connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\safari\\remote_connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\safari\\remote_connection.py',
    'PYMODULE'),
   ('selenium.webdriver.safari.service',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\safari\\service.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\safari\\service.py',
    'PYMODULE'),
   ('selenium.webdriver.safari.webdriver',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\safari\\webdriver.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\safari\\webdriver.py',
    'PYMODULE'),
   ('selenium.webdriver.support',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.support.abstract_event_listener',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\abstract_event_listener.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\abstract_event_listener.py',
    'PYMODULE'),
   ('selenium.webdriver.support.color',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\color.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\color.py',
    'PYMODULE'),
   ('selenium.webdriver.support.event_firing_webdriver',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\event_firing_webdriver.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\event_firing_webdriver.py',
    'PYMODULE'),
   ('selenium.webdriver.support.events',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\events.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\events.py',
    'PYMODULE'),
   ('selenium.webdriver.support.expected_conditions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\expected_conditions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\expected_conditions.py',
    'PYMODULE'),
   ('selenium.webdriver.support.relative_locator',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\relative_locator.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\relative_locator.py',
    'PYMODULE'),
   ('selenium.webdriver.support.select',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\select.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\select.py',
    'PYMODULE'),
   ('selenium.webdriver.support.ui',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\ui.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\ui.py',
    'PYMODULE'),
   ('selenium.webdriver.support.wait',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\wait.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\support\\wait.py',
    'PYMODULE'),
   ('selenium.webdriver.webkitgtk',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\webkitgtk\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\webkitgtk\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.webkitgtk.options',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\webkitgtk\\options.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\webkitgtk\\options.py',
    'PYMODULE'),
   ('selenium.webdriver.webkitgtk.service',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\webkitgtk\\service.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\webkitgtk\\service.py',
    'PYMODULE'),
   ('selenium.webdriver.webkitgtk.webdriver',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\webkitgtk\\webdriver.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\webkitgtk\\webdriver.py',
    'PYMODULE'),
   ('selenium.webdriver.wpewebkit',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\wpewebkit\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\wpewebkit\\__init__.py',
    'PYMODULE'),
   ('selenium.webdriver.wpewebkit.options',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\wpewebkit\\options.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\wpewebkit\\options.py',
    'PYMODULE'),
   ('selenium.webdriver.wpewebkit.service',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\wpewebkit\\service.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\wpewebkit\\service.py',
    'PYMODULE'),
   ('selenium.webdriver.wpewebkit.webdriver',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\selenium\\webdriver\\wpewebkit\\webdriver.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\selenium\\webdriver\\wpewebkit\\webdriver.py',
    'PYMODULE'),
   ('setuptools',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\__init__.py',
    'PYMODULE'),
   ('setuptools._core_metadata',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_core_metadata.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_core_metadata.py',
    'PYMODULE'),
   ('setuptools._discovery',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_discovery.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_discovery.py',
    'PYMODULE'),
   ('setuptools._distutils',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\__init__.py',
    'PYMODULE'),
   ('setuptools._distutils._log',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\_log.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\_log.py',
    'PYMODULE'),
   ('setuptools._distutils._modified',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\_modified.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\_modified.py',
    'PYMODULE'),
   ('setuptools._distutils._msvccompiler',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\_msvccompiler.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\_msvccompiler.py',
    'PYMODULE'),
   ('setuptools._distutils.archive_util',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\archive_util.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\archive_util.py',
    'PYMODULE'),
   ('setuptools._distutils.ccompiler',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\ccompiler.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\ccompiler.py',
    'PYMODULE'),
   ('setuptools._distutils.cmd',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\cmd.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\cmd.py',
    'PYMODULE'),
   ('setuptools._distutils.command',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\__init__.py',
    'PYMODULE'),
   ('setuptools._distutils.command.bdist',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\bdist.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\bdist.py',
    'PYMODULE'),
   ('setuptools._distutils.command.build',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\build.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\build.py',
    'PYMODULE'),
   ('setuptools._distutils.command.build_ext',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\build_ext.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\build_ext.py',
    'PYMODULE'),
   ('setuptools._distutils.command.sdist',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\sdist.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\sdist.py',
    'PYMODULE'),
   ('setuptools._distutils.compat',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\__init__.py',
    'PYMODULE'),
   ('setuptools._distutils.compat.numpy',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\numpy.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\numpy.py',
    'PYMODULE'),
   ('setuptools._distutils.compat.py39',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\py39.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\py39.py',
    'PYMODULE'),
   ('setuptools._distutils.compilers', '-', 'PYMODULE'),
   ('setuptools._distutils.compilers.C', '-', 'PYMODULE'),
   ('setuptools._distutils.compilers.C.base',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\base.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\base.py',
    'PYMODULE'),
   ('setuptools._distutils.compilers.C.errors',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\errors.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\errors.py',
    'PYMODULE'),
   ('setuptools._distutils.compilers.C.msvc',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\msvc.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\msvc.py',
    'PYMODULE'),
   ('setuptools._distutils.core',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\core.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\core.py',
    'PYMODULE'),
   ('setuptools._distutils.debug',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\debug.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\debug.py',
    'PYMODULE'),
   ('setuptools._distutils.dir_util',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\dir_util.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\dir_util.py',
    'PYMODULE'),
   ('setuptools._distutils.dist',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\dist.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\dist.py',
    'PYMODULE'),
   ('setuptools._distutils.errors',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\errors.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\errors.py',
    'PYMODULE'),
   ('setuptools._distutils.extension',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\extension.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\extension.py',
    'PYMODULE'),
   ('setuptools._distutils.fancy_getopt',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\fancy_getopt.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\fancy_getopt.py',
    'PYMODULE'),
   ('setuptools._distutils.file_util',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\file_util.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\file_util.py',
    'PYMODULE'),
   ('setuptools._distutils.filelist',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\filelist.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\filelist.py',
    'PYMODULE'),
   ('setuptools._distutils.log',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\log.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\log.py',
    'PYMODULE'),
   ('setuptools._distutils.spawn',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\spawn.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\spawn.py',
    'PYMODULE'),
   ('setuptools._distutils.sysconfig',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\sysconfig.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\sysconfig.py',
    'PYMODULE'),
   ('setuptools._distutils.text_file',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\text_file.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\text_file.py',
    'PYMODULE'),
   ('setuptools._distutils.util',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\util.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\util.py',
    'PYMODULE'),
   ('setuptools._distutils.version',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\version.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\version.py',
    'PYMODULE'),
   ('setuptools._distutils.versionpredicate',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\versionpredicate.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_distutils\\versionpredicate.py',
    'PYMODULE'),
   ('setuptools._entry_points',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_entry_points.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_entry_points.py',
    'PYMODULE'),
   ('setuptools._imp',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_imp.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_imp.py',
    'PYMODULE'),
   ('setuptools._importlib',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_importlib.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_importlib.py',
    'PYMODULE'),
   ('setuptools._itertools',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_itertools.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_itertools.py',
    'PYMODULE'),
   ('setuptools._normalization',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_normalization.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_normalization.py',
    'PYMODULE'),
   ('setuptools._path',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_path.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_path.py',
    'PYMODULE'),
   ('setuptools._reqs',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_reqs.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_reqs.py',
    'PYMODULE'),
   ('setuptools._shutil',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_shutil.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_shutil.py',
    'PYMODULE'),
   ('setuptools._static',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_static.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_static.py',
    'PYMODULE'),
   ('setuptools._vendor', '-', 'PYMODULE'),
   ('setuptools._vendor.backports',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\__init__.py',
    'PYMODULE'),
   ('setuptools._vendor.backports.tarfile',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\__init__.py',
    'PYMODULE'),
   ('setuptools._vendor.backports.tarfile.compat',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\compat\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\compat\\__init__.py',
    'PYMODULE'),
   ('setuptools._vendor.backports.tarfile.compat.py38',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\compat\\py38.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\compat\\py38.py',
    'PYMODULE'),
   ('setuptools._vendor.importlib_metadata',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\__init__.py',
    'PYMODULE'),
   ('setuptools._vendor.importlib_metadata._adapters',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_adapters.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_adapters.py',
    'PYMODULE'),
   ('setuptools._vendor.importlib_metadata._collections',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_collections.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_collections.py',
    'PYMODULE'),
   ('setuptools._vendor.importlib_metadata._compat',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_compat.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_compat.py',
    'PYMODULE'),
   ('setuptools._vendor.importlib_metadata._functools',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_functools.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_functools.py',
    'PYMODULE'),
   ('setuptools._vendor.importlib_metadata._itertools',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_itertools.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_itertools.py',
    'PYMODULE'),
   ('setuptools._vendor.importlib_metadata._meta',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_meta.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_meta.py',
    'PYMODULE'),
   ('setuptools._vendor.importlib_metadata._text',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_text.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_text.py',
    'PYMODULE'),
   ('setuptools._vendor.importlib_metadata._typing',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_typing.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_typing.py',
    'PYMODULE'),
   ('setuptools._vendor.importlib_metadata.compat',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\__init__.py',
    'PYMODULE'),
   ('setuptools._vendor.importlib_metadata.compat.py311',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\py311.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\py311.py',
    'PYMODULE'),
   ('setuptools._vendor.importlib_metadata.compat.py39',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\py39.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\py39.py',
    'PYMODULE'),
   ('setuptools._vendor.jaraco', '-', 'PYMODULE'),
   ('setuptools._vendor.jaraco.context',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\context\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\context\\__init__.py',
    'PYMODULE'),
   ('setuptools._vendor.jaraco.functools',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\functools\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\functools\\__init__.py',
    'PYMODULE'),
   ('setuptools._vendor.jaraco.text',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\__init__.py',
    'PYMODULE'),
   ('setuptools._vendor.more_itertools',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\__init__.py',
    'PYMODULE'),
   ('setuptools._vendor.more_itertools.more',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\more.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\more.py',
    'PYMODULE'),
   ('setuptools._vendor.more_itertools.recipes',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\recipes.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\recipes.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\__init__.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging._elffile',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_elffile.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_elffile.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging._manylinux',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_manylinux.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_manylinux.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging._musllinux',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_musllinux.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_musllinux.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging._parser',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_parser.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_parser.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging._structures',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_structures.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_structures.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging._tokenizer',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_tokenizer.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_tokenizer.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging.markers',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\markers.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\markers.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging.requirements',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\requirements.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\requirements.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging.specifiers',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\specifiers.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\specifiers.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging.tags',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\tags.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\tags.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging.utils',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\utils.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\utils.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging.version',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\version.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\version.py',
    'PYMODULE'),
   ('setuptools._vendor.tomli',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\__init__.py',
    'PYMODULE'),
   ('setuptools._vendor.tomli._parser',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_parser.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_parser.py',
    'PYMODULE'),
   ('setuptools._vendor.tomli._re',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_re.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_re.py',
    'PYMODULE'),
   ('setuptools._vendor.tomli._types',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_types.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_types.py',
    'PYMODULE'),
   ('setuptools._vendor.wheel',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\__init__.py',
    'PYMODULE'),
   ('setuptools._vendor.wheel.macosx_libfile',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\macosx_libfile.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\macosx_libfile.py',
    'PYMODULE'),
   ('setuptools._vendor.wheel.wheelfile',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\wheelfile.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\wheelfile.py',
    'PYMODULE'),
   ('setuptools._vendor.zipp',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\__init__.py',
    'PYMODULE'),
   ('setuptools._vendor.zipp._functools',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\_functools.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\_functools.py',
    'PYMODULE'),
   ('setuptools._vendor.zipp.compat',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\__init__.py',
    'PYMODULE'),
   ('setuptools._vendor.zipp.compat.overlay',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\overlay.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\overlay.py',
    'PYMODULE'),
   ('setuptools._vendor.zipp.compat.py310',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\py310.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\py310.py',
    'PYMODULE'),
   ('setuptools._vendor.zipp.compat.py313',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\py313.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\py313.py',
    'PYMODULE'),
   ('setuptools._vendor.zipp.glob',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\glob.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\glob.py',
    'PYMODULE'),
   ('setuptools.archive_util',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\archive_util.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\archive_util.py',
    'PYMODULE'),
   ('setuptools.command',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\command\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\command\\__init__.py',
    'PYMODULE'),
   ('setuptools.command._requirestxt',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\command\\_requirestxt.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\command\\_requirestxt.py',
    'PYMODULE'),
   ('setuptools.command.bdist_egg',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\command\\bdist_egg.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\command\\bdist_egg.py',
    'PYMODULE'),
   ('setuptools.command.bdist_wheel',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\command\\bdist_wheel.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\command\\bdist_wheel.py',
    'PYMODULE'),
   ('setuptools.command.build',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\command\\build.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\command\\build.py',
    'PYMODULE'),
   ('setuptools.command.egg_info',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\command\\egg_info.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\command\\egg_info.py',
    'PYMODULE'),
   ('setuptools.command.sdist',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\command\\sdist.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\command\\sdist.py',
    'PYMODULE'),
   ('setuptools.command.setopt',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\command\\setopt.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\command\\setopt.py',
    'PYMODULE'),
   ('setuptools.compat',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\compat\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\compat\\__init__.py',
    'PYMODULE'),
   ('setuptools.compat.py310',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\compat\\py310.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\compat\\py310.py',
    'PYMODULE'),
   ('setuptools.compat.py311',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\compat\\py311.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\compat\\py311.py',
    'PYMODULE'),
   ('setuptools.compat.py39',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\compat\\py39.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\compat\\py39.py',
    'PYMODULE'),
   ('setuptools.config',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\config\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\config\\__init__.py',
    'PYMODULE'),
   ('setuptools.config._apply_pyprojecttoml',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\config\\_apply_pyprojecttoml.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\config\\_apply_pyprojecttoml.py',
    'PYMODULE'),
   ('setuptools.config._validate_pyproject',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\__init__.py',
    'PYMODULE'),
   ('setuptools.config._validate_pyproject.error_reporting',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\error_reporting.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\error_reporting.py',
    'PYMODULE'),
   ('setuptools.config._validate_pyproject.extra_validations',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\extra_validations.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\extra_validations.py',
    'PYMODULE'),
   ('setuptools.config._validate_pyproject.fastjsonschema_exceptions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_exceptions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_exceptions.py',
    'PYMODULE'),
   ('setuptools.config._validate_pyproject.fastjsonschema_validations',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_validations.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_validations.py',
    'PYMODULE'),
   ('setuptools.config._validate_pyproject.formats',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\formats.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\formats.py',
    'PYMODULE'),
   ('setuptools.config.expand',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\config\\expand.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\config\\expand.py',
    'PYMODULE'),
   ('setuptools.config.pyprojecttoml',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\config\\pyprojecttoml.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\config\\pyprojecttoml.py',
    'PYMODULE'),
   ('setuptools.config.setupcfg',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\config\\setupcfg.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\config\\setupcfg.py',
    'PYMODULE'),
   ('setuptools.depends',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\depends.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\depends.py',
    'PYMODULE'),
   ('setuptools.discovery',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\discovery.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\discovery.py',
    'PYMODULE'),
   ('setuptools.dist',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\dist.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\dist.py',
    'PYMODULE'),
   ('setuptools.errors',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\errors.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\errors.py',
    'PYMODULE'),
   ('setuptools.extension',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\extension.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\extension.py',
    'PYMODULE'),
   ('setuptools.glob',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\glob.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\glob.py',
    'PYMODULE'),
   ('setuptools.installer',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\installer.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\installer.py',
    'PYMODULE'),
   ('setuptools.logging',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\logging.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\logging.py',
    'PYMODULE'),
   ('setuptools.monkey',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\monkey.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\monkey.py',
    'PYMODULE'),
   ('setuptools.msvc',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\msvc.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\msvc.py',
    'PYMODULE'),
   ('setuptools.unicode_utils',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\unicode_utils.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\unicode_utils.py',
    'PYMODULE'),
   ('setuptools.version',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\version.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\version.py',
    'PYMODULE'),
   ('setuptools.warnings',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\warnings.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\warnings.py',
    'PYMODULE'),
   ('setuptools.wheel',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\wheel.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\wheel.py',
    'PYMODULE'),
   ('setuptools.windows_support',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\setuptools\\windows_support.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\setuptools\\windows_support.py',
    'PYMODULE'),
   ('shlex', 'C:\\Python314\\Lib\\shlex.py', 'PYMODULE'),
   ('shutil', 'C:\\Python314\\Lib\\shutil.py', 'PYMODULE'),
   ('signal', 'C:\\Python314\\Lib\\signal.py', 'PYMODULE'),
   ('site', 'C:\\Python314\\Lib\\site.py', 'PYMODULE'),
   ('sniffio',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\sniffio\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\sniffio\\__init__.py',
    'PYMODULE'),
   ('sniffio._impl',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\sniffio\\_impl.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\sniffio\\_impl.py',
    'PYMODULE'),
   ('sniffio._version',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\sniffio\\_version.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\sniffio\\_version.py',
    'PYMODULE'),
   ('socket', 'C:\\Python314\\Lib\\socket.py', 'PYMODULE'),
   ('socketserver', 'C:\\Python314\\Lib\\socketserver.py', 'PYMODULE'),
   ('socks',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\socks.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\socks.py',
    'PYMODULE'),
   ('sortedcontainers',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\sortedcontainers\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\sortedcontainers\\__init__.py',
    'PYMODULE'),
   ('sortedcontainers.sorteddict',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\sortedcontainers\\sorteddict.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\sortedcontainers\\sorteddict.py',
    'PYMODULE'),
   ('sortedcontainers.sortedlist',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\sortedcontainers\\sortedlist.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\sortedcontainers\\sortedlist.py',
    'PYMODULE'),
   ('sortedcontainers.sortedset',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\sortedcontainers\\sortedset.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\sortedcontainers\\sortedset.py',
    'PYMODULE'),
   ('ssl', 'C:\\Python314\\Lib\\ssl.py', 'PYMODULE'),
   ('statistics', 'C:\\Python314\\Lib\\statistics.py', 'PYMODULE'),
@@ -1950,302 +1950,302 @@
   ('tomllib._types', 'C:\\Python314\\Lib\\tomllib\\_types.py', 'PYMODULE'),
   ('tracemalloc', 'C:\\Python314\\Lib\\tracemalloc.py', 'PYMODULE'),
   ('trio',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\__init__.py',
    'PYMODULE'),
   ('trio._abc',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_abc.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_abc.py',
    'PYMODULE'),
   ('trio._channel',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_channel.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_channel.py',
    'PYMODULE'),
   ('trio._core',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\__init__.py',
    'PYMODULE'),
   ('trio._core._asyncgens',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_asyncgens.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_asyncgens.py',
    'PYMODULE'),
   ('trio._core._concat_tb',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_concat_tb.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_concat_tb.py',
    'PYMODULE'),
   ('trio._core._entry_queue',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_entry_queue.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_entry_queue.py',
    'PYMODULE'),
   ('trio._core._exceptions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_exceptions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_exceptions.py',
    'PYMODULE'),
   ('trio._core._generated_instrumentation',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_generated_instrumentation.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_generated_instrumentation.py',
    'PYMODULE'),
   ('trio._core._generated_io_epoll',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_generated_io_epoll.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_generated_io_epoll.py',
    'PYMODULE'),
   ('trio._core._generated_io_kqueue',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_generated_io_kqueue.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_generated_io_kqueue.py',
    'PYMODULE'),
   ('trio._core._generated_io_windows',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_generated_io_windows.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_generated_io_windows.py',
    'PYMODULE'),
   ('trio._core._generated_run',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_generated_run.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_generated_run.py',
    'PYMODULE'),
   ('trio._core._generated_windows_ffi',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_generated_windows_ffi.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_generated_windows_ffi.py',
    'PYMODULE'),
   ('trio._core._instrumentation',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_instrumentation.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_instrumentation.py',
    'PYMODULE'),
   ('trio._core._io_common',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_io_common.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_io_common.py',
    'PYMODULE'),
   ('trio._core._io_epoll',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_io_epoll.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_io_epoll.py',
    'PYMODULE'),
   ('trio._core._io_kqueue',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_io_kqueue.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_io_kqueue.py',
    'PYMODULE'),
   ('trio._core._io_windows',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_io_windows.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_io_windows.py',
    'PYMODULE'),
   ('trio._core._ki',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_ki.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_ki.py',
    'PYMODULE'),
   ('trio._core._local',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_local.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_local.py',
    'PYMODULE'),
   ('trio._core._mock_clock',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_mock_clock.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_mock_clock.py',
    'PYMODULE'),
   ('trio._core._parking_lot',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_parking_lot.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_parking_lot.py',
    'PYMODULE'),
   ('trio._core._run',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_run.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_run.py',
    'PYMODULE'),
   ('trio._core._run_context',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_run_context.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_run_context.py',
    'PYMODULE'),
   ('trio._core._thread_cache',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_thread_cache.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_thread_cache.py',
    'PYMODULE'),
   ('trio._core._traps',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_traps.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_traps.py',
    'PYMODULE'),
   ('trio._core._unbounded_queue',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_unbounded_queue.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_unbounded_queue.py',
    'PYMODULE'),
   ('trio._core._wakeup_socketpair',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_wakeup_socketpair.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_wakeup_socketpair.py',
    'PYMODULE'),
   ('trio._core._windows_cffi',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_core\\_windows_cffi.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_core\\_windows_cffi.py',
    'PYMODULE'),
   ('trio._deprecate',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_deprecate.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_deprecate.py',
    'PYMODULE'),
   ('trio._dtls',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_dtls.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_dtls.py',
    'PYMODULE'),
   ('trio._file_io',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_file_io.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_file_io.py',
    'PYMODULE'),
   ('trio._highlevel_generic',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_highlevel_generic.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_highlevel_generic.py',
    'PYMODULE'),
   ('trio._highlevel_open_tcp_listeners',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_highlevel_open_tcp_listeners.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_highlevel_open_tcp_listeners.py',
    'PYMODULE'),
   ('trio._highlevel_open_tcp_stream',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_highlevel_open_tcp_stream.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_highlevel_open_tcp_stream.py',
    'PYMODULE'),
   ('trio._highlevel_open_unix_stream',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_highlevel_open_unix_stream.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_highlevel_open_unix_stream.py',
    'PYMODULE'),
   ('trio._highlevel_serve_listeners',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_highlevel_serve_listeners.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_highlevel_serve_listeners.py',
    'PYMODULE'),
   ('trio._highlevel_socket',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_highlevel_socket.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_highlevel_socket.py',
    'PYMODULE'),
   ('trio._highlevel_ssl_helpers',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_highlevel_ssl_helpers.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_highlevel_ssl_helpers.py',
    'PYMODULE'),
   ('trio._path',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_path.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_path.py',
    'PYMODULE'),
   ('trio._signals',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_signals.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_signals.py',
    'PYMODULE'),
   ('trio._socket',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_socket.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_socket.py',
    'PYMODULE'),
   ('trio._ssl',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_ssl.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_ssl.py',
    'PYMODULE'),
   ('trio._subprocess',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_subprocess.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_subprocess.py',
    'PYMODULE'),
   ('trio._subprocess_platform',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_subprocess_platform\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_subprocess_platform\\__init__.py',
    'PYMODULE'),
   ('trio._subprocess_platform.kqueue',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_subprocess_platform\\kqueue.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_subprocess_platform\\kqueue.py',
    'PYMODULE'),
   ('trio._subprocess_platform.waitid',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_subprocess_platform\\waitid.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_subprocess_platform\\waitid.py',
    'PYMODULE'),
   ('trio._subprocess_platform.windows',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_subprocess_platform\\windows.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_subprocess_platform\\windows.py',
    'PYMODULE'),
   ('trio._sync',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_sync.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_sync.py',
    'PYMODULE'),
   ('trio._threads',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_threads.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_threads.py',
    'PYMODULE'),
   ('trio._timeouts',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_timeouts.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_timeouts.py',
    'PYMODULE'),
   ('trio._unix_pipes',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_unix_pipes.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_unix_pipes.py',
    'PYMODULE'),
   ('trio._util',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_util.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_util.py',
    'PYMODULE'),
   ('trio._version',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_version.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_version.py',
    'PYMODULE'),
   ('trio._wait_for_object',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_wait_for_object.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_wait_for_object.py',
    'PYMODULE'),
   ('trio._windows_pipes',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\_windows_pipes.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\_windows_pipes.py',
    'PYMODULE'),
   ('trio.abc',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\abc.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\abc.py',
    'PYMODULE'),
   ('trio.from_thread',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\from_thread.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\from_thread.py',
    'PYMODULE'),
   ('trio.lowlevel',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\lowlevel.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\lowlevel.py',
    'PYMODULE'),
   ('trio.socket',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\socket.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\socket.py',
    'PYMODULE'),
   ('trio.testing',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\testing\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\testing\\__init__.py',
    'PYMODULE'),
   ('trio.testing._check_streams',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\testing\\_check_streams.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\testing\\_check_streams.py',
    'PYMODULE'),
   ('trio.testing._checkpoints',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\testing\\_checkpoints.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\testing\\_checkpoints.py',
    'PYMODULE'),
   ('trio.testing._memory_streams',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\testing\\_memory_streams.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\testing\\_memory_streams.py',
    'PYMODULE'),
   ('trio.testing._network',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\testing\\_network.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\testing\\_network.py',
    'PYMODULE'),
   ('trio.testing._raises_group',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\testing\\_raises_group.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\testing\\_raises_group.py',
    'PYMODULE'),
   ('trio.testing._sequencer',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\testing\\_sequencer.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\testing\\_sequencer.py',
    'PYMODULE'),
   ('trio.testing._trio_test',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\testing\\_trio_test.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\testing\\_trio_test.py',
    'PYMODULE'),
   ('trio.to_thread',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio\\to_thread.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio\\to_thread.py',
    'PYMODULE'),
   ('trio_websocket',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio_websocket\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio_websocket\\__init__.py',
    'PYMODULE'),
   ('trio_websocket._impl',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio_websocket\\_impl.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio_websocket\\_impl.py',
    'PYMODULE'),
   ('trio_websocket._version',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\trio_websocket\\_version.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\trio_websocket\\_version.py',
    'PYMODULE'),
   ('tty', 'C:\\Python314\\Lib\\tty.py', 'PYMODULE'),
   ('typing', 'C:\\Python314\\Lib\\typing.py', 'PYMODULE'),
   ('typing_extensions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\typing_extensions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\typing_extensions.py',
    'PYMODULE'),
   ('unittest', 'C:\\Python314\\Lib\\unittest\\__init__.py', 'PYMODULE'),
   ('unittest._log', 'C:\\Python314\\Lib\\unittest\\_log.py', 'PYMODULE'),
@@ -2267,148 +2267,148 @@
   ('urllib.request', 'C:\\Python314\\Lib\\urllib\\request.py', 'PYMODULE'),
   ('urllib.response', 'C:\\Python314\\Lib\\urllib\\response.py', 'PYMODULE'),
   ('urllib3',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\__init__.py',
    'PYMODULE'),
   ('urllib3._base_connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\_base_connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\_base_connection.py',
    'PYMODULE'),
   ('urllib3._collections',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\_collections.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\_collections.py',
    'PYMODULE'),
   ('urllib3._request_methods',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\_request_methods.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\_request_methods.py',
    'PYMODULE'),
   ('urllib3._version',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\_version.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\_version.py',
    'PYMODULE'),
   ('urllib3.connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\connection.py',
    'PYMODULE'),
   ('urllib3.connectionpool',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\connectionpool.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\connectionpool.py',
    'PYMODULE'),
   ('urllib3.contrib',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\contrib\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\contrib\\__init__.py',
    'PYMODULE'),
   ('urllib3.contrib.emscripten',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\__init__.py',
    'PYMODULE'),
   ('urllib3.contrib.emscripten.connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\connection.py',
    'PYMODULE'),
   ('urllib3.contrib.emscripten.fetch',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\fetch.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\fetch.py',
    'PYMODULE'),
   ('urllib3.contrib.emscripten.request',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\request.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\request.py',
    'PYMODULE'),
   ('urllib3.contrib.emscripten.response',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\response.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\response.py',
    'PYMODULE'),
   ('urllib3.contrib.pyopenssl',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\contrib\\pyopenssl.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\contrib\\pyopenssl.py',
    'PYMODULE'),
   ('urllib3.contrib.socks',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\contrib\\socks.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\contrib\\socks.py',
    'PYMODULE'),
   ('urllib3.exceptions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\exceptions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\exceptions.py',
    'PYMODULE'),
   ('urllib3.fields',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\fields.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\fields.py',
    'PYMODULE'),
   ('urllib3.filepost',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\filepost.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\filepost.py',
    'PYMODULE'),
   ('urllib3.http2',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\http2\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\http2\\__init__.py',
    'PYMODULE'),
   ('urllib3.http2.connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\http2\\connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\http2\\connection.py',
    'PYMODULE'),
   ('urllib3.http2.probe',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\http2\\probe.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\http2\\probe.py',
    'PYMODULE'),
   ('urllib3.poolmanager',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\poolmanager.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\poolmanager.py',
    'PYMODULE'),
   ('urllib3.response',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\response.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\response.py',
    'PYMODULE'),
   ('urllib3.util',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\util\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\util\\__init__.py',
    'PYMODULE'),
   ('urllib3.util.connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\util\\connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\util\\connection.py',
    'PYMODULE'),
   ('urllib3.util.proxy',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\util\\proxy.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\util\\proxy.py',
    'PYMODULE'),
   ('urllib3.util.request',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\util\\request.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\util\\request.py',
    'PYMODULE'),
   ('urllib3.util.response',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\util\\response.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\util\\response.py',
    'PYMODULE'),
   ('urllib3.util.retry',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\util\\retry.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\util\\retry.py',
    'PYMODULE'),
   ('urllib3.util.ssl_',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\util\\ssl_.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\util\\ssl_.py',
    'PYMODULE'),
   ('urllib3.util.ssl_match_hostname',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\util\\ssl_match_hostname.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\util\\ssl_match_hostname.py',
    'PYMODULE'),
   ('urllib3.util.ssltransport',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\util\\ssltransport.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\util\\ssltransport.py',
    'PYMODULE'),
   ('urllib3.util.timeout',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\util\\timeout.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\util\\timeout.py',
    'PYMODULE'),
   ('urllib3.util.url',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\util\\url.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\util\\url.py',
    'PYMODULE'),
   ('urllib3.util.util',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\util\\util.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\util\\util.py',
    'PYMODULE'),
   ('urllib3.util.wait',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\urllib3\\util\\wait.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\urllib3\\util\\wait.py',
    'PYMODULE'),
   ('utils', '-', 'PYMODULE'),
   ('utils.driver',
@@ -2422,188 +2422,188 @@
   ('uuid', 'C:\\Python314\\Lib\\uuid.py', 'PYMODULE'),
   ('webbrowser', 'C:\\Python314\\Lib\\webbrowser.py', 'PYMODULE'),
   ('webdriver_manager',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\__init__.py',
    'PYMODULE'),
   ('webdriver_manager.chrome',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\chrome.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\chrome.py',
    'PYMODULE'),
   ('webdriver_manager.core',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\__init__.py',
    'PYMODULE'),
   ('webdriver_manager.core.archive',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\archive.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\archive.py',
    'PYMODULE'),
   ('webdriver_manager.core.config',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\config.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\config.py',
    'PYMODULE'),
   ('webdriver_manager.core.constants',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\constants.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\constants.py',
    'PYMODULE'),
   ('webdriver_manager.core.download_manager',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\download_manager.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\download_manager.py',
    'PYMODULE'),
   ('webdriver_manager.core.driver',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\driver.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\driver.py',
    'PYMODULE'),
   ('webdriver_manager.core.driver_cache',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\driver_cache.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\driver_cache.py',
    'PYMODULE'),
   ('webdriver_manager.core.file_manager',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\file_manager.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\file_manager.py',
    'PYMODULE'),
   ('webdriver_manager.core.http',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\http.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\http.py',
    'PYMODULE'),
   ('webdriver_manager.core.logger',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\logger.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\logger.py',
    'PYMODULE'),
   ('webdriver_manager.core.manager',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\manager.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\manager.py',
    'PYMODULE'),
   ('webdriver_manager.core.os_manager',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\os_manager.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\os_manager.py',
    'PYMODULE'),
   ('webdriver_manager.core.utils',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\utils.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\core\\utils.py',
    'PYMODULE'),
   ('webdriver_manager.drivers',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\drivers\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\drivers\\__init__.py',
    'PYMODULE'),
   ('webdriver_manager.drivers.chrome',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\drivers\\chrome.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\drivers\\chrome.py',
    'PYMODULE'),
   ('webdriver_manager.drivers.edge',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\drivers\\edge.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\drivers\\edge.py',
    'PYMODULE'),
   ('webdriver_manager.drivers.firefox',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\drivers\\firefox.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\drivers\\firefox.py',
    'PYMODULE'),
   ('webdriver_manager.drivers.ie',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\drivers\\ie.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\drivers\\ie.py',
    'PYMODULE'),
   ('webdriver_manager.drivers.opera',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\drivers\\opera.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\drivers\\opera.py',
    'PYMODULE'),
   ('webdriver_manager.firefox',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\firefox.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\firefox.py',
    'PYMODULE'),
   ('webdriver_manager.microsoft',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\microsoft.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\microsoft.py',
    'PYMODULE'),
   ('webdriver_manager.opera',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\webdriver_manager\\opera.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\webdriver_manager\\opera.py',
    'PYMODULE'),
   ('websocket',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\websocket\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\websocket\\__init__.py',
    'PYMODULE'),
   ('websocket._abnf',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\websocket\\_abnf.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\websocket\\_abnf.py',
    'PYMODULE'),
   ('websocket._app',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\websocket\\_app.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\websocket\\_app.py',
    'PYMODULE'),
   ('websocket._cookiejar',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\websocket\\_cookiejar.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\websocket\\_cookiejar.py',
    'PYMODULE'),
   ('websocket._core',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\websocket\\_core.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\websocket\\_core.py',
    'PYMODULE'),
   ('websocket._dispatcher',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\websocket\\_dispatcher.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\websocket\\_dispatcher.py',
    'PYMODULE'),
   ('websocket._exceptions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\websocket\\_exceptions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\websocket\\_exceptions.py',
    'PYMODULE'),
   ('websocket._handshake',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\websocket\\_handshake.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\websocket\\_handshake.py',
    'PYMODULE'),
   ('websocket._http',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\websocket\\_http.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\websocket\\_http.py',
    'PYMODULE'),
   ('websocket._logging',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\websocket\\_logging.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\websocket\\_logging.py',
    'PYMODULE'),
   ('websocket._socket',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\websocket\\_socket.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\websocket\\_socket.py',
    'PYMODULE'),
   ('websocket._ssl_compat',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\websocket\\_ssl_compat.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\websocket\\_ssl_compat.py',
    'PYMODULE'),
   ('websocket._url',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\websocket\\_url.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\websocket\\_url.py',
    'PYMODULE'),
   ('websocket._utils',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\websocket\\_utils.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\websocket\\_utils.py',
    'PYMODULE'),
   ('wsproto',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\wsproto\\__init__.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\wsproto\\__init__.py',
    'PYMODULE'),
   ('wsproto.connection',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\wsproto\\connection.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\wsproto\\connection.py',
    'PYMODULE'),
   ('wsproto.events',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\wsproto\\events.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\wsproto\\events.py',
    'PYMODULE'),
   ('wsproto.extensions',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\wsproto\\extensions.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\wsproto\\extensions.py',
    'PYMODULE'),
   ('wsproto.frame_protocol',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\wsproto\\frame_protocol.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\wsproto\\frame_protocol.py',
    'PYMODULE'),
   ('wsproto.handshake',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\wsproto\\handshake.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\wsproto\\handshake.py',
    'PYMODULE'),
   ('wsproto.typing',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\wsproto\\typing.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\wsproto\\typing.py',
    'PYMODULE'),
   ('wsproto.utilities',
-   'd:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar '
-   'pedidos\\.venv\\Lib\\site-packages\\wsproto\\utilities.py',
+   'D:\\Documento\\#Estudo & Trabalho\\Código\\Automatizar pedidos - '
+   'Copia\\.venv\\Lib\\site-packages\\wsproto\\utilities.py',
    'PYMODULE'),
   ('xml', 'C:\\Python314\\Lib\\xml\\__init__.py', 'PYMODULE'),
   ('xml.dom', 'C:\\Python314\\Lib\\xml\\dom\\__init__.py', 'PYMODULE'),
