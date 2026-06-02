@@ -5,7 +5,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 import threading
-from datetime import date
+from datetime import date, timedelta
 import os
 import json
 
@@ -144,7 +144,7 @@ def _btn_primario(parent, texto, cmd, **kw):
                      bg=COR["acento_btn"], fg=COR["texto_dark"],
                      activebackground=COR["acento_btn_hover"],
                      activeforeground=COR["texto_dark"],
-                     relief="flat", cursor="hand2", padx=14, pady=5, **kw)
+                     relief="flat", cursor="hand2", padx=16, pady=6, **kw)
 
 def _btn_secundario(parent, texto, cmd, **kw):
     return tk.Button(parent, text=texto, command=cmd, font=FONTE_BTN,
@@ -152,6 +152,13 @@ def _btn_secundario(parent, texto, cmd, **kw):
                      activebackground=COR["borda"],
                      activeforeground=COR["texto"],
                      relief="flat", cursor="hand2", padx=14, pady=5, **kw)
+
+def _btn_pequeno(parent, texto, cmd, **kw):
+    return tk.Button(parent, text=texto, command=cmd, font=("Segoe UI", 7),
+                     bg=COR["borda"], fg=COR["texto"],
+                     activebackground=COR["acento_btn"],
+                     activeforeground=COR["texto_branco"],
+                     relief="flat", cursor="hand2", padx=4, pady=1, **kw)
 
 def _card(parent, titulo=None):
     outer = tk.Frame(parent, bg=COR["borda"])
@@ -193,8 +200,28 @@ class App(tk.Tk):
 
         _aplicar_estilos()
         self._build()
+        self._carregar_fila()
         self._carregar_log_salvo()
         self._centralizar()
+
+        self.protocol("WM_DELETE_WINDOW", self._ao_fechar)
+
+        # Atalhos de teclado
+        self.bind("<Control-Return>", lambda e: self._add_item())
+        self.bind("<Control-s>", lambda e: self._adicionar_fila())
+        self.bind("<Control-l>", lambda e: self._limpar_pedido())
+        self.bind("<Control-d>", lambda e: self._duplicar_pedido_fila())
+        self.bind("<Control-i>", lambda e: self._importar_itens())
+
+    def _ao_fechar(self):
+        pendentes = [p for p in self.fila if p["status"] == "pendente"]
+        if pendentes:
+            if not messagebox.askyesno("Sair",
+                f"Existem {len(pendentes)} pedido(s) pendente(s) na fila.\n\n"
+                "Deseja sair mesmo assim?"):
+                return
+        self._salvar_fila()
+        self.destroy()
 
     def _centralizar(self):
         self.update_idletasks()
@@ -202,6 +229,40 @@ class App(tk.Tk):
         x = (self.winfo_screenwidth()  - w) // 2
         y = (self.winfo_screenheight() - h) // 2
         self.geometry(f"{w}x{h}+{x}+{y}")
+
+    def _salvar_fila(self):
+        try:
+            dados = []
+            for p in self.fila:
+                dados.append({
+                    "dados":      p["dados"],
+                    "itens":      p["itens"],
+                    "baixar_pdf": p["baixar_pdf"],
+                    "codigo":     p.get("codigo"),
+                    "status":     p["status"],
+                })
+            with open(FILA_PATH, "w", encoding="utf-8") as f:
+                json.dump(dados, f, ensure_ascii=False, indent=2)
+        except Exception:
+            pass
+
+    def _carregar_fila(self):
+        try:
+            if not os.path.exists(FILA_PATH):
+                return
+            with open(FILA_PATH, "r", encoding="utf-8") as f:
+                dados = json.load(f)
+            for p in dados:
+                self.fila.append({
+                    "dados":      p["dados"],
+                    "itens":      p["itens"],
+                    "baixar_pdf": p.get("baixar_pdf", False),
+                    "codigo":     p.get("codigo"),
+                    "status":     p.get("status", "pendente"),
+                })
+            self._atualizar_tree_fila()
+        except Exception:
+            pass
 
     # ── Layout ───────────────────────────────
 
@@ -239,6 +300,10 @@ class App(tk.Tk):
                  font=("Segoe UI", 8), bg=COR["rodape"],
                  fg=COR["texto_fraco"]).pack(side="left", padx=10, pady=4)
         
+        tk.Label(rod, text="Ctrl+Enter: Adicionar item  |  Ctrl+S: Salvar na fila  |  Ctrl+L: Limpar  |  Ctrl+D: Duplicar  |  Ctrl+I: Importar",
+                 font=("Segoe UI", 7), bg=COR["rodape"],
+                 fg=COR["texto_fraco"]).pack(side="left", padx=10, pady=4)
+        
         self._progresso_var = tk.StringVar(value="")
         self._progresso_lbl = tk.Label(rod, textvariable=self._progresso_var,
                  font=("Segoe UI", 8, "bold"), bg=COR["rodape"],
@@ -256,6 +321,18 @@ class App(tk.Tk):
     def _limpar_progresso(self):
         self._progresso_var.set("")
         self._status_var.set("Pronto.")
+
+    def _data_rapida(self, dias):
+        d = date.today() + timedelta(days=dias)
+        self.v_data.set(d.strftime("%d/%m/%Y"))
+
+    def _data_rapida_prox_seg(self):
+        hoje = date.today()
+        dias_ate_seg = (7 - hoje.weekday()) % 7
+        if dias_ate_seg == 0:
+            dias_ate_seg = 7
+        d = hoje + timedelta(days=dias_ate_seg)
+        self.v_data.set(d.strftime("%d/%m/%Y"))
 
     # ── Aba 1 — Pedido ───────────────────────
 
@@ -282,9 +359,16 @@ class App(tk.Tk):
         _label(corpo, "Prev. Entrega", fraco=True).grid(
             row=0, column=2, sticky="w", padx=(0,6), pady=(10,2))
         self.entry_data = _entry(corpo, self.v_data, width=14)
-        self.entry_data.grid(row=0, column=3, sticky="w", padx=(0,12), pady=(10,2))
+        self.entry_data.grid(row=0, column=3, sticky="w", padx=(0,4), pady=(10,2))
         self.entry_data.bind("<Up>", lambda e: self._alterar_data(1))
         self.entry_data.bind("<Down>", lambda e: self._alterar_data(-1))
+
+        # Botões de data rápida
+        frame_data = tk.Frame(corpo, bg=COR["fundo"])
+        frame_data.grid(row=0, column=4, sticky="w", padx=(0,12), pady=(10,2))
+        _btn_pequeno(frame_data, "Hoje", lambda: self._data_rapida(0)).pack(side="left", padx=1)
+        _btn_pequeno(frame_data, "Amanhã", lambda: self._data_rapida(1)).pack(side="left", padx=1)
+        _btn_pequeno(frame_data, "Seg", lambda: self._data_rapida_prox_seg()).pack(side="left", padx=1)
 
         self.v_empresa = tk.StringVar(
             value="AMAZONAS INDUSTRIAS ALIMENTICIAS S A AMASA — BELÉM")
@@ -420,11 +504,19 @@ class App(tk.Tk):
         self.tree.bind("<FocusIn>", lambda e: self._selecionar_primeiro_item(self.tree))
         self.tree.config(takefocus=True)
 
+        # Totalizador
+        self._total_var = tk.StringVar(value="Total: R$ 0,00")
+        tk.Label(frame, textvariable=self._total_var,
+                 font=("Segoe UI", 10, "bold"), bg=COR["janela"],
+                 fg=COR["acento_btn"]).grid(row=2, column=0, sticky="w", padx=12, pady=(0,4))
+
         btn_row = tk.Frame(frame, bg=COR["janela"])
-        btn_row.grid(row=2, column=0, sticky="ew", padx=12, pady=(0,10))
+        btn_row.grid(row=3, column=0, sticky="ew", padx=12, pady=(0,10))
 
         _btn_secundario(btn_row, "✕  Remover Item", self._remover).pack(side="left")
         _btn_secundario(btn_row, "✎  Editar Item", self._editar_item).pack(side="left", padx=(8,0))
+        _btn_secundario(btn_row, "📋  Importar Itens",
+                        self._importar_itens).pack(side="left", padx=(8,0))
         _btn_secundario(btn_row, "← Voltar ao Pedido",
                         lambda: self.nb.select(0)).pack(side="left", padx=(8,0))
         _btn_primario(btn_row, "＋  Adicionar à Fila",
@@ -476,6 +568,8 @@ class App(tk.Tk):
                         self._remover_da_fila).pack(side="left")
         _btn_secundario(btn_row, "✎  Editar Pedido",
                         self._editar_pedido_fila).pack(side="left", padx=(8,0))
+        _btn_secundario(btn_row, "⊕  Duplicar Pedido",
+                        self._duplicar_pedido_fila).pack(side="left", padx=(8,0))
         _btn_secundario(btn_row, "↑  Mover para Cima",
                         lambda: self._mover_fila(-1)).pack(side="left", padx=(8,0))
         _btn_secundario(btn_row, "↓  Mover para Baixo",
@@ -658,6 +752,90 @@ class App(tk.Tk):
         self.itens.clear()
         self.v_esp.set(""); self.v_pa.set("")
         self.v_qtd.set(""); self.v_val.set("")
+        self._atualizar_total()
+
+    def _duplicar_pedido_fila(self):
+        sel = self.tree_fila.selection()
+        if not sel:
+            messagebox.showinfo("Nenhum pedido", "Selecione um pedido na fila para duplicar.")
+            return
+        idx = int(sel[0])
+        pedido = self.fila[idx]
+        
+        self.v_ordem.set(pedido["dados"]["ordem"])
+        self.v_data.set(pedido["dados"]["data"])
+        self.v_cliente.set(pedido["dados"]["cliente"])
+        self.v_pagto.set(pedido["dados"]["pagamento"])
+        self.txt_obs.delete("1.0", "end")
+        self.txt_obs.insert("1.0", pedido["dados"].get("observacao", ""))
+        
+        self.itens.clear()
+        for item in self.tree.get_children():
+            self.tree.delete(item)
+        
+        for item in pedido["itens"]:
+            self.itens.append(item)
+            self.tree.insert("", "end", values=(
+                item["especie"].capitalize(),
+                item["pa"],
+                f"{item['quantidade']:.3f}".rstrip("0").rstrip("."),
+                f"R$ {item['valor']:.2f}"
+            ))
+        
+        self.nb.select(0)
+        self._status(f"Pedido de {pedido['dados']['cliente']} duplicado — ajuste e adicione à fila")
+
+    def _importar_itens(self):
+        try:
+            clip = self.clipboard_get()
+        except tk.TclError:
+            messagebox.showinfo("Área de transferência",
+                "Nenhum texto copiado.\n\n"
+                "Copie linhas no formato:\n"
+                "especie;PA;quantidade;valor\n\n"
+                "Exemplo:\ncamarao;0001;10;45.00")
+            return
+        
+        linhas = [l.strip() for l in clip.strip().split("\n") if l.strip()]
+        importados = 0
+        erros = 0
+        
+        for linha in linhas:
+            partes = linha.replace(",", ".").split(";")
+            if len(partes) < 4:
+                erros += 1
+                continue
+            try:
+                esp = partes[0].strip().lower()
+                pa = partes[1].strip().zfill(4)
+                qtd = float(partes[2].strip())
+                val = float(partes[3].strip())
+                
+                self.itens.append({"especie": esp, "pa": pa, "quantidade": qtd, "valor": val})
+                self.tree.insert("", "end", values=(
+                    esp.capitalize(), pa,
+                    f"{qtd:.3f}".rstrip("0").rstrip("."),
+                    f"R$ {val:.2f}"
+                ))
+                importados += 1
+            except (ValueError, IndexError):
+                erros += 1
+        
+        if importados > 0:
+            self._status(f"{importados} item(ns) importado(s)")
+            messagebox.showinfo("Importação",
+                f"{importados} item(ns) importado(s) com sucesso.\n"
+                f"{erros} linha(s) com erro.")
+        else:
+            messagebox.showerror("Erro",
+                "Nenhum item importado.\n\n"
+                "Formato esperado por linha:\n"
+                "especie;PA;quantidade;valor\n\n"
+                "Exemplo:\ncamarao;0001;10;45.00")
+
+    def _atualizar_total(self):
+        total = sum(item["quantidade"] * item["valor"] for item in self.itens)
+        self._total_var.set(f"Total: R$ {total:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
 
     def _add_item(self):
         esp = self.v_esp.get().strip().lower()
@@ -687,6 +865,7 @@ class App(tk.Tk):
         self.v_pa.set("")
         self.v_qtd.set("")
         self.v_val.set("")
+        self._atualizar_total()
 
     def _remover(self):
         sel = self.tree.selection()
@@ -694,6 +873,7 @@ class App(tk.Tk):
         idx = self.tree.index(sel[0])
         self.tree.delete(sel[0])
         self.itens.pop(idx)
+        self._atualizar_total()
 
     def _editar_item(self):
         sel = self.tree.selection()
@@ -815,6 +995,8 @@ class App(tk.Tk):
                     "⏳ Pendente"),
             tags=("pendente",))
 
+        self._salvar_fila()
+
         messagebox.showinfo("Adicionado à Fila",
             f"Pedido de {self.v_cliente.get()} adicionado!\n"
             f"Total na fila: {n} pedido(s).\n\n"
@@ -837,6 +1019,7 @@ class App(tk.Tk):
         self.fila.pop(idx)
         # Renumera
         self._atualizar_tree_fila()
+        self._salvar_fila()
 
     def _editar_pedido_fila(self):
         sel = self.tree_fila.selection()
@@ -887,6 +1070,7 @@ class App(tk.Tk):
         self.tree_fila.delete(sel[0])
         self.fila.pop(idx)
         self._atualizar_tree_fila()
+        self._salvar_fila()
         
         self.nb.select(0)
         self._status(f"Editando pedido de {dados['cliente']}")
@@ -895,8 +1079,6 @@ class App(tk.Tk):
             "Pedido carregado na tela principal.\n"
             "Edite os dados e itens conforme necessário.\n"
             "Para incluir na fila novamente, vá na aba Itens e clique em 'Adicionar à Fila'.")
-        tk.Button(btn_frame, text="Salvar", command=salvar,
-                  bg=COR["acento_btn"], fg=COR["texto_branco"], relief="flat", padx=20, pady=8).pack(side="right", padx=(10,0))
 
     def _mover_fila(self, direcao):
         sel = self.tree_fila.selection()
@@ -906,6 +1088,7 @@ class App(tk.Tk):
         if novo < 0 or novo >= len(self.fila): return
         self.fila[idx], self.fila[novo] = self.fila[novo], self.fila[idx]
         self._atualizar_tree_fila()
+        self._salvar_fila()
 
     def _atualizar_tree_fila(self):
         for item in self.tree_fila.get_children():
@@ -983,6 +1166,7 @@ class App(tk.Tk):
 
                 pedido["status"] = "rodando"
                 self.after(0, self._atualizar_tree_fila)
+                self.after(0, self._salvar_fila)
 
                 self.after(0, lambda n=i+1, c=pedido["dados"]["cliente"]:
                     self.log(f"\n{'─'*55}\n  PEDIDO {n}: {c.upper()}\n{'─'*55}", "info"))
@@ -992,6 +1176,7 @@ class App(tk.Tk):
                     pedido["codigo"] = codigo
                     pedido["status"] = "concluido"
                     self.after(0, self._atualizar_tree_fila)
+                    self.after(0, self._salvar_fila)
 
                     # Adiciona à aba Conferir
                     self.after(0, lambda p=pedido, cd=codigo:
@@ -1019,6 +1204,7 @@ class App(tk.Tk):
                 except Exception as ex:
                     pedido["status"] = "pendente"
                     self.after(0, self._atualizar_tree_fila)
+                    self.after(0, self._salvar_fila)
                     self.after(0, lambda e=str(ex):
                         self.log(f"\n[ERRO] Pedido falhou: {e}", "erro"))
                     self.after(0, lambda c=pedido["dados"]["cliente"]:
@@ -1095,6 +1281,7 @@ class App(tk.Tk):
             self.tree_conf.delete(item)
         
         self._atualizar_tree_fila()
+        self._salvar_fila()
         messagebox.showinfo("Sucesso", f"{len(sel)} pedido(s) retornaram para a fila.\nAdicione os itens na aba Itens.")
 
     def _editar_pedido_conferir(self):
@@ -1435,7 +1622,7 @@ class App(tk.Tk):
                         time.sleep(1)
                         try:
                             fazer_login()
-                        except:
+                        except Exception:
                             pass
                         time.sleep(1)
                     
@@ -1466,85 +1653,6 @@ class App(tk.Tk):
         finally:
             builtins.print = _orig
 
-    # ── Helpers de planilhas ──────────────────
-
-    def _log_planilha(self, msg, tipo="info"):
-        self.txt_planilha_resultado.configure(state="normal")
-        self.txt_planilha_resultado.insert("end", msg + "\n", tipo)
-        self.txt_planilha_resultado.see("end")
-        self.txt_planilha_resultado.configure(state="disabled")
-
-    def _escolher_arquivo(self, variavel, titulo):
-        caminho = filedialog.askopenfilename(
-            title=titulo,
-            filetypes=[("Excel", "*.xlsx *.xlsm"), ("Todos", "*.*")])
-        if caminho:
-            variavel.set(caminho)
-
-    def _salvar_caminhos_planilhas(self):
-        cfg = _carregar_config()
-        cfg["relatorio"]   = self.v_rel.get().strip()
-        cfg["programacao"] = self.v_prog.get().strip()
-        _salvar_config(cfg)
-        messagebox.showinfo("Salvo", "Caminhos salvos com sucesso!")
-
-    def _preencher_via_foto(self):
-        caminho_foto = filedialog.askopenfilename(
-            title="Selecione a foto do impresso",
-            filetypes=[("Imagens", "*.jpg *.jpeg *.png"), ("Todos", "*.*")])
-        if not caminho_foto: return
-
-        rel  = self.v_rel.get().strip()
-        prog = self.v_prog.get().strip()
-
-        if not os.path.exists(rel):
-            messagebox.showerror("Não encontrado",
-                f"Relatório não encontrado:\n{rel}"); return
-        if not os.path.exists(prog):
-            messagebox.showerror("Não encontrado",
-                f"Programação não encontrada:\n{prog}"); return
-
-        self.txt_planilha_resultado.configure(state="normal")
-        self.txt_planilha_resultado.delete("1.0", "end")
-        self.txt_planilha_resultado.configure(state="disabled")
-
-        self._log_planilha(f"Foto: {os.path.basename(caminho_foto)}", "info")
-        self._log_planilha(f"Período: {self.v_periodo.get()}", "info")
-
-        periodo = self.v_periodo.get()
-
-        def _rodar():
-            import sys
-            base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            if base not in sys.path:
-                sys.path.insert(0, base)
-            try:
-                import preencher_planilhas as pp
-                from pathlib import Path
-                pp.RELATORIO   = Path(rel)
-                pp.PROGRAMACAO = Path(prog)
-                self.after(0, lambda: self._log_planilha("Lendo com IA...", "info"))
-                dados = pp.extrair_dados_imagem(caminho_foto)
-                self.after(0, lambda: self._log_planilha(
-                    f"\n{len(dados)} cliente(s) detectados:", "info"))
-                for d in dados:
-                    m = f"  {d.get('cliente','?')}: {d.get('kg','?')} kg | R$ {d.get('valor_rs','?')}"
-                    self.after(0, lambda msg=m: self._log_planilha(msg))
-                self.after(0, lambda: self._log_planilha("\nAtualizando...", "info"))
-                ok, nok = pp.atualizar_planilhas(dados, periodo)
-                for n in ok:
-                    self.after(0, lambda x=n: self._log_planilha(f"  ✔ {x}", "ok"))
-                for n in nok:
-                    self.after(0, lambda x=n: self._log_planilha(
-                        f"  ⚠ {x} — não encontrado", "aviso"))
-                self.after(0, lambda: self._log_planilha("\nPlanilhas salvas!", "ok"))
-                self.after(0, lambda: messagebox.showinfo("Concluído",
-                    f"{len(ok)} cliente(s) atualizados."))
-            except Exception as ex:
-                self.after(0, lambda e=str(ex): self._log_planilha(f"[ERRO] {e}", "erro"))
-                self.after(0, lambda: messagebox.showerror("Erro", str(ex)))
-
-        threading.Thread(target=_rodar, daemon=True).start()
 
 
 # ── Ponto de entrada ─────────────────────────

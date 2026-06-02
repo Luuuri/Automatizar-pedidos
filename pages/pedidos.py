@@ -9,7 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import utils.driver as _drv
 from utils.waits import aguardar, esperar, limpar_e_digitar, clicar_js, fechar_popup_swal
-from config import SEL, LOGIN, CLIENTES_ESPECIAIS, CLIENTES_NORMAIS
+from config import SEL, LOGIN, CLIENTES_ESPECIAIS, CLIENTES_NORMAIS, URL_BASE
 import time
 
 pedido = {
@@ -92,7 +92,9 @@ def _anotar_preco_observacao(pa, valor):
     nota = f"PA {pa} {f'{valor:.2f}'.replace('.', ',')}"
 
     clicar_js(SEL["aba_pedidos"])
-    time.sleep(0.8)
+    WebDriverWait(_d(), 3).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, SEL["observacao"]))
+    )
 
     campo = aguardar(SEL["observacao"])
     atual = campo.get_attribute("value").strip()
@@ -111,8 +113,10 @@ def _anotar_preco_observacao(pa, valor):
     time.sleep(0.8)
 
 def _ler_codigo():
-    time.sleep(0.5)
     try:
+        WebDriverWait(_d(), 3).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "#PEDCODIGO"))
+        )
         campo = _d().find_element(By.CSS_SELECTOR, "#PEDCODIGO")
         valor = campo.get_attribute("value").strip()
         return valor if valor and valor != "0" else None
@@ -128,31 +132,33 @@ def fazer_login():
     print("[OK] Login realizado")
 
 def abrir_novo_pedido():
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    
     try:
         btn = WebDriverWait(_d(), 3).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, SEL["btn_pedidos"]))
         )
         btn.click()
-        time.sleep(0.8)
+        WebDriverWait(_d(), 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, SEL["aba_pedidos"]))
+        )
     except Exception:
         print("[AVISO] Botão pedidos não encontrado, recarregando página...")
-        from config import URL_BASE
         _d().get(URL_BASE)
         time.sleep(1)
         fazer_login()
-        time.sleep(1)
-        aguardar(SEL["btn_pedidos"]).click()
-        time.sleep(0.8)
+        WebDriverWait(_d(), 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, SEL["btn_pedidos"]))
+        ).click()
+        WebDriverWait(_d(), 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, SEL["aba_pedidos"]))
+        )
     
     try:
         aguardar(SEL["aba_pedidos"]).click()
     except Exception:
         _d().find_element("css selector", SEL["aba_pedidos"]).click()
-    time.sleep(0.8)
+    WebDriverWait(_d(), 3).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, SEL["empresa"]))
+    )
     print("[OK] Aba Pedidos aberta")
 
 def selecionar_empresa():
@@ -186,11 +192,11 @@ def selecionar_cliente():
         except Exception as e:
             print(f"[AVISO] Value {dados['value']} não encontrada, buscando pelo nome...")
             campo.send_keys(dados["busca"])
-            time.sleep(1.5)
+            time.sleep(1)
             campo.send_keys(Keys.ENTER)
     else:
         campo.send_keys(dados["busca"])
-        time.sleep(1.5)
+        time.sleep(1)
         campo.send_keys(Keys.ENTER)
     
     time.sleep(0.5)
@@ -262,7 +268,9 @@ def gravar_pedido():
 def abrir_aba_itens():
     # ID correto conforme HTML inspecionado: id="pedidoitem"
     clicar_js("#pedidoitem")
-    time.sleep(1)
+    WebDriverWait(_d(), 5).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, SEL["especie"]))
+    )
     print("[OK] Aba Itens Pedidos aberta\n")
 
 def verificar_erro_produto():
@@ -303,7 +311,9 @@ def adicionar_item(especie, pa, quantidade, valor_pedido):
     # 2. Produto (PA)
     nome_prod = _bsselect_buscar_e_selecionar("PROCODIGO", pa)
     print(f"         Produto: {nome_prod}")
-    time.sleep(0.8)
+    WebDriverWait(_d(), 3).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, SEL["und_medida"]))
+    )
 
     if verificar_erro_produto():
         print(f"[PULADO] PA {pa} não encontrado.")
@@ -337,10 +347,12 @@ def adicionar_item(especie, pa, quantidade, valor_pedido):
 
         texto_opcao = "rosa" if "camar" in especie.lower() else None
         _bsselect_buscar_e_selecionar("ESPCODIGO", especie, texto_opcao)
-        time.sleep(0.4)
+        time.sleep(0.3)
 
         _bsselect_buscar_e_selecionar("PROCODIGO", pa)
-        time.sleep(0.8)
+        WebDriverWait(_d(), 3).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, SEL["und_medida"]))
+        )
 
         # Uni. medida pode ter sido limpa também
         limpar_e_digitar(SEL["und_medida"], "KG")
@@ -380,13 +392,14 @@ def conferir_pedido(codigo):
     Vai para o Filtro, pesquisa o pedido pelo código e clica em Conferir.
     Equivale a clicar em GravarStatusPedido(codigo, '2') via JavaScript.
     """
-    from config import URL_BASE
     from datetime import date as _date
 
     print(f"[CONFERIR] Buscando pedido #{codigo}...")
 
     clicar_js(SEL["btn_pedidos"])
-    time.sleep(0.5)
+    WebDriverWait(_d(), 3).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, "#filtro"))
+    )
 
     try:
         aguardar("#filtro").click()
@@ -398,10 +411,6 @@ def conferir_pedido(codigo):
     limpar_e_digitar("#DtaIni", _date.today().strftime("%d/%m/%Y"))
     time.sleep(0.3)
     clicar_js("#btnPesquisar")
-
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    from selenium.webdriver.common.by import By
 
     WebDriverWait(_d(), 10).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, "#example tbody tr"))
@@ -419,7 +428,6 @@ def conferir_pedido(codigo):
         print(f"[CONFERIR] [OK] #{codigo} conferido.")
 
 def cancelar_pedido(codigo):
-    from config import URL_BASE, LOGIN
     print(f"[CANCELAR] Cancelando pedido #{codigo}...")
     
     url_atual = _d().current_url
@@ -427,41 +435,42 @@ def cancelar_pedido(codigo):
     if "login" in url_atual.lower() or "entrar" in url_atual.lower():
         print("[CANCELAR] Sessão expirada, fazendo login...")
         _d().get(URL_BASE)
-        time.sleep(2)
-        fazer_login()
         time.sleep(1)
+        fazer_login()
+        WebDriverWait(_d(), 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, SEL["btn_pedidos"]))
+        )
     
     try:
         btn = aguardar(SEL["btn_pedidos"], segundos=5)
         btn.click()
-        time.sleep(0.8)
+        WebDriverWait(_d(), 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "#filtro"))
+        )
     except Exception:
         _d().get(URL_BASE)
         time.sleep(1)
         fazer_login()
-        time.sleep(1)
-        aguardar(SEL["btn_pedidos"]).click()
-        time.sleep(0.8)
+        WebDriverWait(_d(), 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, SEL["btn_pedidos"]))
+        ).click()
+        WebDriverWait(_d(), 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "#filtro"))
+        )
     
     try:
         aguardar("#filtro").click()
     except Exception:
         _d().find_element("css selector", "#filtro").click()
-    time.sleep(0.8)
     
     from datetime import date as _date
     limpar_e_digitar("#DtaIni", _date.today().strftime("%d/%m/%Y"))
     time.sleep(0.3)
     clicar_js("#btnPesquisar")
     
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    from selenium.webdriver.common.by import By
-    
     WebDriverWait(_d(), 10).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, "#example tbody tr"))
     )
-    time.sleep(1)
     
     _d().execute_script(f"CancelarPedido({codigo})")
     time.sleep(2)
@@ -473,7 +482,6 @@ def cancelar_pedido(codigo):
         print(f"[CANCELAR] [OK] #{codigo} cancelado.")
 
 def editar_pedido_sistema(codigo):
-    from config import URL_BASE, LOGIN
     print(f"[EDITAR] Editando pedido #{codigo} no sistema...")
     
     url_atual = _d().current_url
@@ -481,36 +489,38 @@ def editar_pedido_sistema(codigo):
     if "login" in url_atual.lower() or "entrar" in url_atual.lower():
         print("[EDITAR] Sessão expirada, fazendo login...")
         _d().get(URL_BASE)
-        time.sleep(2)
-        fazer_login()
         time.sleep(1)
+        fazer_login()
+        WebDriverWait(_d(), 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, SEL["btn_pedidos"]))
+        )
     
     try:
         btn = aguardar(SEL["btn_pedidos"], segundos=5)
         btn.click()
-        time.sleep(0.8)
+        WebDriverWait(_d(), 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "#filtro"))
+        )
     except Exception:
         _d().get(URL_BASE)
         time.sleep(1)
         fazer_login()
-        time.sleep(1)
-        aguardar(SEL["btn_pedidos"]).click()
-        time.sleep(0.8)
+        WebDriverWait(_d(), 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, SEL["btn_pedidos"]))
+        ).click()
+        WebDriverWait(_d(), 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "#filtro"))
+        )
     
     try:
         aguardar("#filtro").click()
     except Exception:
         _d().find_element("css selector", "#filtro").click()
-    time.sleep(0.8)
     
     from datetime import date as _date
     limpar_e_digitar("#DtaIni", _date.today().strftime("%d/%m/%Y"))
     time.sleep(0.3)
     clicar_js("#btnPesquisar")
-    
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    from selenium.webdriver.common.by import By
     
     WebDriverWait(_d(), 10).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, "#example tbody tr"))
@@ -523,9 +533,6 @@ def editar_pedido_sistema(codigo):
     print(f"[EDITAR] [OK] Pedido #{codigo} aberto para edição no sistema")
 
 def validar_condicao_pagamento(condicao):
-    from selenium.webdriver.support.ui import Select
-    from selenium.webdriver.common.by import By
-    
     try:
         select = Select(_d().find_element(By.CSS_SELECTOR, SEL["cond_pagto"]))
         opcoes = [opt.text.strip().lower() for opt in select.options if opt.text.strip()]
@@ -563,7 +570,6 @@ def executar_pedido(dados_pedido, itens):
 
     pedido.update(dados_pedido)
 
-    from config import URL_BASE
     driver_atual = _d()
     if driver_atual is None:
         _drv.iniciar()

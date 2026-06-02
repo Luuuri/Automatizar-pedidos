@@ -1,12 +1,19 @@
 # ─────────────────────────────────────────────
 #  config.py — configurações centrais do projeto
-#  Edite aqui: login, clientes, seletores HTML
+#  Edite aqui: clientes, seletores HTML
+#  Credenciais ficam no arquivo .env
 # ─────────────────────────────────────────────
+
+import os
+from dotenv import load_dotenv
+
+_BASE = os.path.dirname(os.path.abspath(__file__))
+load_dotenv(os.path.join(_BASE, ".env"))
 
 # ── Login ─────────────────────────────────────
 LOGIN = {
-    "usuario": "Americo.Lima",
-    "senha":   "amlima1947",
+    "usuario": os.getenv("SGEP_USUARIO", ""),
+    "senha":   os.getenv("SGEP_SENHA", ""),
 }
 
 # ── Clientes ──────────────────────────────────
