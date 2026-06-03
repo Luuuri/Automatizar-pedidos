@@ -1,19 +1,12 @@
 # ─────────────────────────────────────────────
 #  config.py — configurações centrais do projeto
-#  Edite aqui: clientes, seletores HTML
-#  Credenciais ficam no arquivo .env
+#  Edite aqui: login, clientes, seletores HTML
 # ─────────────────────────────────────────────
-
-import os
-from dotenv import load_dotenv
-
-_BASE = os.path.dirname(os.path.abspath(__file__))
-load_dotenv(os.path.join(_BASE, ".env"))
 
 # ── Login ─────────────────────────────────────
 LOGIN = {
-    "usuario": os.getenv("SGEP_USUARIO", ""),
-    "senha":   os.getenv("SGEP_SENHA", ""),
+    "usuario": "Americo.Lima",
+    "senha":   "amlima1947",
 }
 
 # ── Clientes ──────────────────────────────────
@@ -47,7 +40,7 @@ TODOS_CLIENTES = sorted(list(CLIENTES_ESPECIAIS.keys()) + sorted(CLIENTES_NORMAI
 
 # ── Condições de pagamento ────────────────────
 PAGAMENTOS = [
-    "a vista", "contrato", "7 dias", "14 dias", "21 dias", "21/28", "28 dias",
+    "a vista", "contrato", "7 dias", "14 dias", "21 dias", "21/28", "21/28/35","28 dias",
     "28/42", "30 dias", "30/60", "30/60/90", "45 dias", "60 dias", "28/35/42", "14/21/28"
 ]
 

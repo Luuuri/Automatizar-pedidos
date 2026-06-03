@@ -126,8 +126,16 @@ def _ler_codigo():
 # ── etapas do pedido ──────────────────────────
 
 def fazer_login():
-    aguardar(SEL["usuario"]).send_keys(LOGIN["usuario"])
-    aguardar(SEL["senha"]).send_keys(LOGIN["senha"])
+    campo_user = aguardar(SEL["usuario"])
+    campo_user.click()
+    campo_user.send_keys(Keys.CONTROL + "a", Keys.DELETE)
+    campo_user.send_keys(LOGIN["usuario"])
+
+    campo_senha = aguardar(SEL["senha"])
+    campo_senha.click()
+    campo_senha.send_keys(Keys.CONTROL + "a", Keys.DELETE)
+    campo_senha.send_keys(LOGIN["senha"])
+
     aguardar(SEL["btn_login"]).click()
     print("[OK] Login realizado")
 
@@ -207,6 +215,7 @@ def selecionar_vendedor():
     print("[OK] Vendedor selecionado")
 
 def selecionar_pagamento():
+    import re
     entrada = pedido["pagamento"].lower().strip()
     
     select = Select(aguardar(SEL["cond_pagto"]))
@@ -219,14 +228,16 @@ def selecionar_pagamento():
     for modo in ("exato", "inicia", "contem"):
         for opcao in select.options:
             texto = opcao.text.lower().strip()
-            achou = (
-                (modo == "exato"  and texto == entrada) or
-                (modo == "inicia" and texto.startswith(entrada)) or
-                (modo == "contem" and entrada in texto)
-            )
-            if achou:
+            if modo == "exato":
+                match = texto == entrada
+            elif modo == "inicia":
+                match = texto.startswith(entrada)
+            else:
+                match = bool(re.search(r'(?<!\d)' + re.escape(entrada) + r'(?!\d)', texto))
+            if match:
                 opcao.click()
                 opcao_encontrada = opcao.text.strip()
+                achou = True
                 break
         if achou:
             break
