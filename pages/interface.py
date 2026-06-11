@@ -5,7 +5,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 import threading
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 import os
 import json
 
@@ -1123,7 +1123,7 @@ class App(tk.Tk):
         self.nb.select(4)  # aba Log
         self.log("═" * 55, "info")
         self.log(f"  INICIANDO FILA — {len(pendentes)} pedido(s)"
-                 f"  {date.today().strftime('%d/%m/%Y %H:%M')}", "info")
+                 f"  {datetime.now().strftime('%d/%m/%Y %H:%M')}", "info")
         self.log("═" * 55, "info")
         self._status("Executando fila...")
 
@@ -1202,13 +1202,13 @@ class App(tk.Tk):
                                 self.log(f"[PDF] [ERRO] {e}", "erro"))
 
                 except Exception as ex:
-                    pedido["status"] = "pendente"
+                    pedido["status"] = "erro"
                     self.after(0, self._atualizar_tree_fila)
                     self.after(0, self._salvar_fila)
                     self.after(0, lambda e=str(ex):
                         self.log(f"\n[ERRO] Pedido falhou: {e}", "erro"))
                     self.after(0, lambda c=pedido["dados"]["cliente"]:
-                        self.log(f"  → Pedido de {c} marcado como pendente para редаição", "aviso"))
+                        self.log(f"  → Pedido de {c} marcado com erro — edite e reenvie na aba Fila", "aviso"))
 
             concluidos = sum(1 for p in self.fila if p["status"] == "concluido")
             erros      = sum(1 for p in self.fila if p["status"] == "erro")

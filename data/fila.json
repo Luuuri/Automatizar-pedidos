@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "dados": {
+      "ordem": "0",
+      "data": "11/06/2026",
+      "cliente": "ds",
+      "pagamento": "a vista",
+      "observacao": "VIA TRANSMARABÁ / 1 CX ISOPOR 170L R$ 174,00",
+      "empresa_index": 1,
+      "vendedor_index": 1
+    },
+    "itens": [
+      {
+        "especie": "camarao",
+        "pa": "0104",
+        "quantidade": 14.0,
+        "valor": 109.0
+      },
+      {
+        "especie": "camarao",
+        "pa": "0811",
+        "quantidade": 33.0,
+        "valor": 110.0
+      },
+      {
+        "especie": "camarao",
+        "pa": "7121",
+        "quantidade": 28.0,
+        "valor": 133.0
+      },
+      {
+        "especie": "pargo",
+        "pa": "10514",
+        "quantidade": 2.0,
+        "valor": 70.0
+      }
+    ],
+    "baixar_pdf": true,
+    "codigo": "91466",
+    "status": "concluido"
+  }
+]
