@@ -33,3 +33,4 @@ data/log.txt
 
 # Config generated at runtime
 data/config.json
+.pyc
