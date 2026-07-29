@@ -12,7 +12,11 @@ import json
 from config import TODOS_CLIENTES, PAGAMENTOS, ESPECIES
 
 # ── Caminhos ──────────────────────────────────
-_BASE       = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import sys
+if getattr(sys, 'frozen', False):
+    _BASE = os.path.dirname(sys.executable)
+else:
+    _BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOG_PATH    = os.path.join(_BASE, "data", "log.txt")
 CONFIG_PATH = os.path.join(_BASE, "data", "config.json")
 FILA_PATH   = os.path.join(_BASE, "data", "fila.json")

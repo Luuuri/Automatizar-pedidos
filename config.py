@@ -32,7 +32,7 @@ CLIENTES_ESPECIAIS = {
 # Clientes que o sistema reconhece só pelo nome digitado.
 CLIENTES_NORMAIS = {
     "compespa", "assembleia", "jo", "lucelia", "lider",
-    "cambuci", "r3x", "shopping", "kenko", "amazonia", "dumar", "diniz",
+    "cambuci", "r3x", "shopping", "kenko", "amazonia", "dumar", "diniz", "liliane"
 }
 
 # Lista unificada para a interface (dropdown)
@@ -41,7 +41,8 @@ TODOS_CLIENTES = sorted(list(CLIENTES_ESPECIAIS.keys()) + sorted(CLIENTES_NORMAI
 # ── Condições de pagamento ────────────────────
 PAGAMENTOS = [
     "a vista", "contrato", "7 dias", "14 dias", "21 dias", "21/28", "21/28/35","28 dias",
-    "28/42", "30 dias", "30/60", "30/60/90", "45 dias", "60 dias", "28/35/42", "14/21/28"
+    "28/42", "30 dias", "30/60", "30/60/90", "45 dias", "60 dias", "28/35/42", "14/21/28",
+    "14/21/28/35"
 ]
 
 # ── Espécies ──────────────────────────────────
@@ -77,7 +78,7 @@ SEL = {
 }
 
 # ── URL do sistema ────────────────────────────
-URL_BASE = "http://45.228.140.38:8082/WebSGEP/"
+URL_BASE = "https://amasa.sistemassartec.com.br/WebSGEP"
 
 # ── Padrões fixos (não mudam por pedido) ─────
 EMPRESA_INDEX  = 1   # sempre a primeira opção real no dropdown

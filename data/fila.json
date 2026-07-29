@@ -38,5 +38,283 @@
     "baixar_pdf": true,
     "codigo": "91466",
     "status": "concluido"
+  },
+  {
+    "dados": {
+      "ordem": "0",
+      "data": "12/06/2026",
+      "cliente": "r3x",
+      "pagamento": "14/21/28/35",
+      "observacao": "",
+      "empresa_index": 1,
+      "vendedor_index": 1
+    },
+    "itens": [
+      {
+        "especie": "camarao",
+        "pa": "7121",
+        "quantidade": 42.0,
+        "valor": 124.0
+      },
+      {
+        "especie": "camarao",
+        "pa": "7123",
+        "quantidade": 46.0,
+        "valor": 112.0
+      },
+      {
+        "especie": "camarao",
+        "pa": "7093",
+        "quantidade": 20.8,
+        "valor": 112.0
+      },
+      {
+        "especie": "camarao",
+        "pa": "0811",
+        "quantidade": 42.0,
+        "valor": 110.0
+      },
+      {
+        "especie": "camarao",
+        "pa": "6081",
+        "quantidade": 18.4,
+        "valor": 124.0
+      }
+    ],
+    "baixar_pdf": true,
+    "codigo": "91472",
+    "status": "concluido"
+  },
+  {
+    "dados": {
+      "ordem": "0",
+      "data": "15/06/2026",
+      "cliente": "formosa_cn",
+      "pagamento": "30",
+      "observacao": "OBS: 0108 51/60 PRODUTO RETORNADO SP\n.",
+      "empresa_index": 1,
+      "vendedor_index": 1
+    },
+    "itens": [
+      {
+        "especie": "camarao",
+        "pa": "0811",
+        "quantidade": 140.0,
+        "valor": 100.0
+      },
+      {
+        "especie": "camarao",
+        "pa": "0106",
+        "quantidade": 42.0,
+        "valor": 92.0
+      },
+      {
+        "especie": "camarao",
+        "pa": "0108",
+        "quantidade": 42.0,
+        "valor": 76.0
+      },
+      {
+        "especie": "camarao",
+        "pa": "0202",
+        "quantidade": 10.0,
+        "valor": 112.5
+      },
+      {
+        "especie": "camarao",
+        "pa": "0204",
+        "quantidade": 10.0,
+        "valor": 100.0
+      },
+      {
+        "especie": "camarao",
+        "pa": "0204",
+        "quantidade": 10.0,
+        "valor": 87.5
+      }
+    ],
+    "baixar_pdf": true,
+    "codigo": "91487",
+    "status": "concluido"
+  },
+  {
+    "dados": {
+      "ordem": "0",
+      "data": "17/06/2026",
+      "cliente": "formosa_cu",
+      "pagamento": "30",
+      "observacao": "",
+      "empresa_index": 1,
+      "vendedor_index": 1
+    },
+    "itens": [
+      {
+        "especie": "camarao",
+        "pa": "0810",
+        "quantidade": 280.0,
+        "valor": 112.5
+      },
+      {
+        "especie": "camarao",
+        "pa": "1801",
+        "quantidade": 21.6,
+        "valor": 98.0
+      },
+      {
+        "especie": "camarao",
+        "pa": "0204",
+        "quantidade": 50.0,
+        "valor": 87.5
+      },
+      {
+        "especie": "pargo",
+        "pa": "10514",
+        "quantidade": 100.0,
+        "valor": 65.0
+      }
+    ],
+    "baixar_pdf": true,
+    "codigo": "91498",
+    "status": "concluido"
+  },
+  {
+    "dados": {
+      "ordem": "0",
+      "data": "16/06/2026",
+      "cliente": "s_alb",
+      "pagamento": "21/28/35",
+      "observacao": "",
+      "empresa_index": 1,
+      "vendedor_index": 1
+    },
+    "itens": [
+      {
+        "especie": "camarao",
+        "pa": "0105",
+        "quantidade": 14.0,
+        "valor": 109.0
+      },
+      {
+        "especie": "camarao",
+        "pa": "0109",
+        "quantidade": 98.0,
+        "valor": 81.0
+      }
+    ],
+    "baixar_pdf": true,
+    "codigo": "91499",
+    "status": "concluido"
+  },
+  {
+    "dados": {
+      "ordem": "0",
+      "data": "16/06/2026",
+      "cliente": "liliane",
+      "pagamento": "a vista",
+      "observacao": "Fornecer cxs isopor Via Azul\n.",
+      "empresa_index": 1,
+      "vendedor_index": 1
+    },
+    "itens": [
+      {
+        "especie": "camarao",
+        "pa": "0103",
+        "quantidade": 28.0,
+        "valor": 160.0
+      },
+      {
+        "especie": "camarao",
+        "pa": "0106",
+        "quantidade": 28.0,
+        "valor": 101.0
+      }
+    ],
+    "baixar_pdf": true,
+    "codigo": "91501",
+    "status": "concluido"
+  },
+  {
+    "dados": {
+      "ordem": "0",
+      "data": "17/06/2026",
+      "cliente": "assembleia",
+      "pagamento": "0",
+      "observacao": "CONTRATO\n.",
+      "empresa_index": 1,
+      "vendedor_index": 1
+    },
+    "itens": [
+      {
+        "especie": "camarao",
+        "pa": "1222",
+        "quantidade": 180.0,
+        "valor": 90.0
+      },
+      {
+        "especie": "camarao",
+        "pa": "7098",
+        "quantidade": 120.0,
+        "valor": 90.0
+      }
+    ],
+    "baixar_pdf": true,
+    "codigo": "91502",
+    "status": "concluido"
+  },
+  {
+    "dados": {
+      "ordem": "0",
+      "data": "17/06/2026",
+      "cliente": "formosa_agm",
+      "pagamento": "30",
+      "observacao": "",
+      "empresa_index": 1,
+      "vendedor_index": 1
+    },
+    "itens": [
+      {
+        "especie": "camarao",
+        "pa": "0810",
+        "quantidade": 70.0,
+        "valor": 112.5
+      },
+      {
+        "especie": "camarao",
+        "pa": "1801",
+        "quantidade": 21.6,
+        "valor": 98.0
+      }
+    ],
+    "baixar_pdf": true,
+    "codigo": null,
+    "status": "erro"
+  },
+  {
+    "dados": {
+      "ordem": "0",
+      "data": "17/06/2026",
+      "cliente": "formosa_agm",
+      "pagamento": "30",
+      "observacao": "",
+      "empresa_index": 1,
+      "vendedor_index": 1
+    },
+    "itens": [
+      {
+        "especie": "camarao",
+        "pa": "0810",
+        "quantidade": 70.0,
+        "valor": 112.5
+      },
+      {
+        "especie": "camarao",
+        "pa": "1801",
+        "quantidade": 21.6,
+        "valor": 98.0
+      }
+    ],
+    "baixar_pdf": true,
+    "codigo": "91505",
+    "status": "concluido"
   }
 ]

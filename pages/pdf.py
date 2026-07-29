@@ -57,7 +57,6 @@ def _verificar_pedido_na_tabela(codigo):
 
 def _configurar_download_cdp(d):
     """Usa Chrome DevTools Protocol para forçar o download automático sem perguntar."""
-    # Tenta Browser.setDownloadBehavior (mais confiável)
     try:
         d.execute_cdp_cmd("Browser.setDownloadBehavior", {
             "behavior": "allow",
@@ -68,8 +67,6 @@ def _configurar_download_cdp(d):
         return True
     except Exception:
         pass
-
-    # Fallback: Page.setDownloadBehavior
     try:
         d.execute_cdp_cmd("Page.setDownloadBehavior", {
             "behavior": "allow",
@@ -82,93 +79,77 @@ def _configurar_download_cdp(d):
         return False
 
 
-def _aceitar_download_barras(d):
-    """
-    Tenta fechar/aceitar possíveis barras de download do Chrome
-    via atalhos de teclado e JavaScript.
-    """
-    try:
-        # Envia Alt+Shift+A para aceitar downloads perigosos (atalho do Chrome)
-        from selenium.webdriver.common.action_chains import ActionChains
-        from selenium.webdriver.common.keys import Keys
-        ActionChains(d).send_keys(Keys.ALT + Keys.SHIFT + "a").perform()
-        time.sleep(0.3)
-    except Exception:
-        pass
-
-    # Tenta clicar em botões de confirmação via JS (caso estejam no DOM)
-    try:
-        d.execute_script("""
-            document.querySelectorAll('#save-file, .download-button, [id*="keep"], [class*="keep"]').forEach(el => {
-                if (el.offsetParent !== null) el.click();
-            });
-        """)
-    except Exception:
-        pass
-
-
 def _garantir_pasta():
-    """Garante que a pasta de downloads existe."""
+    """Garante que a pasta de downloads existe e limpa .crdownload antigos."""
     os.makedirs(PASTA_PDF, exist_ok=True)
+    # Remove .crdownload com mais de 5 minutos (arquivos travados)
+    for f in glob.glob(os.path.join(PASTA_PDF, "*.crdownload")):
+        try:
+            idade_min = (time.time() - os.path.getmtime(f)) / 60
+            if idade_min > 5:
+                os.remove(f)
+                print(f"[PDF] Limpo .crdownload antigo: {os.path.basename(f)}")
+        except Exception:
+            pass
 
 
-def _aguardar_download(timeout=90):
+def _snapshot_pdfs():
+    """Retorna dict {caminho: tamanho} dos PDFs na pasta."""
+    return {f: os.path.getsize(f) for f in glob.glob(os.path.join(PASTA_PDF, "*.pdf"))}
+
+
+def _aguardar_download(timeout=90, snapshot_ini=None):
     """
     Aguarda um novo PDF aparecer na pasta de downloads.
-    Retorna o caminho do arquivo baixado, ou None se timeout.
+    Detecta tanto arquivos NOVOS quanto SOBRESCRITOS (mesmo nome, tamanho mudou).
+    Se snapshot_ini for fornecido, usa como estado ANTES (tirado antes de ImprimirPedido).
     """
     _garantir_pasta()
 
-    antes_pdfs = set(glob.glob(os.path.join(PASTA_PDF, "*.pdf")))
-    cr_anteriores = set(glob.glob(os.path.join(PASTA_PDF, "*.crdownload")))
+    # Usa o snapshot fornecido ou tira um novo
+    if snapshot_ini is not None:
+        antes_pdfs, antes_cr = snapshot_ini
+    else:
+        antes_pdfs = _snapshot_pdfs()
+        antes_cr   = set(glob.glob(os.path.join(PASTA_PDF, "*.crdownload")))
 
     fim = time.time() + timeout
-    ultimo_tamanho = {}
-    tentativas_stuck = 0
-
     while time.time() < fim:
+        # Pega .crdownload atuais e filtra apenas os NOVOS
         cr_atual = set(glob.glob(os.path.join(PASTA_PDF, "*.crdownload")))
+        cr_novos = cr_atual - antes_cr
 
-        if cr_atual:
-            # Verifica se o download está travado (tamanho não muda)
-            for cr in cr_atual:
-                try:
-                    tam = os.path.getsize(cr)
-                    if cr in ultimo_tamanho and ultimo_tamanho[cr] == tam:
-                        tentativas_stuck += 1
-                        if tentativas_stuck >= 6:  # ~6 segundos sem mudar
-                            print(f"[PDF] [DEBUG] Download pode estar travado. Tentando aceitar...")
-                            _aceitar_download_barras(_d())
-                            tentativas_stuck = 0
-                    else:
-                        ultimo_tamanho[cr] = tam
-                        tentativas_stuck = 0
-                except Exception:
-                    pass
+        if cr_novos:
             time.sleep(1)
             continue
 
-        # Se havia .crdownload e agora não tem mais, o download terminou
-        agora_pdfs = set(glob.glob(os.path.join(PASTA_PDF, "*.pdf")))
-        novos = agora_pdfs - antes_pdfs
+        # Checa PDFs: novos OU modificados (sobrescritos)
+        agora_pdfs = _snapshot_pdfs()
 
-        novos_completos = [
-            f for f in novos
-            if os.path.getsize(f) > 0
-        ]
+        # Arquivos que NÃO existiam antes e têm tamanho > 0
+        nomes_novos = set(agora_pdfs.keys()) - set(antes_pdfs.keys())
+        novos = [f for f in nomes_novos if agora_pdfs[f] > 0]
 
-        if novos_completos:
-            return novos_completos[0]
+        # Arquivos que JÁ existiam mas mudaram de tamanho (sobrescritos)
+        modificados = []
+        for caminho, tam_atual in agora_pdfs.items():
+            tam_antes = antes_pdfs.get(caminho, -1)
+            if tam_atual > 0 and tam_atual != tam_antes:
+                modificados.append(caminho)
+
+        candidatos = novos + modificados
+        if candidatos:
+            return max(candidatos, key=os.path.getmtime)
 
         # Também checa a pasta padrão do Chrome
         pasta_chrome = os.path.join(os.path.expanduser("~"), "Downloads")
         if pasta_chrome.lower() != PASTA_PDF.lower():
-            cr_chrome = glob.glob(os.path.join(pasta_chrome, "*.crdownload"))
+            cr_chrome_novos = set(glob.glob(os.path.join(pasta_chrome, "*.crdownload"))) - antes_cr
             pdfs_chrome = [
                 f for f in glob.glob(os.path.join(pasta_chrome, "*.pdf"))
                 if os.path.getsize(f) > 0
             ]
-            if not cr_chrome and pdfs_chrome:
+            if not cr_chrome_novos and pdfs_chrome:
                 origem = sorted(pdfs_chrome, key=os.path.getmtime)[-1]
                 destino = os.path.join(PASTA_PDF, os.path.basename(origem))
                 try:
@@ -225,6 +206,10 @@ def baixar_pdf(codigo, cliente, data_pedido):
     print(f"[PDF] Chamando impressão com valor...")
     janela_principal = d.current_window_handle
 
+    # Tira snapshot ANTES de iniciar o download (o download é muito rápido)
+    snapshot_antes = (_snapshot_pdfs(),
+                      set(glob.glob(os.path.join(PASTA_PDF, "*.crdownload"))))
+
     try:
         d.execute_script(f"ImprimirPedido({codigo}, 'ComValor')")
     except Exception as ex:
@@ -237,10 +222,7 @@ def baixar_pdf(codigo, cliente, data_pedido):
     # Trata possíveis popups SweetAlert
     fechar_popup_swal(timeout=3)
 
-    # Tenta aceitar barra de download do Chrome
-    _aceitar_download_barras(d)
-
-    # Se uma nova janela/aba abriu (preview do PDF), volta para a principal
+    # Se uma nova janela/aba abriu, volta para a principal
     try:
         handles = d.window_handles
         if len(handles) > 1:
@@ -266,16 +248,19 @@ def baixar_pdf(codigo, cliente, data_pedido):
 
     # 5. Aguardar o arquivo aparecer na pasta
     print(f"[PDF] Aguardando download...")
-    arquivo_baixado = _aguardar_download(timeout=90)
+    arquivo_baixado = _aguardar_download(timeout=90, snapshot_ini=snapshot_antes)
 
     if not arquivo_baixado:
         print(f"[PDF] [AVISO] Download não detectado em {PASTA_PDF}.")
         try:
-            conteudo = [f for f in os.listdir(PASTA_PDF) if f.endswith(('.pdf', '.crdownload'))]
-            if conteudo:
-                print(f"[PDF] [DEBUG] Arquivos na pasta: {conteudo[-5:]}")
+            novos_cr = [f for f in os.listdir(PASTA_PDF) if f.endswith('.crdownload')]
+            novos_pdf = [f for f in os.listdir(PASTA_PDF) if f.endswith('.pdf')]
+            if novos_cr:
+                print(f"[PDF] [DEBUG] .crdownload ainda ativos: {novos_cr}")
+            elif novos_pdf:
+                print(f"[PDF] [DEBUG] {len(novos_pdf)} PDFs na pasta (nenhum novo detectado).")
             else:
-                print(f"[PDF] [DEBUG] Pasta {PASTA_PDF} sem PDFs ou crdownloads.")
+                print(f"[PDF] [DEBUG] Pasta vazia.")
         except Exception as e:
             print(f"[PDF] [DEBUG] Erro ao listar pasta: {e}")
         return False
